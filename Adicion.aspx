@@ -18,12 +18,11 @@
             <tr>
                 
                 
-                <td >
-                    <asp:TextBox ID="TextBox1" runat="server" class="caja"></asp:TextBox>
-                    &nbsp;<asp:Label ID="Label2" runat="server" Text="TOMADOR PRNCIPAL CEDULA" CssClass="texto"></asp:Label>
+                <td class="auto-style1" >
+                    <asp:TextBox ID="TextBox1" runat="server" class="cajagrande" placeholder="TOMADOR CEDULA"></asp:TextBox>
+                    &nbsp;<br />
                     <br />
-                    <br />
-                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="caja"/><br />
+                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="cajagrande"/><br />
                     <br />
                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="cajagrande"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
@@ -124,4 +123,13 @@
         
 </html>
  </asp:Content>
+    
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            width: 623px;
+        }
+    </style>
+</asp:Content>
+
     

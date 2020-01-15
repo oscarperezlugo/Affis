@@ -69,12 +69,12 @@
                     </table>
                     
                     
-                    <table style="width:100%;">
+                    <table >
                         <tr>
-                            <td class="auto-style13">
+                            <td >
                                 <asp:TextBox ID="TextBox7" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
-                            <td class="auto-style10">
+                            <td >
                                 <asp:TextBox ID="TextBox8" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
                             <td>
@@ -82,21 +82,21 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style13">
+                            <td>
                                 <asp:TextBox ID="TextBox10" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
-                            <td class="auto-style10">
-                                <asp:TextBox ID="TextBox11" runat="server" CssClass="cajagrande" style="margin-left: 0px"></asp:TextBox>
+                            <td >
+                                <asp:TextBox ID="TextBox11" runat="server" CssClass="cajagrande" ></asp:TextBox>
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox12" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style13">
+                            <td >
                                 <asp:TextBox ID="TextBox13" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
-                            <td class="auto-style10">
+                            <td >
                                 <asp:TextBox ID="TextBox14" runat="server" CssClass="cajagrande"></asp:TextBox>
                             </td>
                             <td>

@@ -41,13 +41,13 @@
                         <tr>
                             <td >
                     <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="cajagrande" /></td>
-                            <td><input id="Text1" class="cajagrande" placeholder="DIRECCION" type="text" runat="server" /></td>
+                            <td><asp:TextBox id="Text1" class="cajagrande" placeholder="DIRECCION" runat="server" /></td>
                             
                         </tr>
                         <tr>
                             <td >
                     <asp:TextBox id="Text2" placeholder="EMAIL" type="text" runat="server" class="cajagrande"/></td>
-                            <td><input id="cargo" class="cajagrande" placeholder="CARGO" type="text" runat="server"/></td>
+                            <td><asp:TextBox id="cargo1" class="cajagrande" placeholder="CARGO" type="text" runat="server"/></td>
                             
                         </tr>
                         <tr>

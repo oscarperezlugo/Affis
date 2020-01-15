@@ -17,29 +17,43 @@
             text-align: left;
             color: gray;
         }
+        .TableTopAlign {
+            align-content:center;
+            vertical-align: top;
+        }
+        .cajagrande {
+            border-color: lightgray;
+            border-radius: 6px;
+            
+            width: 350px;
+            
+        }
         .rootNode {
+            margin-top: 0px;
             color: black;
             font-family: Arial;
             font-weight: bold;
             font-size: 18px;
         }
-        .treeNode
-        {
-            color:gray;
+
+        .treeNode {
+             margin-top: 0px;
+            color: gray;
             font-family: Arial;
             font-weight: bold;
             font-size: 14px;
         }
-        .leafNode
-        {
+
+        .leafNode {
+             margin-top: 0px;
             font-size: 14px;
             font-weight: normal;
             color: gray;
         }
-        
-       
-       
-       
+
+
+
+
         .button2 {
             background-color: gray;
             border-radius: 5px;
@@ -77,7 +91,7 @@
             font-size: medium;
             font-family: Arial;
             font-weight: bold;
-            width: 120px;
+            width: 200px;
             
         }
          .gridcalc {
@@ -88,7 +102,22 @@
         }
          .content{
              width: 100%;
-         }
+        }
+          
+        .dropdown-content {
+            border: none;
+            font-family: Arial;
+            font-size: 10px;
+            width: 100px;
+            background-color: white;                        
+        }
+        .dropdown-contentG {
+            border: none;
+            font-family: Arial;
+            font-size: 10px;
+            width: 300px;
+            background-color: white;                        
+        }
         
         </style>
 </head>
@@ -118,12 +147,12 @@
         </div>
         
                        
-                        <td >
+                       
                             <table >
                                 <tr>
-                                    <td>
-                                        <br />
-                    <asp:TreeView ID="TreeView2" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode" position="top" >
+                                    <td class="TableTopAlign">
+                                       
+                    <asp:TreeView ID="TreeView2" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode"   >
                         <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
                         <LeafNodeStyle CssClass="leafNode" />
                         <Nodes>
@@ -159,9 +188,11 @@
                                 <asp:TreeNode Text="PRODUCTOS" Value="PRODUCTOS">
                                     <asp:TreeNode Text="WSM" Value="WSM" NavigateUrl="~/Productoswsm.aspx">
                                         <asp:TreeNode NavigateUrl="~/CreacionProductosWSM.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
                                     </asp:TreeNode>
                                     <asp:TreeNode Text="BANCA SEGUROS" Value="BANCA SEGUROS" NavigateUrl="~/Productosbs.aspx">
                                         <asp:TreeNode NavigateUrl="~/CreacionProductosBanca.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
                                     </asp:TreeNode>
                                 </asp:TreeNode>
                             </asp:TreeNode>

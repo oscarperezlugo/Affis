@@ -18,7 +18,7 @@
             font-size: medium;
             font-family: Arial;
             font-weight: bold;
-            width: 100%;
+            width: 350px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -32,14 +32,30 @@
             width: 30%;
         }
 
-
+        .cajagrande {
+            border-color: lightgray;
+            border-radius: 6px;
+            
+            width: 350px;
+            margin-top: 0px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .texto {
             font-family: Arial;
             font-size: small;
             font-weight: normal;
-            text-align: left;
+            margin-top: 0px;
+            text-align:center;
             color: gray;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .auto-style3 {
+            margin-top: 0px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -67,7 +83,7 @@
                         </tr>
                         <tr>
                             <td>
-        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" CssClass="auto-style3" ></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" CssClass="cajagrande" ></asp:TextBox>
                             </td>                            
                         </tr>
                         <tr>
@@ -76,7 +92,7 @@
                         </tr>
                         <tr>
                             <td>
-            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" CssClass="auto-style3" ></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" CssClass="cajagrande" ></asp:TextBox>
                             </td>                            
                         </tr>
                         <tr>
@@ -95,7 +111,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
+                            <td>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="texto" OnClick="LinkButtonClicked">Recuperar Contraseña</asp:LinkButton>
+                            </td>
                         </tr>
                       
                     </table>

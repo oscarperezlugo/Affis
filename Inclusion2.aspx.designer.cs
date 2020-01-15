@@ -84,7 +84,7 @@ namespace Affis
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.WebControls.TextBox Text1;
 
         /// <summary>
         /// Text2 control.
@@ -96,13 +96,13 @@ namespace Affis
         protected global::System.Web.UI.WebControls.TextBox Text2;
 
         /// <summary>
-        /// cargo control.
+        /// cargo1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText cargo;
+        protected global::System.Web.UI.WebControls.TextBox cargo1;
 
         /// <summary>
         /// Text6 control.

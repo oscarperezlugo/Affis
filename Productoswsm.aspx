@@ -4,7 +4,7 @@
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1">
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <title></title>
     
@@ -20,16 +20,14 @@
                     
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" CssClass="gridcalc" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" >
                         <Columns>
-                            <asp:BoundField DataField="Código" HeaderText="Código" SortExpression="Código" />
+                            <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
                             <asp:BoundField DataField="Producto" HeaderText="Producto" SortExpression="Producto" />
-                            <asp:BoundField DataField="Plan" HeaderText="Plan" SortExpression="Plan" />
-                            <asp:BoundField DataField="Edad_mínima" HeaderText="Edad_mínima" SortExpression="Edad_mínima" />
-                            <asp:BoundField DataField="Edad_máxima" HeaderText="Edad_máxima" SortExpression="Edad_máxima" />
-                            <asp:BoundField DataField="Edad_máxima_renova" HeaderText="Edad_máxima_renova" SortExpression="Edad_máxima_renova" />
-                            <asp:BoundField DataField="Aplica_a" HeaderText="Aplica_a" SortExpression="Aplica_a" />
+                            <asp:BoundField DataField="Plano" HeaderText="Plano" SortExpression="Plano" />
+                            <asp:BoundField DataField="Edadminima" HeaderText="Edadminima" SortExpression="Edadminima" />
+                            <asp:BoundField DataField="Edadmaxima" HeaderText="Edadmaxima" SortExpression="Edadmaxima" />
+                            <asp:BoundField DataField="Edadmaximarenova" HeaderText="Edadmaximarenova" SortExpression="Edadmaximarenova" />
+                            <asp:BoundField DataField="Aplicaa" HeaderText="Aplicaa" SortExpression="Aplicaa" />
                             <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
-                            <asp:BoundField DataField="Cobertura" HeaderText="Cobertura" SortExpression="Cobertura" />
-                            <asp:BoundField DataField="Causa" HeaderText="Causa" SortExpression="Causa" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -40,12 +38,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Código], [Producto], [Plan], [Edad mínima] AS Edad_mínima, [Edad máxima] AS Edad_máxima, [Edad máxima renova] AS Edad_máxima_renova, [Aplica a] AS Aplica_a, [Valor], [Cobertura], [Causa] FROM [PRODUCTOS]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRESCOMPLETOS], [CEDULA], [RELACION], [COSTO] FROM [ASEGURADOS] WHERE ([TOMADOR] = @TOMADOR)">
-                        <SelectParameters>
-                            <asp:SessionParameter Name="TOMADOR" SessionField="reemplazo" Type="String" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Codigo], [Producto], [Plano], [Edadminima], [Edadmaxima], [Edadmaximarenova], [Aplicaa], [Valor] FROM [PRODUCTOS]"></asp:SqlDataSource>
                     
                     
                     <asp:Button ID="Button1" runat="server" Text="SIGUIENTE" CssClass="button" OnClick="Button1_Click" />

@@ -46,7 +46,7 @@ namespace Affis
             DataSet ds = new DataSet();
 
 
-            string sqlQuery = "SELECT DISTINCT[Valor], [Producto], [Plan] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND([Plan] LIKE '%" + plan +"%'))";
+            string sqlQuery = "SELECT DISTINCT[Valor], [Producto], [Plano] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND([Plano] LIKE '%" + plan +"%'))";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
             da.Fill(ds);

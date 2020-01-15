@@ -13,10 +13,10 @@
         </tr>
         <tr>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
             </td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox7" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
         </tr>
          <tr>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdown-content">
                     <asp:ListItem>A</asp:ListItem>
                     <asp:ListItem>B</asp:ListItem>
                     <asp:ListItem>C</asp:ListItem>
@@ -49,7 +49,7 @@
                 </asp:DropDownList>
              </td>
             <td>
-                <asp:DropDownList ID="DropDownList2" runat="server">
+                <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown-content">
                     <asp:ListItem>6 Meses</asp:ListItem>
                     <asp:ListItem>5 Años</asp:ListItem>
                     <asp:ListItem>18 Años</asp:ListItem>
@@ -57,21 +57,21 @@
                 </asp:DropDownList>
              </td>
              <td>
-                 <asp:DropDownList ID="DropDownList3" runat="server">
+                 <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdown-content">
                      <asp:ListItem>55 Años</asp:ListItem>
                      <asp:ListItem>65 Años</asp:ListItem>
                      <asp:ListItem>70 Años</asp:ListItem>
                  </asp:DropDownList>
              </td>
             <td>
-                <asp:DropDownList ID="DropDownList4" runat="server">
+                <asp:DropDownList ID="DropDownList4" runat="server" CssClass="dropdown-content">
                     <asp:ListItem>21 Años</asp:ListItem>
                     <asp:ListItem>65 Años</asp:ListItem>
                     <asp:ListItem>70 Años</asp:ListItem>
                 </asp:DropDownList>
              </td>
             <td>
-                <asp:DropDownList ID="DropDownList5" runat="server">
+                <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdown-content">
                     <asp:ListItem>Conyugue</asp:ListItem>
                     <asp:ListItem>Padre</asp:ListItem>
                     <asp:ListItem>Madre</asp:ListItem>
@@ -79,7 +79,7 @@
                 </asp:DropDownList>
              </td>
              <td>
-                 <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                 <asp:TextBox ID="TextBox5" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
              </td>
         </tr>
         <tr>

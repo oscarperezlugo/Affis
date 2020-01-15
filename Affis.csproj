@@ -129,8 +129,10 @@
     <Content Include="Content\svg-with-js.min.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <Content Include="EditarProducto2.aspx" />
     <Content Include="CreacionProductosWSM.aspx" />
     <Content Include="CreacionProductosBanca.aspx" />
+    <Content Include="EditarProducto1.aspx" />
     <Content Include="Productosbs.aspx" />
     <Content Include="Productoswsm.aspx" />
     <Content Include="Reemplazo3.aspx" />
@@ -161,6 +163,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="RecuperarPass.aspx" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -260,6 +263,13 @@
     <Compile Include="Cobranzas.aspx.designer.cs">
       <DependentUpon>Cobranzas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarProducto2.aspx.cs">
+      <DependentUpon>EditarProducto2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarProducto2.aspx.designer.cs">
+      <DependentUpon>EditarProducto2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreacionProductosWSM.aspx.cs">
       <DependentUpon>CreacionProductosWSM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,6 +283,13 @@
     </Compile>
     <Compile Include="CreacionProductosBanca.aspx.designer.cs">
       <DependentUpon>CreacionProductosBanca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProducto1.aspx.cs">
+      <DependentUpon>EditarProducto1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarProducto1.aspx.designer.cs">
+      <DependentUpon>EditarProducto1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productosbs.aspx.cs">
       <DependentUpon>Productosbs.aspx</DependentUpon>
@@ -415,6 +432,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarPass.aspx.cs">
+      <DependentUpon>RecuperarPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarPass.aspx.designer.cs">
+      <DependentUpon>RecuperarPass.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

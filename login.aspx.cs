@@ -20,9 +20,9 @@ namespace Affis
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            // define your connection string (typically from a .config file) and your query WITH parameters!
+            
             string connectionString = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-            string query = "SELECT NOMBRE, ROL, FICHA FROM LOGIN$ WHERE USUARIO=@user AND CONTRASENA=@pwd;";
+            string query = "SELECT , ROL, FICHA FROM LOGIN$ WHERE USUARIO=@user AND CONTRASENA=@pwd;";
 
             // set up a connection and command in using() blocks
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -70,7 +70,7 @@ namespace Affis
                     {
                         string error = "Usuario y Contraseña incorrectos";
                         Label1.Text = error;
-                        
+
                         // what do you want to do if NO ROW was returned? E.g. user/pwd combo is wrong
                     }
 
@@ -81,6 +81,9 @@ namespace Affis
             }
         }
 
-
+        protected void LinkButtonClicked(object sender, EventArgs e)
+        {
+            Response.Redirect("RecuperarPass");
+        }
     }
 }

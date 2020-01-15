@@ -4,7 +4,7 @@
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <title></title>
     
@@ -55,13 +55,13 @@
                                 <asp:TextBox ID="TextBox1" runat="server" CssClass="cajagrande" placeholder="BANCO"></asp:TextBox>
                             </td>
                             <td class="texto">
-                                <asp:CheckBox ID="CheckBox1" runat="server" Text="Corriente" />
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="cajagrande" placeholder="NRO CUENTA" ></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             
                             <td >
-                                <asp:TextBox ID="TextBox2" runat="server" CssClass="cajagrande" placeholder="NRO CUENTA" ></asp:TextBox>
+                                <asp:CheckBox ID="CheckBox1" runat="server" Text="Corriente" CssClass="texto" />
                             </td>
                             <td>
                                 <asp:CheckBox ID="CheckBox2" runat="server" CssClass="texto" Text="Ahorros" />
@@ -91,7 +91,7 @@
                         <tr>
                             <td class="auto-style6">&nbsp;</td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style9" placeholder="CODIGO DE SEGURIDAD"></asp:TextBox>
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="cajagrande" placeholder="CODIGO DE SEGURIDAD" class="cajagrande"></asp:TextBox>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -101,7 +101,7 @@
                                 <asp:Label ID="Label6" runat="server" Text="PRIMA TOTAL" Class="texto"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="Label7" runat="server" CssClass="certificado"></asp:Label>
+                                <asp:Label ID="Label7" runat="server" CssClass="certificado" Font-Bold="True" ForeColor="Red"></asp:Label>
                             </td>
                         </tr>
                     </table>

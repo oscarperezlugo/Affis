@@ -18,7 +18,9 @@
                 <td >
                     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="NOMBRECOMERCIAL" DataValueField="NOMBRECOMERCIAL" CssClass="cajagrande">
                     </asp:DropDownList>
+                    <br />
                     <asp:Button ID="Button1" runat="server" Text="FILTRAR" OnClick="Button1_Click" class="button"/>
+                    <br/>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                     
                     
@@ -40,6 +42,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
+                    <br />
                     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE"  CssClass="button"/>
                     
                     

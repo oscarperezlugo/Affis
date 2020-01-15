@@ -33,8 +33,8 @@ namespace Affis
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["cedula"] = String.Format("{0}", Request.Form["Text3"]);
-            Session["nombre"] = String.Format("{0}", Request.Form["Text6"]);
+            Session["cedula"] = Text3.Text;
+            Session["nombre"] = Text6.Text;
             Session["genero"] = String.Format("{0}", DropDownList1.SelectedValue);
             Session["ano"] = String.Format("{0}", DropDownList2.SelectedValue);
             Session["mes"] = String.Format("{0}", DropDownList3.SelectedValue);
@@ -42,22 +42,22 @@ namespace Affis
 
             using (SqlConnection openCon = new SqlConnection("workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity"))
             {
-                string empresa = String.Format("{0}", Request.Form["TextBox1"]);
-                string direccion = String.Format("{0}", Request.Form["TextBox2"]);
-                string medio = String.Format("{0}", Request.Form["TextBox3"]);
-                string telempresa = String.Format("{0}", Request.Form["TextBox4"]);
-                string cedula = String.Format("{0}", Request.Form["Text3"]);
-                string dirper = String.Format("{0}", Request.Form["Text1"]);
-                string email = String.Format("{0}", Request.Form["Text2"]);
+                string empresa = TextBox1.Text;
+                string direccion = TextBox2.Text;
+                string medio = TextBox3.Text;
+                string telempresa = TextBox4.Text;
+                string cedula = Text3.Text;
+                string dirper = Text1.Text;
+                string email = Text2.Text;
                 //string cargo = String.Format("{0}", Request.Form["cargo"]);
-                string cargo = "prueba";
+                string cargo = cargo1.Text;
                 string fechanac = String.Format("{0}", DropDownList2.SelectedValue + DropDownList3.SelectedValue + DropDownList4.SelectedValue);
                 string fechavig = String.Format("{0}", DropDownList5.SelectedValue + DropDownList6.SelectedValue + DropDownList7.SelectedValue);
                 string fechaefec = String.Format("{0}", DropDownList8.SelectedValue + DropDownList9.SelectedValue + DropDownList10.SelectedValue);
-                string nombre = String.Format("{0}", Request.Form["Text6"]);
-                string codigo = String.Format("{0}", Request.Form["codigo"]);
-                string telcelular = String.Format("{0}", Request.Form["Text7"]);
-                string teldom = String.Format("{0}", Request.Form["Text8"]);
+                string nombre = Text6.Text;
+                string codigo = "codigo";
+                string telcelular = Text7.Text;
+                string teldom = Text8.Text;
                 string genero = String.Format("{0}", DropDownList1.SelectedValue);
                 
 
