@@ -22,7 +22,7 @@ namespace Affis
         {
             
             string connectionString = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-            string query = "SELECT , ROL, FICHA FROM LOGIN$ WHERE USUARIO=@user AND CONTRASENA=@pwd;";
+            string query = "SELECT NOMBRE, ROL, FICHA FROM LOGIN$ WHERE USUARIO=@user AND CONTRASENA=@pwd;";
 
             // set up a connection and command in using() blocks
             using (SqlConnection con = new SqlConnection(connectionString))

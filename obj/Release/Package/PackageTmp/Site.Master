@@ -1,71 +1,225 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Affis.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Affis.Site" %>
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
+        .texto {
+            font-family: Arial;
+            font-size: small;
+            font-weight: normal;
+            text-align: left;
+            color: gray;
+        }
+        .TableTopAlign {
+            align-content:center;
+            vertical-align: top;
+        }
+        .cajagrande {
+            border-color: lightgray;
+            border-radius: 6px;
+            
+            width: 350px;
+            
+        }
+        .rootNode {
+            margin-top: 0px;
+            color: black;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        .treeNode {
+             margin-top: 0px;
+            color: gray;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 14px;
+        }
 
+        .leafNode {
+             margin-top: 0px;
+            font-size: 14px;
+            font-weight: normal;
+            color: gray;
+        }
+
+
+
+
+        .button2 {
+            background-color: gray;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: medium;
+            font-family: Arial;
+            font-weight: bold;
+            width: 120px;
+        }
+        .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+        .subtitulo {
+            font-family: Arial;
+            font-size: medium;
+            font-weight: normal;
+            text-align: left;
+            color: white;
+        }
+        
+        .button {
+            background-color: white;
+            border-radius: 5px;
+            border: solid;
+            border-color: gray;
+            color: gray;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: medium;
+            font-family: Arial;
+            font-weight: bold;
+            width: 200px;
+            
+        }
+         .gridcalc {
+            border-color: white;
+            font-family: Arial;
+            font-weight: normal;
+            
+        }
+         .content{
+             width: 100%;
+        }
+          
+        .dropdown-content {
+            border: none;
+            font-family: Arial;
+            font-size: 10px;
+            width: 100px;
+            background-color: white;                        
+        }
+        .dropdown-contentG {
+            border: none;
+            font-family: Arial;
+            font-size: 10px;
+            width: 300px;
+            background-color: white;                        
+        }
+        
+        </style>
 </head>
 <body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+    <form id="form1" runat="server">
+        
+            
+                
+        <div style="background-color:gray;" class="auto-style3">
+            
+            
+           <table>
+               <tr>
+                   <td class="auto-style9"><asp:Image ID="Image12" runat="server" ImageUrl="~/Sin título-1.png" Height="75" CssClass="auto-style7" /></td>
+                   <td><asp:TextBox ID="TextBox4" runat="server" class="caja" Height="30" Width="450" placeholder="Introduzca el valor" CssClass="auto-style10"></asp:TextBox> </td>
+                   <td><asp:LinkButton ID="buttonsearch" runat="server" class="button2" OnClick="buttonsearch_Click" ><i class="fa fa-address-card"></i> CEDULA</asp:LinkButton></td>
+                   <td><asp:LinkButton ID="certbutton" runat="server" class="button2" OnClick="certbutton_click" ><i class="fa fa-certificate"></i> CERT</asp:LinkButton></td>
+               </tr>
+              
+           </table> 
+            <table>
+                <tr>
+                   <td class="auto-style11"><asp:Label ID="Label2" runat="server" class="subtitulo" ></asp:Label></td>
+                   
+               </tr>
+                </table> 
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
+        
+                       
+                       
+                            <table >
+                                <tr>
+                                    <td class="TableTopAlign">
+                                       
+                    <asp:TreeView ID="TreeView2" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode"   >
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <LeafNodeStyle CssClass="leafNode" />
+                        <Nodes>
+                            <asp:TreeNode SelectAction="None" Text="WSM" Value="WSM" >
+                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
+                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA" SelectAction="Expand"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="VENTAS" Value="VENTAS">
+                                    <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="ADICION" Value="ADICION" NavigateUrl="~/Adicion.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="REEMPLAZO" Value="REEMPLAZO" NavigateUrl="~/Reemplazo.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode SelectAction="None" Text="BANCA SEGUROS" Value="BANCA SEGUROS">
+                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
+                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode SelectAction="None" Text="VENTAS" Value="VENTAS">
+                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Inclusion2.aspx" Text="INCLUSION" Value="INCLUSION"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode SelectAction="None" Text="COBRANZA" Value="COBRANZA">
+                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Cobranzas.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode SelectAction="None" Text="RECLAMOS" Value="RECLAMOS">
+                                    <asp:TreeNode Text="CASOS" Value="CASOS"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode SelectAction="None" Text="COMISIONES" Value="COMISIONES">
+                                    <asp:TreeNode Text="COMISION" Value="COMISION"></asp:TreeNode>
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="OPERACIONES" Value="OPERACIONES">
+                                <asp:TreeNode Text="PRODUCTOS" Value="PRODUCTOS">
+                                    <asp:TreeNode Text="WSM" Value="WSM" NavigateUrl="~/Productoswsm.aspx">
+                                        <asp:TreeNode NavigateUrl="~/CreacionProductosWSM.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="BANCA SEGUROS" Value="BANCA SEGUROS" NavigateUrl="~/Productosbs.aspx">
+                                        <asp:TreeNode NavigateUrl="~/CreacionProductosBanca.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                        
+<NodeStyle CssClass="treeNode"></NodeStyle>
+                        <RootNodeStyle CssClass="rootNode" />
+                        
+                    </asp:TreeView>
+                                    </td>
+                                    <td class="content">
+                                        
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
 
+                                        </asp:ContentPlaceHolder>
+                                        
+                                    </td>
+                                    
+                                </tr>
+                                
+                            </table>
+                      
+                    
+                   
+               
+            
+        
     </form>
 </body>
 </html>

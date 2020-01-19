@@ -1,186 +1,28 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Adicion.aspx.cs" Inherits="Affis.Adicion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Adicion.aspx.cs" Inherits="Affis.Adicion" MasterPageFile="~/Site.Master" %>
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+ <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
+     <!DOCTYPE html>
+ 
+     <html>
+   
+<head >
     <title></title>
-    <style type="text/css">
-        
-        .auto-style1 {
-            font: Arial;
-            width: 250px;
-        }
-        .treeNode
-        {
-            color:gray;
-            font-family: Arial;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .rootNode
-        {
-            color:black;
-            font-family: Arial;
-            font-weight: bold;
-            font-size: 18px;
-            
-        }
-        .gridcalc {
-            border-color: white;
-            font-family: Arial;
-            font-weight: bold;
-            
-        }
-        .leafNode
-        {
-            font-size: 14px;
-            font-weight: normal;
-            color: gray;
-        }
-        .auto-style2 {
-            width: 100%;
-            margin-top: 0px;
-        }
-        .caja {
-            border-color: lightgray;
-            border-radius: 6px;
-            width: 30%;
-            
-            
-        }
-        
-
-        .cajagrande {
-            border-color: lightgray;
-            border-radius: 6px;
-            width: 30%;
-        }
-        .auto-style3 {
-            height: 63px;
-            width: 100%;
-        }
-        .auto-style4 {
-            width: 778px;
-        }
-        .button {
-            background-color: gray;
-            border-radius: 30px;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: medium;
-            font-family: Arial;
-            font-weight: bold;
-            width: 30%;
-            
-        }
-        .dropdown-content {
-            border: none;
-            font-family: Arial;
-            font-size: 10px;
-            width: 15%;
-            background-color: white;                        
-        }
-        .dropdown-contentG {
-            border: none;
-            font-family: Arial;
-            font-size: 10px;
-            width: 30%;
-            background-color: white;                        
-        }
-        .subtitulo {
-            font-family: Arial;
-            font-size: medium;
-            font-weight: normal;
-            text-align: left;
-            color: white;
-        }
-        .texto {
-            font-family: Arial;
-            font-size: small;
-            font-weight: normal;
-            text-align: left;
-            color: gray;
-        }
-        .auto-style5 {
-            width: 37%;
-        }
-        .auto-style6 {
-            width: 33px;
-        }
-        </style>
+    
+   
 </head>
 <body>
-    <form id="form12" runat="server">
-        <div style="background-color:gray;" class="auto-style3">
-            <asp:Image ID="Image12" runat="server" ImageUrl="~/Sin título-1.png" Height="75" />                                                 
-        </div>
-        <div style="background-color:gray">
-             <asp:Label ID="Label1" runat="server" Text="ADICION" class="subtitulo" ></asp:Label>
-        </div>
-        <table class="auto-style2">
+    
+        
+        <table >
             <tr>
-                <td class="auto-style1">
-                    <asp:Label ID="Label4" runat="server" CssClass="texto"></asp:Label>
-                    <asp:TreeView ID="TreeView2" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode" >
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                        <LeafNodeStyle CssClass="leafNode" />
-                        <Nodes>
-                            <asp:TreeNode SelectAction="None" Text="WSM" Value="WSM" >
-                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
-                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA" SelectAction="Expand"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="VENTAS" Value="VENTAS">
-                                    <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="ADICION" Value="ADICION" NavigateUrl="~/Adicion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="REEMPLAZO" Value="REEMPLAZO" NavigateUrl="~/Reemplazo.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode SelectAction="None" Text="BANCA SEGUROS" Value="BANCA SEGUROS">
-                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
-                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="VENTAS" Value="VENTAS">
-                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/Inclusion2.aspx" Text="INCLUSION" Value="INCLUSION"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="COBRANZA" Value="COBRANZA">
-                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Cobranzas.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="RECLAMOS" Value="RECLAMOS">
-                                    <asp:TreeNode Text="CASOS" Value="CASOS"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="COMISIONES" Value="COMISIONES">
-                                    <asp:TreeNode Text="COMISION" Value="COMISION"></asp:TreeNode>
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode Text="OPERACIONES" Value="OPERACIONES">
-                                <asp:TreeNode Text="PRODUCTOS" Value="PRODUCTOS">
-                                    <asp:TreeNode Text="WSM" Value="WSM" NavigateUrl="~/Productoswsm.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="BANCA SEGUROS" Value="BANCA SEGUROS" NavigateUrl="~/Productosbs.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                        </Nodes>
-                        
-<NodeStyle CssClass="treeNode"></NodeStyle>
-                        <RootNodeStyle CssClass="rootNode" />
-                        
-                    </asp:TreeView>
+                
+                
+                <td class="auto-style1" >
+                    <asp:TextBox ID="TextBox1" runat="server" class="cajagrande" placeholder="TOMADOR CEDULA"></asp:TextBox>
+                    &nbsp;<br />
                     <br />
-                </td>
-                 
-                <td class="auto-style4">
-                    <asp:TextBox ID="TextBox1" runat="server" class="caja"></asp:TextBox>
-                    &nbsp;<asp:Label ID="Label2" runat="server" Text="TOMADOR PRNCIPAL CEDULA" CssClass="texto"></asp:Label>
-                    <br />
-                    <br />
-                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="caja"/><br />
+                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="cajagrande"/><br />
                     <br />
                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="cajagrande"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
@@ -217,7 +59,7 @@
                         <asp:ListItem>C</asp:ListItem>
                     </asp:DropDownList>
                     <br />
-                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="CALCULAR" CssClass="button" />
+                    <asp:LinkButton ID="Button3" runat="server" OnClick="Button3_Click"  CssClass="button" ><i class="fa fa-calculator"></i> CALCULAR</asp:LinkButton>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;<table class="auto-style5">
                         
@@ -241,15 +83,16 @@
                     <br />
                     &nbsp;&nbsp;
                     <br />
-                    <asp:Button class="button" ID="Button1" runat="server" OnClick="Button1_Click" Text="ADICIONAR" />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" CssClass="button" />
+                    <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click"  ><i class="fa fa-plus-circle"></i> ADICIONAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="button" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     <br />
+                    
                     <br />
                     
                     
                 </td>
         
-              
+             
             
             </tr>
             
@@ -275,6 +118,18 @@
         
         
         
-    </form>
+    
 </body>
+        
 </html>
+ </asp:Content>
+    
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            width: 623px;
+        }
+    </style>
+</asp:Content>
+
+    

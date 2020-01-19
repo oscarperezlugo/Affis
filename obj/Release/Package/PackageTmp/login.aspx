@@ -18,38 +18,44 @@
             font-size: medium;
             font-family: Arial;
             font-weight: bold;
-            width: 100%;
+            width: 350px;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
 
         .auto-style1 {
             width: 70%;
-            height: 19px;
         }
-
         .auto-style2 {
             width: 30%;
-            height: 232px;
         }
 
-        .auto-style3 {
+        .cajagrande {
+            border-color: lightgray;
+            border-radius: 6px;
+            
+            width: 350px;
             margin-top: 0px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            border-color: lightgray;
-            border-radius: 6px;
-            width: 100%;
         }
+
         .texto {
             font-family: Arial;
             font-size: small;
             font-weight: normal;
-            text-align: left;
+            margin-top: 0px;
+            text-align:center;
             color: gray;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .auto-style3 {
+            margin-top: 0px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -72,12 +78,12 @@
                     <table style="width: 100%; ">
                         <tr>
                             <td>
-                                <asp:Image ID="Image1" runat="server" ImageUrl="https://www.stickpng.com/assets/thumbs/585e4bf3cb11b227491c339a.png" width="70%" CssClass="auto-style3" Height="277px"/>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="https://image.flaticon.com/icons/png/512/32/32438.png" width="70%" CssClass="auto-style3" Height="277px"/>
                             </td>                            
                         </tr>
                         <tr>
                             <td>
-        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" CssClass="auto-style3" ></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" CssClass="cajagrande" ></asp:TextBox>
                             </td>                            
                         </tr>
                         <tr>
@@ -86,7 +92,7 @@
                         </tr>
                         <tr>
                             <td>
-            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" CssClass="auto-style3" ></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" CssClass="cajagrande" ></asp:TextBox>
                             </td>                            
                         </tr>
                         <tr>
@@ -105,7 +111,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
+                            <td>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="texto" OnClick="LinkButtonClicked">Recuperar Contraseña</asp:LinkButton>
+                            </td>
                         </tr>
                       
                     </table>

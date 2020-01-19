@@ -13,19 +13,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
     <File Include="Adicion.aspx">
-      <publishTime>01/08/2020 19:46:26</publishTime>
+      <publishTime>01/15/2020 15:30:55</publishTime>
     </File>
     <File Include="AperturaEmpresa.aspx">
-      <publishTime>01/08/2020 19:46:38</publishTime>
+      <publishTime>01/14/2020 14:46:35</publishTime>
     </File>
     <File Include="Beneficiarios.aspx">
-      <publishTime>01/08/2020 19:46:48</publishTime>
+      <publishTime>01/15/2020 16:25:47</publishTime>
     </File>
     <File Include="bin/Affis.dll">
-      <publishTime>01/08/2020 22:27:51</publishTime>
+      <publishTime>01/17/2020 15:46:55</publishTime>
     </File>
     <File Include="bin/Affis.pdb">
-      <publishTime>01/08/2020 22:27:51</publishTime>
+      <publishTime>01/17/2020 15:46:55</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 22:29:20</publishTime>
@@ -205,19 +205,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2014 18:57:34</publishTime>
     </File>
     <File Include="Bundle.config">
-      <publishTime>11/27/2019 16:38:25</publishTime>
+      <publishTime>01/11/2020 14:04:25</publishTime>
+    </File>
+    <File Include="BuscaCedula.aspx">
+      <publishTime>01/14/2020 14:17:08</publishTime>
+    </File>
+    <File Include="BuscaCert.aspx">
+      <publishTime>01/13/2020 19:56:34</publishTime>
     </File>
     <File Include="Certificado.aspx">
-      <publishTime>01/08/2020 19:46:59</publishTime>
+      <publishTime>01/14/2020 14:50:53</publishTime>
     </File>
     <File Include="Coberturas.aspx">
-      <publishTime>01/08/2020 19:47:10</publishTime>
+      <publishTime>01/14/2020 14:51:52</publishTime>
     </File>
     <File Include="Cobranzas.aspx">
-      <publishTime>01/08/2020 19:47:19</publishTime>
+      <publishTime>01/15/2020 16:20:37</publishTime>
     </File>
     <File Include="ConsultaCedula.aspx">
-      <publishTime>01/08/2020 21:29:07</publishTime>
+      <publishTime>01/14/2020 14:56:30</publishTime>
     </File>
     <File Include="Contact.aspx">
       <publishTime>11/27/2019 16:38:25</publishTime>
@@ -246,11 +252,65 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css.map">
       <publishTime>11/27/2019 16:38:52</publishTime>
     </File>
+    <File Include="Content/brands.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/brands.min.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/fontawesome-all.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/fontawesome-all.min.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/fontawesome.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/fontawesome.min.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/regular.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/regular.min.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
     <File Include="Content/Site.css">
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
+    <File Include="Content/solid.css">
+      <publishTime>01/11/2020 13:33:28</publishTime>
+    </File>
+    <File Include="Content/solid.min.css">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Content/svg-with-js.css">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Content/svg-with-js.min.css">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Content/v4-shims.css">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Content/v4-shims.min.css">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="CreacionProductosBanca.aspx">
+      <publishTime>01/15/2020 17:47:07</publishTime>
+    </File>
+    <File Include="CreacionProductosWSM.aspx">
+      <publishTime>01/15/2020 17:57:05</publishTime>
+    </File>
     <File Include="Default.aspx">
       <publishTime>11/27/2019 16:38:25</publishTime>
+    </File>
+    <File Include="EditarProducto1.aspx">
+      <publishTime>01/15/2020 18:53:55</publishTime>
+    </File>
+    <File Include="EditarProducto2.aspx">
+      <publishTime>01/15/2020 18:56:09</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/27/2019 16:38:25</publishTime>
@@ -274,34 +334,79 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
     <File Include="Inclusion.aspx">
-      <publishTime>01/08/2020 19:47:59</publishTime>
+      <publishTime>01/15/2020 15:54:29</publishTime>
     </File>
     <File Include="Inclusion2.aspx">
-      <publishTime>01/08/2020 19:48:10</publishTime>
+      <publishTime>01/15/2020 16:14:24</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>01/08/2020 19:40:09</publishTime>
+      <publishTime>01/15/2020 15:03:25</publishTime>
     </File>
     <File Include="Productosbs.aspx">
-      <publishTime>01/08/2020 19:48:23</publishTime>
+      <publishTime>01/15/2020 14:48:29</publishTime>
     </File>
     <File Include="Productoswsm.aspx">
-      <publishTime>01/08/2020 19:48:33</publishTime>
+      <publishTime>01/15/2020 14:47:16</publishTime>
+    </File>
+    <File Include="RecuperarPass.aspx">
+      <publishTime>01/15/2020 13:59:57</publishTime>
     </File>
     <File Include="Reemplazo.aspx">
-      <publishTime>01/08/2020 19:48:42</publishTime>
+      <publishTime>01/14/2020 14:29:29</publishTime>
     </File>
     <File Include="Reemplazo2.aspx">
-      <publishTime>01/08/2020 19:48:51</publishTime>
+      <publishTime>01/14/2020 14:32:07</publishTime>
     </File>
     <File Include="Reemplazo3.aspx">
-      <publishTime>01/08/2020 19:49:04</publishTime>
+      <publishTime>01/15/2020 17:40:32</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/27/2019 16:38:52</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>11/27/2019 16:38:52</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/all.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/all.min.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/brands.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/brands.min.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/conflict-detection.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/conflict-detection.min.js">
+      <publishTime>01/11/2020 13:33:27</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/fontawesome.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/fontawesome.min.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/regular.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/regular.min.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/solid.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/solid.min.js">
+      <publishTime>01/11/2020 13:33:26</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/v4-shims.js">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/v4-shims.min.js">
+      <publishTime>01/11/2020 13:33:25</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
       <publishTime>11/27/2019 16:38:44</publishTime>
@@ -391,7 +496,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/13/2019 11:43:28</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>11/27/2019 16:38:25</publishTime>
+      <publishTime>01/15/2020 18:56:11</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>11/27/2019 16:38:58</publishTime>
@@ -400,7 +505,52 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2019 16:38:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/08/2020 21:39:44</publishTime>
+      <publishTime>01/17/2020 15:15:57</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.eot">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.svg">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.ttf">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff2">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.eot">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.svg">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.ttf">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff2">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.eot">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.svg">
+      <publishTime>01/11/2020 13:33:25</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.ttf">
+      <publishTime>01/11/2020 13:33:24</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff">
+      <publishTime>01/11/2020 13:33:24</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff2">
+      <publishTime>01/11/2020 13:33:23</publishTime>
     </File>
   </ItemGroup>
 </Project>
