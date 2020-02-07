@@ -15,6 +15,15 @@ namespace Affis
     {
 
         /// <summary>
+        /// Label12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
+
+        /// <summary>
         /// SqlDataSource3 control.
         /// </summary>
         /// <remarks>
@@ -150,13 +159,13 @@ namespace Affis
         protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
 
         /// <summary>
-        /// DropDownList6 control.
+        /// DropDownList11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList6;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList11;
 
         /// <summary>
         /// DropDownList7 control.
@@ -177,13 +186,13 @@ namespace Affis
         protected global::System.Web.UI.WebControls.DropDownList DropDownList8;
 
         /// <summary>
-        /// DropDownList9 control.
+        /// DropDownList12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList9;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList12;
 
         /// <summary>
         /// DropDownList10 control.
@@ -319,5 +328,23 @@ namespace Affis
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button4;
+
+        /// <summary>
+        /// Button7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button7;
+
+        /// <summary>
+        /// Button8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button8;
     }
 }

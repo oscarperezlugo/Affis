@@ -58,5 +58,11 @@ namespace Affis
                 //MessageBox.Show("Seleccione una Empresa");
             }
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Affis
     {
         public string filtro { get; set; }
         public string plan { get; set; }
+        public string relacion { get; set; }
     }
 }

@@ -48,7 +48,7 @@ namespace Affis
                     finally
                     {
                         con.Close();
-                        Response.Write("<script>alert('ACTUALIZADO')</script>");
+                        Response.Write("<script>alert('PASSWORD ACTUALIZADO')</script>");
                         Response.Redirect("login.aspx");
                     }
 

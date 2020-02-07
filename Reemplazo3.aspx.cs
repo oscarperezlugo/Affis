@@ -24,6 +24,7 @@ namespace Affis
             filtrovalor filtrosend = new filtrovalor();
             filtrosend.filtro = DropDownList8.SelectedValue;
             filtrosend.plan = DropDownList7.SelectedValue;
+            filtrosend.relacion = DropDownList5.SelectedValue;
             GridView1.DataSource = conn.Obtenerinfo3(filtrosend);
             GridView1.DataBind();
 

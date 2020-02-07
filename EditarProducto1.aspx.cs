@@ -48,7 +48,7 @@ namespace Affis
                         string edadmaxima = dr.GetFieldValue<string>(3);
                         string edadminimar = dr.GetFieldValue<string>(4);
                         string aplica = dr.GetFieldValue<string>(5);
-                        string valor = dr.GetFieldValue<string>(6);
+                        decimal valor = dr.GetFieldValue<decimal>(6);
                         Session["producto"] = producto.ToString();
                         Session["plan"] = plan.ToString();
                         Session["edadminima"] = edadminima.ToString();

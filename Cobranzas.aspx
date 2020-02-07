@@ -2,7 +2,10 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-<!DOCTYPE html>
+    <asp:Label ID="Label8" runat="server" CssClass="treeNode" Text="COBRANZA"></asp:Label>
+    <br />
+    <br />
+    <!DOCTYPE html>
 
 <html>
 <head >
@@ -45,26 +48,26 @@
                     <table >
                         <tr>
                             <td >
-                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdown-contentG">
+                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                                     <asp:ListItem>MEDIO DE COBRO</asp:ListItem>
                                     <asp:ListItem>ROL DE PAGOS</asp:ListItem>
                                     <asp:ListItem>TARJETA DE CREDITO</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
+                            &nbsp;</td>
                             <td>
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="cajagrande" placeholder="BANCO"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="BANCO"></asp:TextBox>
                             </td>
                             <td class="texto">
-                                <asp:TextBox ID="TextBox2" runat="server" CssClass="cajagrande" placeholder="NRO CUENTA" ></asp:TextBox>
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="NRO CUENTA" ></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             
                             <td >
-                                <asp:CheckBox ID="CheckBox1" runat="server" Text="Corriente" CssClass="texto" />
-                            </td>
+                                &nbsp;</td>
                             <td>
                                 <asp:CheckBox ID="CheckBox2" runat="server" CssClass="texto" Text="Ahorros" />
+                                <asp:CheckBox ID="CheckBox1" runat="server" Text="Corriente" CssClass="texto" />
                             </td>
                         </tr>
                         
@@ -74,7 +77,7 @@
                     <table style="width:100%;">
                         <tr>
                             <td class="auto-style6">
-                                <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown-contentG">
+                                <asp:DropDownList ID="DropDownList2" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                                     <asp:ListItem>SELECCIONE TARJETA</asp:ListItem>
                                     <asp:ListItem>VISA</asp:ListItem>
                                     <asp:ListItem>MASTER CARD</asp:ListItem>
@@ -82,16 +85,16 @@
                                 </asp:DropDownList>
                             </td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox3" runat="server" CssClass="cajagrande" placeholder="VENCIMIENTO"></asp:TextBox>
+                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="VENCIMIENTO"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox5" runat="server" CssClass="cajagrande" placeholder="NUMERO"></asp:TextBox>
+                                <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" placeholder="NUMERO"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style6">&nbsp;</td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox4" runat="server" CssClass="cajagrande" placeholder="CODIGO DE SEGURIDAD" class="cajagrande"></asp:TextBox>
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" placeholder="CODIGO DE SEGURIDAD" class="cajagrande"></asp:TextBox>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -114,7 +117,13 @@
                         <tr>
                             
                             <td>
-                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="button"/>
+                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="btn btn-success"/>
+                    
+                    
+                    <asp:Button ID="Button3" runat="server" Text="CANCELAR" OnClick="Button3_Click" CssClass="btn btn-danger"/>
+                    
+                    
+                    <asp:Button ID="Button4" runat="server" Text="FINALIZAR" OnClick="Button4_Click" CssClass="btn btn-primary"/>
                     
                     
                             </td>

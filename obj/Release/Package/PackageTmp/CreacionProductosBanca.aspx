@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="Label12" runat="server" CssClass="treeNode" Text="CREACION PRODUCTOS BANCA"></asp:Label>
+    <br />
+    <br />
     <table style="width:100%;">
         <tr>
             <td>
@@ -13,10 +16,10 @@
         </tr>
         <tr>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" Width="125px"></asp:TextBox>
             </td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
+                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" Width="125px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -79,12 +82,12 @@
                 </asp:DropDownList>
              </td>
              <td>
-                 <asp:TextBox ID="TextBox5" runat="server" CssClass="cajagrande" Width="125px"></asp:TextBox>
+                 <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" Width="125px"></asp:TextBox>
              </td>
         </tr>
         <tr>
             <td>
-                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="button" OnClick="LinkButton1_Click">GUARDAR</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click">GUARDAR</asp:LinkButton>
             </td>
            
         </tr>

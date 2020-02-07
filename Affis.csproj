@@ -115,6 +115,7 @@
     <Content Include="BuscaCert.aspx" />
     <Content Include="BuscaCedula.aspx" />
     <Content Include="Cobranzas.aspx" />
+    <Content Include="InicioProceso.aspx" />
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
     <Content Include="Content\fontawesome-all.css" />
@@ -213,7 +214,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Sin título-1.png" />
+    <Content Include="Logo.png" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -262,6 +263,13 @@
     </Compile>
     <Compile Include="Cobranzas.aspx.designer.cs">
       <DependentUpon>Cobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioProceso.aspx.cs">
+      <DependentUpon>InicioProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioProceso.aspx.designer.cs">
+      <DependentUpon>InicioProceso.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarProducto2.aspx.cs">
       <DependentUpon>EditarProducto2.aspx</DependentUpon>

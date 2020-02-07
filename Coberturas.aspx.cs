@@ -27,6 +27,7 @@ namespace Affis
         protected void Page_Load(object sender, EventArgs e)
         {
             //Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
+            
         }
 
         protected void GridView2_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -37,8 +38,8 @@ namespace Affis
             }
             else if(e.Row.RowType == DataControlRowType.Footer)
             {
-                e.Row.Cells[5].Text = String.Format("TOTAL {0:c}", total);
-                Session["prima"] = e.Row.Cells[5].Text;
+                e.Row.Cells[4].Text = String.Format("TOTAL {0:c}", total);
+                Session["prima"] = e.Row.Cells[4].Text;
             }
         }
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,6 +50,8 @@ namespace Affis
         {
             Response.Redirect("Certificado.aspx");
         }
+
+       
     }
         
 }

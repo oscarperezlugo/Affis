@@ -30,7 +30,7 @@ namespace Affis
             DataSet ds = new DataSet();
             
 
-            string sqlQuery = "SELECT * FROM ADICIONADOS WHERE CEDULA Like '%" + filtro + "%'";
+            string sqlQuery = "SELECT * FROM ASEGURADOS WHERE CEDULA Like '%" + filtro + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
             da.Fill(ds);
@@ -43,10 +43,11 @@ namespace Affis
         {
             string filtro = filtrorec.filtro;
             string plan = filtrorec.plan;
+            string relacion = filtrorec.relacion;
             DataSet ds = new DataSet();
 
 
-            string sqlQuery = "SELECT DISTINCT[Valor], [Producto], [Plano] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND([Plano] LIKE '%" + plan +"%'))";
+            string sqlQuery = "SELECT DISTINCT[Valor] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND ([Aplicaa] LIKE '%" + relacion + "%') AND ([Plano] LIKE '%" + plan +"%'))";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
             da.Fill(ds);

@@ -13,19 +13,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
     <File Include="Adicion.aspx">
-      <publishTime>01/15/2020 15:30:55</publishTime>
+      <publishTime>02/03/2020 14:32:48</publishTime>
     </File>
     <File Include="AperturaEmpresa.aspx">
-      <publishTime>01/14/2020 14:46:35</publishTime>
+      <publishTime>02/03/2020 14:18:06</publishTime>
     </File>
     <File Include="Beneficiarios.aspx">
-      <publishTime>01/15/2020 16:25:47</publishTime>
+      <publishTime>02/03/2020 14:23:19</publishTime>
     </File>
     <File Include="bin/Affis.dll">
-      <publishTime>01/17/2020 15:46:55</publishTime>
+      <publishTime>02/04/2020 12:38:42</publishTime>
     </File>
     <File Include="bin/Affis.pdb">
-      <publishTime>01/17/2020 15:46:55</publishTime>
+      <publishTime>02/04/2020 12:38:42</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 22:29:20</publishTime>
@@ -208,22 +208,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2020 14:04:25</publishTime>
     </File>
     <File Include="BuscaCedula.aspx">
-      <publishTime>01/14/2020 14:17:08</publishTime>
+      <publishTime>01/29/2020 14:10:33</publishTime>
     </File>
     <File Include="BuscaCert.aspx">
-      <publishTime>01/13/2020 19:56:34</publishTime>
+      <publishTime>02/03/2020 14:37:59</publishTime>
     </File>
     <File Include="Certificado.aspx">
-      <publishTime>01/14/2020 14:50:53</publishTime>
+      <publishTime>02/03/2020 14:40:12</publishTime>
     </File>
     <File Include="Coberturas.aspx">
-      <publishTime>01/14/2020 14:51:52</publishTime>
+      <publishTime>02/03/2020 14:40:54</publishTime>
     </File>
     <File Include="Cobranzas.aspx">
-      <publishTime>01/15/2020 16:20:37</publishTime>
+      <publishTime>02/03/2020 14:48:21</publishTime>
     </File>
     <File Include="ConsultaCedula.aspx">
-      <publishTime>01/14/2020 14:56:30</publishTime>
+      <publishTime>02/03/2020 17:55:10</publishTime>
     </File>
     <File Include="Contact.aspx">
       <publishTime>11/27/2019 16:38:25</publishTime>
@@ -298,19 +298,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2020 13:33:27</publishTime>
     </File>
     <File Include="CreacionProductosBanca.aspx">
-      <publishTime>01/15/2020 17:47:07</publishTime>
+      <publishTime>02/03/2020 15:09:35</publishTime>
     </File>
     <File Include="CreacionProductosWSM.aspx">
-      <publishTime>01/15/2020 17:57:05</publishTime>
+      <publishTime>02/03/2020 15:12:17</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
     <File Include="EditarProducto1.aspx">
-      <publishTime>01/15/2020 18:53:55</publishTime>
+      <publishTime>02/03/2020 15:12:45</publishTime>
     </File>
     <File Include="EditarProducto2.aspx">
-      <publishTime>01/15/2020 18:56:09</publishTime>
+      <publishTime>02/03/2020 15:13:41</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/27/2019 16:38:25</publishTime>
@@ -334,31 +334,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2019 16:38:25</publishTime>
     </File>
     <File Include="Inclusion.aspx">
-      <publishTime>01/15/2020 15:54:29</publishTime>
+      <publishTime>02/03/2020 18:08:53</publishTime>
     </File>
     <File Include="Inclusion2.aspx">
-      <publishTime>01/15/2020 16:14:24</publishTime>
+      <publishTime>02/03/2020 14:05:34</publishTime>
+    </File>
+    <File Include="InicioProceso.aspx">
+      <publishTime>02/03/2020 17:28:29</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>01/15/2020 15:03:25</publishTime>
+      <publishTime>02/04/2020 12:38:24</publishTime>
+    </File>
+    <File Include="Logo.png">
+      <publishTime>01/24/2020 13:23:38</publishTime>
     </File>
     <File Include="Productosbs.aspx">
-      <publishTime>01/15/2020 14:48:29</publishTime>
+      <publishTime>01/29/2020 14:18:48</publishTime>
     </File>
     <File Include="Productoswsm.aspx">
-      <publishTime>01/15/2020 14:47:16</publishTime>
+      <publishTime>01/29/2020 14:20:04</publishTime>
     </File>
     <File Include="RecuperarPass.aspx">
-      <publishTime>01/15/2020 13:59:57</publishTime>
+      <publishTime>01/30/2020 21:05:41</publishTime>
     </File>
     <File Include="Reemplazo.aspx">
-      <publishTime>01/14/2020 14:29:29</publishTime>
+      <publishTime>02/03/2020 15:17:32</publishTime>
     </File>
     <File Include="Reemplazo2.aspx">
-      <publishTime>01/14/2020 14:32:07</publishTime>
+      <publishTime>02/03/2020 15:17:57</publishTime>
     </File>
     <File Include="Reemplazo3.aspx">
-      <publishTime>01/15/2020 17:40:32</publishTime>
+      <publishTime>02/03/2020 15:31:37</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/27/2019 16:38:52</publishTime>
@@ -496,7 +502,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/13/2019 11:43:28</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>01/15/2020 18:56:11</publishTime>
+      <publishTime>02/03/2020 13:37:32</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>11/27/2019 16:38:58</publishTime>

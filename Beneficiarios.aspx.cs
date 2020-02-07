@@ -85,6 +85,16 @@ namespace Affis
 
 
         }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+        protected void Button9_Click(object sender, EventArgs e)
+        {            
+            Response.Redirect("Cobranzas.aspx");
+        }
     }
 }
     

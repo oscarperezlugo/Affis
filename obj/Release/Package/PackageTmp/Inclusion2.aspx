@@ -2,9 +2,12 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-<!DOCTYPE html>
+    <asp:Label ID="Label12" runat="server" CssClass="treeNode" Text="INCLUSION"></asp:Label>
+    <br />
+    <br />
+    <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <title></title>
     
@@ -22,38 +25,38 @@
                     <table >
                         <tr>
                             <td >
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="cajagrande"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td>
-                    <asp:TextBox ID="TextBox2" runat="server" CssClass="cajagrande"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
                             </td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox ID="TextBox3" runat="server"  CssClass="cajagrande"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server"  CssClass="form-control"></asp:TextBox>
                             </td>
                             <td>
-                    <asp:TextBox ID="TextBox4" runat="server" CssClass="cajagrande" ></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" ></asp:TextBox>
                             </td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="cajagrande" /></td>
-                            <td><asp:TextBox id="Text1" class="cajagrande" placeholder="DIRECCION" runat="server" /></td>
+                    <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control" /></td>
+                            <td><asp:TextBox id="Text1" class="form-control" placeholder="DIRECCION" runat="server" /></td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox id="Text2" placeholder="EMAIL" type="text" runat="server" class="cajagrande"/></td>
-                            <td><asp:TextBox id="cargo1" class="cajagrande" placeholder="CARGO" type="text" runat="server"/></td>
+                    <asp:TextBox id="Text2" placeholder="EMAIL" type="text" runat="server" class="form-control"/></td>
+                            <td><asp:TextBox id="cargo1" class="form-control" placeholder="CARGO" type="text" runat="server"/></td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox id="Text6" class="cajagrande" placeholder="NOMBRE COMPLETO" type="text" runat="server" /></td>
-                            <td><asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdown-content">
+                    <asp:TextBox id="Text6" class="form-control" placeholder="NOMBRE COMPLETO" type="text" runat="server" /></td>
+                            <td><asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
                         <asp:ListItem>MASCULINO</asp:ListItem>
                         <asp:ListItem>FEMENINO</asp:ListItem>
@@ -63,8 +66,8 @@
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox id="Text7" class="cajagrande" placeholder="TELEFONO CELULAR" type="text" runat="server" /></td>
-                            <td><asp:TextBox id="Text8" class="cajagrande" placeholder="TELEFONO DOMICILIO" type="text" runat="server" /></td>
+                    <asp:TextBox id="Text7" class="form-control" placeholder="TELEFONO CELULAR" type="text" runat="server" /></td>
+                            <td><asp:TextBox id="Text8" class="form-control" placeholder="TELEFONO DOMICILIO" type="text" runat="server" /></td>
                             
                         </tr>
                     </table>
@@ -76,7 +79,19 @@
                     </asp:DropDownList>
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList6" runat="server" DataSourceID="SqlDataSource2" DataTextField="MES" DataValueField="MES" CssClass="dropdown-content">
+                    <asp:DropDownList ID="DropDownList11" runat="server" CssClass="dropdown-content">
+                        <asp:ListItem Value="1">ENERO</asp:ListItem>
+                        <asp:ListItem Value="2">FEBRERO</asp:ListItem>
+                        <asp:ListItem Value="3">MARZO</asp:ListItem>
+                        <asp:ListItem Value="4">ABRIL</asp:ListItem>
+                        <asp:ListItem Value="5">MAYO</asp:ListItem>
+                        <asp:ListItem Value="6">JUNIO</asp:ListItem>
+                        <asp:ListItem Value="7">JULIO</asp:ListItem>
+                        <asp:ListItem Value="8">AGOSTO</asp:ListItem>
+                        <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
+                        <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
                     </asp:DropDownList>
                             </td>
                             <td>
@@ -91,7 +106,19 @@
                     </asp:DropDownList>
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList9" runat="server" DataSourceID="SqlDataSource2" DataTextField="MES" DataValueField="MES" CssClass="dropdown-content">
+                    <asp:DropDownList ID="DropDownList12" runat="server" CssClass="dropdown-content">
+                        <asp:ListItem Value="1">ENERO</asp:ListItem>
+                        <asp:ListItem Value="2">FEBRERO</asp:ListItem>
+                        <asp:ListItem Value="3">MARZO</asp:ListItem>
+                        <asp:ListItem Value="4">ABRIL</asp:ListItem>
+                        <asp:ListItem Value="5">MAYO</asp:ListItem>
+                        <asp:ListItem Value="6">JUNIO</asp:ListItem>
+                        <asp:ListItem Value="7">JULIO</asp:ListItem>
+                        <asp:ListItem Value="8">AGOSTO</asp:ListItem>
+                        <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
+                        <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
                     </asp:DropDownList>
                             </td>
                             <td>
@@ -106,7 +133,19 @@
                     </asp:DropDownList>
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource2" DataTextField="MES" DataValueField="MES" CssClass="dropdown-content">
+                    <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdown-content">
+                        <asp:ListItem Value="1">ENERO</asp:ListItem>
+                        <asp:ListItem Value="2">FEBRERO</asp:ListItem>
+                        <asp:ListItem Value="3">MARZO</asp:ListItem>
+                        <asp:ListItem Value="4">ABRIL</asp:ListItem>
+                        <asp:ListItem Value="5">MAYO</asp:ListItem>
+                        <asp:ListItem Value="6">JUNIO</asp:ListItem>
+                        <asp:ListItem Value="7">JULIO</asp:ListItem>
+                        <asp:ListItem Value="8">AGOSTO</asp:ListItem>
+                        <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
+                        <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
+                        <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
                     </asp:DropDownList>
                             </td>
                             <td>
@@ -121,10 +160,10 @@
                                 <asp:Label ID="Label5" runat="server" CssClass="texto" Text="¿El tomador es un asegurado?"></asp:Label>
                             </td>
                             <td >
-                                <asp:Button ID="Button5" runat="server" Text="SI" CssClass="button" Width="100%" OnClick="Button5_Click"/>
+                                <asp:Button ID="Button5" runat="server" Text="SI" CssClass="btn btn-success" Width="100%" OnClick="Button5_Click"/>
                             </td>
                             <td >
-                                <asp:Button ID="Button6" runat="server" Text="NO" CssClass="button" Width="100%"/>
+                                <asp:Button ID="Button6" runat="server" Text="NO" CssClass="btn btn-danger" Width="100%"/>
                             </td>
                             
                         </tr>
@@ -139,9 +178,13 @@
                     <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <br />
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="button"/>
-                    <asp:Button ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="button"/>
-                    <asp:Button ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="button"/>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="btn btn-success"/>
+                    <asp:Button ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"/>
+                    <asp:Button ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="btn btn-secondary"/>
+                    <asp:Button ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"/>
+                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                    
+                    
                     <br />
                   
                     

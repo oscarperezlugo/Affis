@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace Affis
 {
-    
-    
-    public partial class ConsultaCedula : System.Web.UI.Page
+
+
+    public partial class InicioProceso : System.Web.UI.Page
     {
-        
+
 
         ConexionesDB conn = new ConexionesDB();
         private void recuperarInfo()
@@ -20,55 +20,71 @@ namespace Affis
             string filtro = TextBox1.Text;
             GridView1.DataSource = conn.Obtenerinfo2(filtro);
             GridView1.DataBind();
-            
-        }
-        
+            if (GridView1.Rows.Count == 0)
+            {
+                Label3.Text = "El numero de cedula no se encuentra en nuestra base de datos";
+            }
+            else
+            {
+                Label3.Text = "El numero de cedula ya es parte de nuestro sistema";
+            }
 
-        
+        }
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           // Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
+            // Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
             if (IsPostBack)
                 recuperarInfo();
-            
+
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             recuperarInfo();
-            
+
         }
 
         public void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-           //empresa = GridView1.SelectedRow.Cells[1].ToString();
+
+            //empresa = GridView1.SelectedRow.Cells[1].ToString();
         }
 
         public void Button2_Click(object sender, EventArgs e)
         {
             if (GridView1.SelectedRow != null)
             {
-                Session["empresa"] = GridView1.SelectedRow.Cells[1].Text;
-                Session["direccion"] = GridView1.SelectedRow.Cells[2].Text;
-                Session["telefono"] = GridView1.SelectedRow.Cells[4].Text;
-                Session["medio"] = GridView1.SelectedRow.Cells[3].Text;
-                Server.Transfer("Inclusion.aspx");
+                Session["cedula"] = GridView1.SelectedRow.Cells[1].Text;
+                Session["nombre"] = GridView1.SelectedRow.Cells[2].Text;
+                Session["genero"] = GridView1.SelectedRow.Cells[4].Text;
+
+                Response.Redirect("Adicion.aspx");
             }
             else
             {
-               // MessageBox.Show("Seleccione una Empresa");
+                Session["cedula"] = TextBox1.Text;
+                Response.Redirect("Inclusion.aspx");
             }
         }
         protected void Button3_Click(object sender, EventArgs e)
         {
             string url = "https://srienlinea.sri.gob.ec/sri-en-linea/SriDeclaracionesWeb/ConsultaImpuestoRenta/Consultas/consultaImpuestoRenta";
-            Response.Write("<script> window.open('" + url + "','_blank'); </script>");            
+            Response.Write("<script> window.open('" + url + "','_blank'); </script>");
         }
         protected void Button4_Click(object sender, EventArgs e)
-        {         
+        {
             string url = "https://www.registrocivil.gob.ec/";
             Response.Write("<script> window.open('" + url + "','_blank'); </script>");
         }
+        public void Button5_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect(Request.RawUrl);
+        }
     }
+            
 }

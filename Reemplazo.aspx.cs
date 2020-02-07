@@ -28,7 +28,7 @@ namespace Affis
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["reemplazo"] = TextBox1.Text;
+            Session["cedula"] = TextBox1.Text;
 
             Response.Redirect("Reemplazo2.aspx");
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,6 +14,8 @@ namespace Affis
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            
 
         }
 
@@ -43,26 +46,29 @@ namespace Affis
                     {
                         // get employee ID and role from the reader
                         string employeeId = dr.GetFieldValue<string>(0);
-                        string role = dr.GetFieldValue<string>(1);
+                        int role = dr.GetFieldValue<int>(1);
                         double ficha = dr.GetFieldValue<double>(2);
                         Session["bienvenido"] = employeeId.ToString();
                         Session["ficha"] = ficha.ToString();
                         Session["fecha"] = DateTime.Now.ToString();
+                        Session["dia"] = DateTime.Now.Day.ToString();
 
+                        Session["mes"] = "Enero";//DateTime.Now.Month.ToString("MMMM", CultureInfo.InvariantCulture).ToUpper();
+                        Session["ano"] = DateTime.Now.Year.ToString();
 
                         // depending on role, jump off to various pages
                         switch (role)
                         {
-                            case "admin":
-                                Response.Redirect("Admin.aspx");
-                                break;
+                            //case "admin":
+                              //  Response.Redirect("Admin.aspx");
+                              //  break;
 
-                            case "manager":
-                                Response.Redirect("manager.aspx");
-                                break;
+                            //case "manager":
+                            //    Response.Redirect("manager.aspx");
+                             //   break;
 
                             default:
-                                Response.Redirect("Inclusion.aspx");
+                                Response.Redirect("InicioProceso.aspx");
                                 break;
                         }
                     }

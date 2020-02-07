@@ -2,9 +2,12 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-<!DOCTYPE html>
+    <asp:Label ID="Label6" runat="server" CssClass="treeNode" Text="CREACION CERTIFICADO"></asp:Label>
+    <br />
+    <br />
+    <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <title></title>
     
@@ -16,12 +19,12 @@
                     
                     <table >
                         <tr>
-                            <td>
+                            <td class="auto-style2">
                     
                     
                                 <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
                             </td>
-                             <td>
+                             <td class="auto-style2">
                     
                     
                                 <asp:Label ID="Label4" runat="server" CssClass="texto"></asp:Label>
@@ -51,12 +54,15 @@
                     <table >
                         <tr>
                             <td>
-                    <asp:Button ID="Button1" runat="server" Text="GENERAR" OnClick="Button1_Click" CssClass="button"/>
+                    <asp:Button ID="Button1" runat="server" Text="GENERAR" OnClick="Button1_Click" CssClass="btn btn-primary"/>
                     
                     
-                            </td>
+                            &nbsp;</td>
                             <td>
-                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="button"/>
+                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="btn btn-success"/>
+                    
+                    
+                            &nbsp;<asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
                     
                     
                             </td>
@@ -92,3 +98,11 @@
 </body>
 </html>
     </asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+    .auto-style2 {
+        width: 150px;
+    }
+</style>
+</asp:Content>
+

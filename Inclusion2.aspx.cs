@@ -20,6 +20,15 @@ namespace Affis
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            DropDownList7.SelectedValue = DateTime.Now.Day.ToString();
+            DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+            DropDownList5.SelectedValue = DateTime.Now.Year.ToString();
+            DropDownList10.SelectedValue = DateTime.Now.Day.ToString();
+            DropDownList12.SelectedValue = DateTime.Now.Month.ToString();
+            DropDownList8.SelectedValue = DateTime.Now.Year.ToString();
+            DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
+            DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
+            DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
             //Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
             if (Session["empresa"] != null)
             {
@@ -27,6 +36,15 @@ namespace Affis
                 TextBox2.Text = Session["direccion"].ToString();
                 TextBox3.Text = Session["medio"].ToString();
                 TextBox4.Text = Session["telefono"].ToString();
+            }
+            if (Session["cedula"] != null)
+            {
+                Text3.Text = Session["cedula"].ToString();
+                if (Session["nombre"] != null && Session["genero"] != null)
+                {
+                    Text6.Text = Session["nombre"].ToString();
+                    DropDownList1.SelectedValue = Session["genero"].ToString();
+                }
             }
 
         }
@@ -52,8 +70,8 @@ namespace Affis
                 //string cargo = String.Format("{0}", Request.Form["cargo"]);
                 string cargo = cargo1.Text;
                 string fechanac = String.Format("{0}", DropDownList2.SelectedValue + DropDownList3.SelectedValue + DropDownList4.SelectedValue);
-                string fechavig = String.Format("{0}", DropDownList5.SelectedValue + DropDownList6.SelectedValue + DropDownList7.SelectedValue);
-                string fechaefec = String.Format("{0}", DropDownList8.SelectedValue + DropDownList9.SelectedValue + DropDownList10.SelectedValue);
+                string fechavig = String.Format("{0}", DropDownList5.SelectedValue + DropDownList11.SelectedValue + DropDownList7.SelectedValue);
+                string fechaefec = String.Format("{0}", DropDownList8.SelectedValue + DropDownList12.SelectedValue + DropDownList10.SelectedValue);
                 string nombre = Text6.Text;
                 string codigo = "codigo";
                 string telcelular = Text7.Text;
@@ -117,10 +135,7 @@ namespace Affis
             //Server.Transfer("Adicion.aspx");
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://srienlinea.sri.gob.ec/sri-en-linea/SriDeclaracionesWeb/ConsultaImpuestoRenta/Consultas/consultaImpuestoRenta");
-        }
+        
         protected void Button4_Click(object sender, EventArgs e)
         {
             Response.Redirect("ConsultaCedula");
@@ -131,6 +146,22 @@ namespace Affis
         {
             Session["tomasegur"] = "si"; 
         }
-            
+        
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            string url = "https://srienlinea.sri.gob.ec/sri-en-linea/SriDeclaracionesWeb/ConsultaImpuestoRenta/Consultas/consultaImpuestoRenta";
+            Response.Write("<script> window.open('" + url + "','_blank'); </script>");
+        }
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.registrocivil.gob.ec/";
+            Response.Write("<script> window.open('" + url + "','_blank'); </script>");
+        }
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+
     }
 }

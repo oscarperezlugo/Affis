@@ -6,7 +6,9 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:ContentPlaceHolder>
     <style type="text/css">
 
@@ -17,6 +19,14 @@
             text-align: left;
             color: gray;
         }
+        .certificado {
+            font-family: Arial;
+            font-size: large;
+            font-weight: bold;
+            font-weight: normal;
+            text-align: left;
+            color: red;
+        }
         .TableTopAlign {
             align-content:center;
             vertical-align: top;
@@ -24,10 +34,10 @@
         .cajagrande {
             border-color: lightgray;
             border-radius: 6px;
-            
+            height: 25px;
             width: 350px;
-            
         }
+
         .rootNode {
             margin-top: 0px;
             color: black;
@@ -59,14 +69,14 @@
             border-radius: 5px;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 5px 5px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: medium;
             font-family: Arial;
             font-weight: bold;
-            width: 120px;
+            width: 150px;
         }
         .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
@@ -84,30 +94,33 @@
             border: solid;
             border-color: gray;
             color: gray;
-            padding: 15px 32px;
+            padding: 5px 5px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: medium;
             font-family: Arial;
             font-weight: bold;
-            width: 200px;
+            width: 140px;
             
         }
-         .gridcalc {
+        .gridcalc {
             border-color: white;
             font-family: Arial;
             font-weight: normal;
+            color: gray;
             
         }
-         .content{
+        .content{
              width: 100%;
+             margin-top: 0px;
         }
           
         .dropdown-content {
             border: none;
             font-family: Arial;
             font-size: 10px;
+            height: 25px;
             width: 100px;
             background-color: white;                        
         }
@@ -115,8 +128,19 @@
             border: none;
             font-family: Arial;
             font-size: 10px;
+            height: 25px;
             width: 300px;
-            background-color: white;                        
+            background-color: white;
+        }
+        .logo {
+            width: 50%;
+        }
+        
+        .auto-style1 {
+            width: 134px;
+        }
+        .contenttop {
+            margin-top: 0px;
         }
         
         </style>
@@ -126,21 +150,27 @@
         
             
                 
-        <div style="background-color:gray;" class="auto-style3">
+        <div style="background-color:gray;">
             
             
            <table>
                <tr>
-                   <td class="auto-style9"><asp:Image ID="Image12" runat="server" ImageUrl="~/Sin título-1.png" Height="75" CssClass="auto-style7" /></td>
-                   <td><asp:TextBox ID="TextBox4" runat="server" class="caja" Height="30" Width="450" placeholder="Introduzca el valor" CssClass="auto-style10"></asp:TextBox> </td>
+                   <td class="auto-style1">&nbsp;&nbsp;&nbsp;
+                       <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" />
+                   </td>
+                   <td><asp:TextBox ID="TextBox4" runat="server" class="caja" Height="30" Width="450" placeholder="Introduzca el valor" CssClass="form-control"></asp:TextBox> </td>
                    <td><asp:LinkButton ID="buttonsearch" runat="server" class="button2" OnClick="buttonsearch_Click" ><i class="fa fa-address-card"></i> CEDULA</asp:LinkButton></td>
-                   <td><asp:LinkButton ID="certbutton" runat="server" class="button2" OnClick="certbutton_click" ><i class="fa fa-certificate"></i> CERT</asp:LinkButton></td>
+                   <td><asp:LinkButton ID="certbutton" runat="server" class="button2" OnClick="certbutton_click" ><i class="fa fa-certificate"></i> CERTIFICADO</asp:LinkButton></td>
                </tr>
               
            </table> 
             <table>
                 <tr>
-                   <td class="auto-style11"><asp:Label ID="Label2" runat="server" class="subtitulo" ></asp:Label></td>
+                   <td class="auto-style11"><asp:Label ID="Label2" runat="server" class="subtitulo" ></asp:Label>   <asp:Label ID="Label1" runat="server" CssClass="subtitulo"></asp:Label>
+                       
+                       <asp:LinkButton ID="LinkButton1" runat="server" CssClass="button2" OnClick="LinkButton1_Click"><i class="fa fa-user"></i> Cerrar Sesion</asp:LinkButton>
+                       
+                    </td>
                    
                </tr>
                 </table> 
@@ -161,7 +191,7 @@
                                     <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA" SelectAction="Expand"></asp:TreeNode>
                                 </asp:TreeNode>
                                 <asp:TreeNode Text="VENTAS" Value="VENTAS">
-                                    <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/InicioProceso.aspx"></asp:TreeNode>
                                     <asp:TreeNode Text="ADICION" Value="ADICION" NavigateUrl="~/Adicion.aspx"></asp:TreeNode>
                                     <asp:TreeNode Text="REEMPLAZO" Value="REEMPLAZO" NavigateUrl="~/Reemplazo.aspx"></asp:TreeNode>
                                 </asp:TreeNode>
@@ -172,7 +202,7 @@
                                 </asp:TreeNode>
                                 <asp:TreeNode SelectAction="None" Text="VENTAS" Value="VENTAS">
                                     <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/Inclusion2.aspx" Text="INCLUSION" Value="INCLUSION"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/InicioProceso.aspx" Text="INCLUSION" Value="INCLUSION"></asp:TreeNode>
                                 </asp:TreeNode>
                                 <asp:TreeNode SelectAction="None" Text="COBRANZA" Value="COBRANZA">
                                     <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Cobranzas.aspx"></asp:TreeNode>

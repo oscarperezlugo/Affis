@@ -2,9 +2,12 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-<!DOCTYPE html>
+    <asp:Label ID="Label12" runat="server" CssClass="treeNode" Text="REEMPLAZO"></asp:Label>
+    <br />
+    <br />
+    <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <title></title>
     
@@ -19,7 +22,7 @@
                             <td >
                     
                     
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="cajagrande" placeholder="CEDULA TOMADOR PRINCIPAL"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="CEDULA TOMADOR PRINCIPAL" Width="354px"></asp:TextBox>
                     
                     
                             </td>
@@ -29,7 +32,11 @@
                             <td >
                     
                     
-                    <asp:Button ID="Button1" runat="server" Text="SIGUIENTE" OnClick="Button1_Click" CssClass="button"/>
+                                <br />
+                                <br />
+                    
+                    
+                    <asp:Button ID="Button1" runat="server" Text="SIGUIENTE" OnClick="Button1_Click" CssClass="btn btn-primary"/>
                     
                     
                             </td>
@@ -62,6 +69,40 @@
         
         
     
+                    <br />
+                    
+                    
+           
+        
+        
+        
+        
+            
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        
+     
+        
+        
+        
+    
 </body>
 </html>
     </asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style2 {
+            border-radius: 6px;
+        }
+    </style>
+</asp:Content>
+

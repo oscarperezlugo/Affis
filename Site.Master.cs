@@ -12,6 +12,7 @@ namespace Affis
         protected void Page_Load(object sender, EventArgs e)
         {
             Label2.Text = String.Format("Bienvenido(a): {0}", Session["bienvenido"].ToString());
+            Label1.Text = DateTime.Now.ToString();
         }
 
         protected void buttonsearch_Click(object sender, EventArgs e)
@@ -24,6 +25,12 @@ namespace Affis
         {
             Session["valor"] = TextBox4.Text;
             Response.Redirect("BuscaCert");
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Login.aspx");
         }
     }
 }

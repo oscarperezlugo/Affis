@@ -35,7 +35,7 @@ namespace Affis
                 Label4.Text = Session["cedula"].ToString();
 
             }
-            if (CheckBox1.Checked) 
+            if (CheckBox1.Checked)
             {
                 tipocuenta = CheckBox1.Text;
             }
@@ -43,7 +43,7 @@ namespace Affis
             {
                 tipocuenta = CheckBox2.Text;
             }
-            else 
+            else
             {
                 tipocuenta = null;
             }
@@ -82,7 +82,7 @@ namespace Affis
                 cmd.Parameters.Add("@ven", SqlDbType.VarChar, 50).Value = TextBox3.Text;
                 cmd.Parameters.Add("@num", SqlDbType.VarChar, 50).Value = TextBox5.Text;
                 cmd.Parameters.Add("@cds", SqlDbType.VarChar, 50).Value = TextBox4.Text;
-                cmd.Parameters.Add("@tdc", SqlDbType.VarChar, 50).Value = tipocuenta;                
+                cmd.Parameters.Add("@tdc", SqlDbType.VarChar, 50).Value = tipocuenta;
                 cmd.Parameters.Add("@cer", SqlDbType.VarChar, 50).Value = Label3.Text;
 
                 // open connection
@@ -105,6 +105,23 @@ namespace Affis
 
 
 
+
+        }
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            string fecha = Session["fecha"].ToString();
+            string ficha = Session["ficha"].ToString();
+            string bienvenido = Session["bienvenido"].ToString();
+            Session.Clear();
+            Session["bienvenido"] = bienvenido.ToString();
+            Session["ficha"] = ficha.ToString();
+            Session["fecha"] = fecha.ToString();
+            Response.Redirect("InicioProceso.aspx");
         }
     }
 }

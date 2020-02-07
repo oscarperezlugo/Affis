@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <style type="text/css">
         .button {
             background-color: gray;
@@ -35,7 +36,7 @@
         .cajagrande {
             border-color: lightgray;
             border-radius: 6px;
-            
+            height: 25px;
             width: 350px;
             margin-top: 0px;
             display: block;
@@ -60,30 +61,37 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .auto-style4 {
+            width: 98%;
+        }
     </style>
+    
 </head>
-<body style="background-color:lightgray">
+<body style="background-color:white">
     <form id="form1" runat="server">
         <table style="width: 100%;">
             <tr>
                 
                 <td class="auto-style1">
                     
-                    <asp:Image ID="Image2" runat="server" ImageUrl="https://baic.ec/wp-content/uploads/2018/12/ecuador-e1559239499682.jpg" Width="100%" Height="630px" />
+                    <asp:Image ID="Image2" runat="server" ImageUrl="https://uc96b079576535e20a74dcdd3e12.previews.dropboxusercontent.com/p/thumb/AAsOIT5Rf41LhfRpv-8vr3-GEWx1YgnG042ODK1Ehd5lFkVjTyA8GT6PIaqMSRgpFuIHEqdwVP73iJg1CvEg1NdS-_RqolkTAR2zxhg037Hh6q88x3ZOV5sX-KZhNyMyu2khs90A1EYShDjEy2lHjl2M8EhuwyaDfRkmw-6-9BwgVsHT72twwQ6VWGKt3JyZeDqmjTd1ZKT4jqIfbMrTWY4OinzLgcgGHeTL2IYqJ5o7KQbqIY2DU-6pSimAiDLKeFXDLhyS-faxwz60nuPURoAnCnyWkGEyBiWtagvwLz5ybIz5dI92eldt3JPutMCAx6VT99vHRKCU1aSevqIRPmITr9peScInY_TgeKGpu2PwCcXZSyQ33PnbZWCA3wciMSuUTYaPfnLjnQdpU_uGUTC4Q3fpTCIIc1y-C7yp_da2ZA/p.jpeg?fv_content=true&amp;size_mode=5" Width="99%" Height="605px" padding="5px"/>
                        
                 </td>
                 
                 <td class="auto-style2">
                     
-                    <table style="width: 100%; ">
+                    <table class="auto-style4">
                         <tr>
                             <td>
-                                <asp:Image ID="Image1" runat="server" ImageUrl="https://image.flaticon.com/icons/png/512/32/32438.png" width="70%" CssClass="auto-style3" Height="277px"/>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png" width="70%" CssClass="auto-style3" Height="277px"/>
+                                <br />
+                                <br />
                             </td>                            
                         </tr>
                         <tr>
                             <td>
-        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" CssClass="cajagrande" ></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" placeholder="USUARIO" class="form-control" ></asp:TextBox>
+                                <br />
                             </td>                            
                         </tr>
                         <tr>
@@ -92,7 +100,8 @@
                         </tr>
                         <tr>
                             <td>
-            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" CssClass="cajagrande" ></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" class="form-control" ></asp:TextBox>
+                                <br />
                             </td>                            
                         </tr>
                         <tr>
@@ -107,7 +116,7 @@
                         </tr>
                         <tr>
                             <td>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="INICIAR SESION" CssClass="button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="INICIAR SESION" class="btn btn-lg btn-primary btn-block" />
                             </td>
                         </tr>
                         <tr>

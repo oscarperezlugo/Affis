@@ -2,9 +2,12 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-<!DOCTYPE html>
+    <asp:Label ID="Label6" runat="server" CssClass="treeNode" Text="REEMPLAZO"></asp:Label>
+    <br />
+    <br />
+    <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <title></title>
     
@@ -18,24 +21,31 @@
                 
                  
                 <td >
-                    <asp:TextBox ID="TextBox1" runat="server" class="cajagrande"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" class="form-control"></asp:TextBox>
                     <br />
                     &nbsp;<asp:Label ID="Label2" runat="server" Text="TOMADOR PRNCIPAL CEDULA" CssClass="texto"></asp:Label>
                     <br />
 
-                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="cajagrande"/><br />
+                    <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control"/><br />
                     <br />
-                    <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="cajagrande"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content">
+                    <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="form-control"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
                         <asp:ListItem>MASCULINO</asp:ListItem>
                         <asp:ListItem>FEMENINO</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdown-content">
-                        <asp:ListItem Value="null">RELACION</asp:ListItem>
-                        <asp:ListItem>TOMADOR</asp:ListItem>
-                        <asp:ListItem>CONYUGUE</asp:ListItem>
-                        <asp:ListItem>HIJO</asp:ListItem>
-                        <asp:ListItem>HERMANO</asp:ListItem>
+                    <asp:DropDownList ID="DropDownList5" runat="server" CssClass="btn btn-secondary dropdown-toggle">
+                        <asp:ListItem>RELACION</asp:ListItem>
+                        <asp:ListItem Value="Titular">Tomador</asp:ListItem>
+                        <asp:ListItem Value="Cónyuge">Cónyuge</asp:ListItem>
+                        <asp:ListItem Value="Hijo">Hijo</asp:ListItem>
+                        <asp:ListItem>Hermano</asp:ListItem>
+                        <asp:ListItem>Progenitor</asp:ListItem>
+                        <asp:ListItem>Primo</asp:ListItem>
+                        <asp:ListItem>Sobrino</asp:ListItem>
+                        <asp:ListItem>Hermano</asp:ListItem>
+                        <asp:ListItem>Nieto</asp:ListItem>
+                        <asp:ListItem>Cuñado</asp:ListItem>
+                        <asp:ListItem>Suegro</asp:ListItem>
                     </asp:DropDownList>
                   
                     <br />
@@ -50,17 +60,17 @@
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [MES] FROM [MES$]"></asp:SqlDataSource>
                     <br />
-                    <asp:DropDownList ID="DropDownList8" runat="server" DataSourceID="SqlDataSource4" DataTextField="Producto" DataValueField="Producto" Height="25px" Width="364px" CssClass="dropdown-content">
+                    <asp:DropDownList ID="DropDownList8" runat="server" DataSourceID="SqlDataSource4" DataTextField="Producto" DataValueField="Producto"  Width="364px" CssClass="btn btn-secondary dropdown-toggle">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Producto] FROM [PRODUCTOS]"></asp:SqlDataSource>
-                    <asp:DropDownList ID="DropDownList7" runat="server" CssClass="dropdown-content"  >
+                    <asp:DropDownList ID="DropDownList7" runat="server" CssClass="btn btn-secondary dropdown-toggle"  >
                         <asp:ListItem Value="null">PLAN</asp:ListItem>
                         <asp:ListItem>A</asp:ListItem>
                         <asp:ListItem>B</asp:ListItem>
                         <asp:ListItem>C</asp:ListItem>
                     </asp:DropDownList>
                     <br />
-                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="CALCULAR" CssClass="button" />
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="CALCULAR" CssClass="btn btn-primary" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;<table class="auto-style5">
                         
@@ -84,8 +94,8 @@
                     <br />
                     &nbsp;&nbsp;
                     <br />
-                    <asp:Button class="button" ID="Button1" runat="server" OnClick="Button1_Click" Text="REEMPLAZAR" />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="FINALIZAR" CssClass="button" />
+                    <asp:Button class="btn btn-success" ID="Button1" runat="server" OnClick="Button1_Click" Text="REEMPLAZAR" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="FINALIZAR" CssClass="btn btn-primary" />
                    
                     
                     
