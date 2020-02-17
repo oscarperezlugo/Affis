@@ -18,7 +18,8 @@
                     <table >
                         <tr>
                             <td>
-                    <input id="Text1" class="form-control" placeholder="RUC" type="text" runat="server"/><br />
+                                <br />
+                                <asp:Label ID="Label7" runat="server" CssClass="textomini" Text="Nombre Empresa"></asp:Label>
                                 <br />
                             </td>
                             
@@ -26,6 +27,7 @@
                         <tr>
                             <td>
                     <input id="Text2" class="form-control" placeholder="NOMBRE COMERCIAL" type="text" runat="server"/><br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Medio De Cobro"></asp:Label>
                                 <br />
                             </td>
                            
@@ -45,6 +47,9 @@
                         <tr>
                             <td>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="GUARDAR" class="btn btn-success"/>
+                                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                    
+                    
                                 <br />
                             </td>
                             

@@ -19,6 +19,13 @@
             text-align: left;
             color: gray;
         }
+        .textomini {
+            font-family: Arial;
+            font-size: xx-small;
+            font-weight: normal;
+            text-align: left;
+            color: black;
+        }
         .certificado {
             font-family: Arial;
             font-size: large;
@@ -28,9 +35,10 @@
             color: red;
         }
         .TableTopAlign {
-            align-content:center;
+            align-content: center;
             vertical-align: top;
         }
+
         .cajagrande {
             border-color: lightgray;
             border-radius: 6px;
@@ -159,8 +167,8 @@
                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" />
                    </td>
                    <td><asp:TextBox ID="TextBox4" runat="server" class="caja" Height="30" Width="450" placeholder="Introduzca el valor" CssClass="form-control"></asp:TextBox> </td>
-                   <td><asp:LinkButton ID="buttonsearch" runat="server" class="button2" OnClick="buttonsearch_Click" ><i class="fa fa-address-card"></i> CEDULA</asp:LinkButton></td>
-                   <td><asp:LinkButton ID="certbutton" runat="server" class="button2" OnClick="certbutton_click" ><i class="fa fa-certificate"></i> CERTIFICADO</asp:LinkButton></td>
+                   <td>&nbsp;</td>
+                   <td><asp:LinkButton ID="certbutton" runat="server" class="button2" OnClick="certbutton_click" ><i class="fa fa-search"></i></asp:LinkButton></td>
                </tr>
               
            </table> 

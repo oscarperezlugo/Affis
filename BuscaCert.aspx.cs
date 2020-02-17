@@ -24,24 +24,49 @@ namespace Affis
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            inicio = DateTime.Now;
-
-            string iDate = GridView4.Rows[0].Cells[3].Text;
-            DateTime oDate = Convert.ToDateTime(iDate);
-
-            final = oDate;
-            tspan = final.Subtract(inicio).Duration();
-
-            int x = (int)tspan.TotalDays;
-
-            if (x > 365)
+            if (GridView4.Rows.Count != 0)
             {
-                Label5.Text = "VENCIDO";
+                inicio = DateTime.Now;
+
+                string iDate = GridView4.Rows[0].Cells[3].Text;
+                DateTime oDate = Convert.ToDateTime(iDate);
+
+                final = oDate;
+                tspan = final.Subtract(inicio).Duration();
+
+                int x = (int)tspan.TotalDays;
+
+                if (x > 365)
+                {
+                    Label5.Text = "VENCIDO";
+                }
+                else
+                {
+                    Label5.Text = "VIGENTE";
+                }
+
             }
             else
             {
-                Label5.Text = "VIGENTE";
+                inicio = DateTime.Now;
+
+                string iDate = GridView7.Rows[0].Cells[3].Text;
+                DateTime oDate = Convert.ToDateTime(iDate);
+
+                final = oDate;
+                tspan = final.Subtract(inicio).Duration();
+
+                int x = (int)tspan.TotalDays;
+
+                if (x > 365)
+                {
+                    Label5.Text = "VENCIDO";
+                }
+                else
+                {
+                    Label5.Text = "VIGENTE";
+                }
+
             }
 
 

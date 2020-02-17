@@ -11,7 +11,7 @@ namespace Affis
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label2.Text = String.Format("Bienvenido(a): {0}", Session["bienvenido"].ToString());
+            Label2.Text = "";//String.Format("Bienvenido(a): {0}", Session["bienvenido"].ToString());
             Label1.Text = DateTime.Now.ToString();
         }
 

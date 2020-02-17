@@ -26,7 +26,7 @@ namespace Affis
                 //string direccion = String.Format("{0}", Request.Form["TextBox2"]);
                 //string medio = String.Format("{0}", Request.Form["TextBox3"]);
                 //string telempresa = String.Format("{0}", Request.Form["TextBox4"]);
-                string ruc = String.Format("{0}", Request.Form["Text1"]);
+                //string ruc = String.Format("{0}", Request.Form["Text1"]);
                 //string dirper = String.Format("{0}", Request.Form["Text1"]);
                 //string email = String.Format("{0}", Request.Form["Text2"]);
                 //string cargo = String.Format("{0}", Request.Form["cargo"]);
@@ -40,12 +40,12 @@ namespace Affis
                 //string teldom = String.Format("{0}", Request.Form["Text8"]);
                 string mdc = String.Format("{0}", DropDownList11.SelectedValue);
 
-                string saveStaff = "INSERT into EMPRESAS (RUC, NOMBRECOMERCIAL, MEDIODECOBRO) VALUES (@RUC, @NOMBRECOMERCIAL, @MEDIODECOBRO)";
+                string saveStaff = "INSERT into EMPRESAS (NOMBRECOMERCIAL, MEDIODECOBRO) VALUES (@NOMBRECOMERCIAL, @MEDIODECOBRO)";
 
                 using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                 {
                     querySaveStaff.Connection = openCon;
-                    querySaveStaff.Parameters.Add("@RUC", SqlDbType.VarChar).Value = ruc.ToString();
+                    //querySaveStaff.Parameters.Add("@RUC", SqlDbType.VarChar).Value = ruc.ToString();
                     querySaveStaff.Parameters.Add("@NOMBRECOMERCIAL", SqlDbType.VarChar).Value = nombre.ToString();
                     querySaveStaff.Parameters.Add("@MEDIODECOBRO", SqlDbType.VarChar).Value = mdc.ToString();
                     //querySaveStaff.Parameters.Add("@TOMADORPRINCIPAL", SqlDbType.VarChar).Value = TextBox1.Text;
@@ -84,6 +84,12 @@ namespace Affis
 
                 }
             }
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
         }
     }
 }

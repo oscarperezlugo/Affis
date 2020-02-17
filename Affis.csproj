@@ -115,6 +115,7 @@
     <Content Include="BuscaCert.aspx" />
     <Content Include="BuscaCedula.aspx" />
     <Content Include="Cobranzas.aspx" />
+    <Content Include="DashBoard.aspx" />
     <Content Include="InicioProceso.aspx" />
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
@@ -263,6 +264,13 @@
     </Compile>
     <Compile Include="Cobranzas.aspx.designer.cs">
       <DependentUpon>Cobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="InicioProceso.aspx.cs">
       <DependentUpon>InicioProceso.aspx</DependentUpon>
