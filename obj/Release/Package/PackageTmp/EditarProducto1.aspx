@@ -10,14 +10,16 @@
     <title></title>
 </head>
 <body>
-    
+    <br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Codigo"></asp:Label>
+                    <br />
         <div>
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Codigo" DataValueField="Codigo" CssClass="dropdown-content">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Codigo] FROM [PRODUCTOS]"></asp:SqlDataSource>
             <br />
             <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click">SELECCIONAR</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-check"></i> SELECCIONAR</asp:LinkButton>
         </div>
     
 </body>

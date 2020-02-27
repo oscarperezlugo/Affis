@@ -16,6 +16,7 @@
         
         <asp:Label ID="Label6" runat="server" CssClass="treeNode" Text="ADICION"></asp:Label>
         <br />
+                                <asp:Label ID="Label7" runat="server" CssClass="textomini" Text="Tomador Cedula"></asp:Label>
         <br />
     
         
@@ -26,8 +27,10 @@
                 <td class="auto-style2" >
                     <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="TOMADOR CEDULA"></asp:TextBox>
                     &nbsp;<br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
                     <br />
                     <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control"/><br />
+                                <asp:Label ID="Label9" runat="server" CssClass="textomini" Text="Nombre Completo"></asp:Label>
                     <br />
                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="form-control"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
@@ -36,17 +39,17 @@
                     </asp:DropDownList>
                     <asp:DropDownList ID="DropDownList5" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem>RELACION</asp:ListItem>
-                        <asp:ListItem Value="Titular">Tomador</asp:ListItem>
-                        <asp:ListItem Value="Cónyuge">Cónyuge</asp:ListItem>
-                        <asp:ListItem Value="Hijo">Hijo</asp:ListItem>
-                        <asp:ListItem>Hermano</asp:ListItem>
-                        <asp:ListItem>Progenitor</asp:ListItem>
-                        <asp:ListItem>Primo</asp:ListItem>
-                        <asp:ListItem>Sobrino</asp:ListItem>
-                        <asp:ListItem>Hermano</asp:ListItem>
-                        <asp:ListItem>Nieto</asp:ListItem>
-                        <asp:ListItem>Cuñado</asp:ListItem>
-                        <asp:ListItem>Suegro</asp:ListItem>
+                        <asp:ListItem Value="TOMADOR">Tomador</asp:ListItem>
+                        <asp:ListItem Value="CONYUGUE">Cónyuge</asp:ListItem>
+                        <asp:ListItem Value="HIJO">Hijo</asp:ListItem>
+                        <asp:ListItem Value="HERMANO">Hermano</asp:ListItem>
+                        <asp:ListItem Value="PROGENITOR">Progenitor</asp:ListItem>
+                        <asp:ListItem Value="PRIMO">Primo</asp:ListItem>
+                        <asp:ListItem Value="SOBRINO">Sobrino</asp:ListItem>
+                        <asp:ListItem Value="HERMANO">Hermano</asp:ListItem>
+                        <asp:ListItem Value="NIETO">Nieto</asp:ListItem>
+                        <asp:ListItem Value="CUÑADO">Cuñado</asp:ListItem>
+                        <asp:ListItem Value="SUEGRO">Suegro</asp:ListItem>
                     </asp:DropDownList>
                     <br />
                     <br />
@@ -95,16 +98,13 @@
                         
                         <tr>
                             
-                            <td class="auto-style6"><asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="gridcalc" ShowHeader="false" Width="10%" >
+                            <td class="auto-style6"><asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="gridcalc" ShowHeader="False" Width="10%" >
                         <Columns>
-                            <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
+                            <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" DataFormatString="{0:0.00}" />
                             <asp:BoundField DataField="Producto" HeaderText="Producto" SortExpression="Producto" visible="false" />
                             <asp:BoundField DataField="Plan" HeaderText="Plan" SortExpression="Plan" visible="false" />
                         </Columns>
                     </asp:GridView>
-                            </td>
-                            <td>
-                    <asp:Label ID="Label5" runat="server" CssClass="texto" Width="10%"></asp:Label>
                             </td>
                         </tr>
                        
@@ -114,11 +114,11 @@
                     &nbsp;&nbsp;
                     <br />
                     <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"  ><i class="fa fa-plus-circle"></i> ADICIONAR</asp:LinkButton>
-                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                    &nbsp;<asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
                     
                     
                     
-                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                     

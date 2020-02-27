@@ -23,15 +23,17 @@
                     
                     <br />
                     
-                    
+                    <br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Numero Cedula"></asp:Label>
+                    <br />
                     <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox><br /><br />
                     
                     
-                    <asp:Button ID="Button1" runat="server" Text="SELECCIONAR" OnClick="Button1_Click" CssClass="btn btn-primary"/><br /><br />
+                    <asp:LinkButton ID="Button1" runat="server" Text="SELECCIONAR" OnClick="Button1_Click" CssClass="btn btn-primary"><i class="fa fa-check"></i> SELECCIONAR</asp:LinkButton><br /><br />
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                     
                     
-                    <asp:Button ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"/>&nbsp;<asp:Button ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" CssClass="btn btn-secondary"/><br /><br />
+                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>&nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> RCGE</asp:LinkButton><br /><br />
                     
                     
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>
@@ -52,7 +54,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView><br />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" CssClass="btn btn-primary"/>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                 </td>

@@ -183,7 +183,7 @@
                     <asp:Parameter DefaultValue="TOMADOR" Name="RELACION" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Text="CONSULTAR ESTADO" Width="226px" />
+            <asp:LinkButton ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Width="226px" ><i class="fa fa-angle-double-right"></i> CONSULTAR ESTADO</asp:LinkButton>
             &nbsp;&nbsp;
             <asp:Label ID="Label5" runat="server" CssClass="texto" Font-Bold="True" Font-Size="Larger" ForeColor="Red"></asp:Label>
             <br />

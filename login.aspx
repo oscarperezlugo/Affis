@@ -74,7 +74,7 @@
                 
                 <td class="auto-style1">
                     
-                    <asp:Image ID="Image2" runat="server" ImageUrl="https://uc96b079576535e20a74dcdd3e12.previews.dropboxusercontent.com/p/thumb/AAsOIT5Rf41LhfRpv-8vr3-GEWx1YgnG042ODK1Ehd5lFkVjTyA8GT6PIaqMSRgpFuIHEqdwVP73iJg1CvEg1NdS-_RqolkTAR2zxhg037Hh6q88x3ZOV5sX-KZhNyMyu2khs90A1EYShDjEy2lHjl2M8EhuwyaDfRkmw-6-9BwgVsHT72twwQ6VWGKt3JyZeDqmjTd1ZKT4jqIfbMrTWY4OinzLgcgGHeTL2IYqJ5o7KQbqIY2DU-6pSimAiDLKeFXDLhyS-faxwz60nuPURoAnCnyWkGEyBiWtagvwLz5ybIz5dI92eldt3JPutMCAx6VT99vHRKCU1aSevqIRPmITr9peScInY_TgeKGpu2PwCcXZSyQ33PnbZWCA3wciMSuUTYaPfnLjnQdpU_uGUTC4Q3fpTCIIc1y-C7yp_da2ZA/p.jpeg?fv_content=true&amp;size_mode=5" Width="99%" Height="605px" padding="5px"/>
+                    <asp:Image ID="Image2" runat="server" ImageUrl="https://www.andbeyond.com/wp-content/uploads/sites/5/Mitad-del-Mundo-in-Quito-Ecuador.jpg" Width="99%" Height="605px" padding="5px"/>
                        
                 </td>
                 

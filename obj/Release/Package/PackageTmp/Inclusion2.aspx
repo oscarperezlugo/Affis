@@ -25,37 +25,58 @@
                     <table >
                         <tr>
                             <td >
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
+                                <br />
+                            </td>
+                            
+                            <td>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
+                                <br />
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td >
+                    <asp:TextBox ID="TextBox3" runat="server"  CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
                             </td>
                             <td>
-                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
                             </td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox ID="TextBox3" runat="server"  CssClass="form-control"></asp:TextBox>
-                            </td>
+                                <br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
+                    <br />
+                    <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control" Width="95%" Height="95%"/></td>
+                            
                             <td>
-                    <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" ></asp:TextBox>
-                            </td>
+                                <br />
+                                <asp:Label ID="Label2" runat="server" CssClass="textomini" Text="Direccion"></asp:Label>
+                    <br />
+                                <asp:TextBox id="Text1" class="form-control" placeholder="DIRECCION" runat="server" Width="95%" Height="95%"/></td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control" /></td>
-                            <td><asp:TextBox id="Text1" class="form-control" placeholder="DIRECCION" runat="server" /></td>
+                                <br />
+                                <asp:Label ID="Label1" runat="server" CssClass="textomini" Text="Email"></asp:Label>
+                    <br />
+                    <asp:TextBox id="Text2" placeholder="EMAIL" type="text" runat="server" class="form-control" Width="95%" Height="95%"/></td>
+                            
+                            <td>
+                                <br />
+                                <asp:Label ID="Label3" runat="server" CssClass="textomini" Text="Cargo"></asp:Label>
+                    <br /><asp:TextBox id="cargo1" class="form-control" placeholder="CARGO" type="text" runat="server" Width="95%" Height="95%"/></td>
                             
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox id="Text2" placeholder="EMAIL" type="text" runat="server" class="form-control"/></td>
-                            <td><asp:TextBox id="cargo1" class="form-control" placeholder="CARGO" type="text" runat="server"/></td>
-                            
-                        </tr>
-                        <tr>
-                            <td >
-                    <asp:TextBox id="Text6" class="form-control" placeholder="NOMBRE COMPLETO" type="text" runat="server" /></td>
+                                <br />
+                                <asp:Label ID="Label4" runat="server" CssClass="textomini" Text="Nombre Completo"></asp:Label>
+                    <br />
+                    <asp:TextBox id="Text6" class="form-control" placeholder="NOMBRE COMPLETO" type="text" runat="server" Width="95%" Height="95%" /></td>
                             <td><asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
                         <asp:ListItem>MASCULINO</asp:ListItem>
@@ -66,8 +87,15 @@
                         </tr>
                         <tr>
                             <td >
-                    <asp:TextBox id="Text7" class="form-control" placeholder="TELEFONO CELULAR" type="text" runat="server" /></td>
-                            <td><asp:TextBox id="Text8" class="form-control" placeholder="TELEFONO DOMICILIO" type="text" runat="server" /></td>
+                                <br />
+                                <asp:Label ID="Label6" runat="server" CssClass="textomini" Text="Telefono Celular"></asp:Label>
+                    <br />
+                    <asp:TextBox id="Text7" class="form-control" placeholder="TELEFONO CELULAR" type="text" runat="server" Width="95%" Height="95%"/></td>
+                            <td>
+                                <br />
+                                <asp:Label ID="Label7" runat="server" CssClass="textomini" Text="Telefono Domicilio"></asp:Label>
+                    <br />
+                                <asp:TextBox id="Text8" class="form-control" placeholder="TELEFONO DOMICILIO" type="text" runat="server" Width="95%" Height="95%"/></td>
                             
                         </tr>
                     </table>
@@ -158,13 +186,14 @@
                         <tr>
                             <td >
                                 <asp:Label ID="Label5" runat="server" CssClass="texto" Text="¿El tomador es un asegurado?"></asp:Label>
+                                <asp:CheckBox ID="CheckBox1" Text="SI" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" />
+                                <asp:CheckBox ID="CheckBox2" Text="NO" runat="server" />
                             </td>
                             <td >
-                                <asp:Button ID="Button5" runat="server" Text="SI" CssClass="btn btn-success" Width="100%" OnClick="Button5_Click"/>
-                            </td>
+                                
+                                &nbsp;</td>
                             <td >
-                                <asp:Button ID="Button6" runat="server" Text="NO" CssClass="btn btn-danger" Width="100%"/>
-                            </td>
+                                &nbsp;</td>
                             
                         </tr>
                         
@@ -178,11 +207,11 @@
                     <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <br />
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="btn btn-success"/>
-                    <asp:Button ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"/>
-                    <asp:Button ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="btn btn-secondary"/>
-                    <asp:Button ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"/>
-                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> REGISTRAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
+                    <asp:LinkButton ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> CEDULA</asp:LinkButton>
+                    <asp:LinkButton ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> RGCE</asp:LinkButton>
+                    <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     
                     <br />

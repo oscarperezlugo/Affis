@@ -38,7 +38,7 @@ namespace Affis
             }
             else if(e.Row.RowType == DataControlRowType.Footer)
             {
-                e.Row.Cells[4].Text = String.Format("TOTAL {0:c}", total);
+                e.Row.Cells[4].Text = String.Format("TOTAL {0:0.00}$", total);
                 Session["prima"] = e.Row.Cells[4].Text;
             }
         }

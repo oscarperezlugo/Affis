@@ -59,10 +59,13 @@ namespace Affis
             if (GridView1.SelectedRow != null)
             {
                 Session["cedula"] = GridView1.SelectedRow.Cells[1].Text;
+                Session["cedul"] = GridView1.SelectedRow.Cells[1].Text;
+                Session["Rela"] = "Tomador";
                 Session["nombre"] = GridView1.SelectedRow.Cells[2].Text;
+                Session["nombres"] = GridView1.SelectedRow.Cells[2].Text;
                 Session["genero"] = GridView1.SelectedRow.Cells[4].Text;
 
-                Response.Redirect("Adicion.aspx");
+                Response.Redirect("IncluDesc.aspx");
             }
             else
             {

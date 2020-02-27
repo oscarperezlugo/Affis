@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <td>
-                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click">GUARDAR</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
             </td>
            
         </tr>

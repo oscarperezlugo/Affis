@@ -46,8 +46,8 @@
                         </tr>
                         <tr>
                             <td>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="GUARDAR" class="btn btn-success"/>
-                                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" class="button" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                                <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" class="button" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     
                                 <br />

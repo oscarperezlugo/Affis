@@ -18,30 +18,32 @@
             <tr>
                 
                  
-                <td class="auto-style2" >
+                <td  >
                     
                     
                     <br />
-                    
+                    <br />
+                                <asp:Label ID="Label6" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
+                    <br />
                     
                     <asp:TextBox ID="TextBox1" placeholder="CEDULA" runat="server" class="form-control"></asp:TextBox><br />
                     <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
                     <br />
                     
                     
-                    <asp:Button ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-lg btn-primary"/><br /><br />
+                    <asp:LinkButton ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-lg btn-primary"><i class="fa fa-search"></i> REVISAR</asp:LinkButton><br /><br />
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                     
                     
-                    <asp:Button ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" class="btn btn-secondary"/>
-                    &nbsp;<asp:Button ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"/>
+                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" class="btn btn-secondary"><i class="fa fa-search"> SRI</i></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"><i class="fa fa-search"> RGCE</i></asp:LinkButton>
                     <br />
                     <br />
                     &nbsp;<br /><br />
                     
                     
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" CssClass="gridcalc" >
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="163%" CssClass="gridcalc" >
                         <Columns>
                             <asp:CommandField ButtonType="Button" SelectText="Confirmar" ShowSelectButton="True" />
                             <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" />
@@ -58,10 +60,10 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView><br />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" class="btn btn-lg btn-primary"/>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" class="btn btn-lg btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
-                &nbsp;<asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" class="btn btn-lg btn-danger"/>
+                &nbsp;<asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" class="btn btn-lg btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     
                     <br />
@@ -101,9 +103,4 @@
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
         <%: Scripts.Render("~/bundles/modernizr") %>
-    <style type="text/css">
-        .auto-style2 {
-            width: 465px;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>

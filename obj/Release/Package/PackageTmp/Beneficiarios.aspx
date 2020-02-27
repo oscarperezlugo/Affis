@@ -22,13 +22,13 @@
                         <tr>
                             <td>
                     
-                    
-                                <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
+                                 <asp:TextBox ID="Label4" runat="server" CssClass="form-control"></asp:TextBox> 
+                                 <!--<asp:TextBox ID="Label3" runat="server" CssClass="form-control"></asp:TextBox>-->
                             </td>
                              <td>
                     
                     
-                                <asp:Label ID="Label4" runat="server" CssClass="texto"></asp:Label>
+                                
                             </td>
                             
                             
@@ -43,9 +43,11 @@
                             <td class="texto">
                                 NOMBRE</td>
                             <td class="texto">
-                                PARENTESCO</td>
+                                &nbsp;
+                                PARENTESCO&nbsp; </td>
                             <td class="texto">
-                                PORCENTAJE %</td>
+                                PORCENTAJE %<br />
+                            </td>
                         </tr>
                         <tr>
                             <td >
@@ -116,13 +118,13 @@
                         <tr>
                             
                             <td >
-                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="btn btn-success"/>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
                     
                     
-                            &nbsp;<asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                            &nbsp;<asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     
-                &nbsp;<asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="SIGUIENTE" CssClass="btn btn-primary"/>
+                &nbsp;<asp:LinkButton ID="Button9" runat="server" OnClick="Button9_Click" CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                             </td>

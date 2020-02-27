@@ -21,12 +21,19 @@
                 
                  
                 <td >
+                    <br />
+                                <asp:Label ID="Label1" runat="server" CssClass="textomini" Text="Cedula Tomador"></asp:Label>
+                    <br />
                     <asp:TextBox ID="TextBox1" runat="server" class="form-control"></asp:TextBox>
                     <br />
-                    &nbsp;<asp:Label ID="Label2" runat="server" Text="TOMADOR PRNCIPAL CEDULA" CssClass="texto"></asp:Label>
+                   
                     <br />
-
+                                <asp:Label ID="Label2" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
+                    <br />
                     <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control"/><br />
+                    <br />
+                    <br />
+                                <asp:Label ID="Label4" runat="server" CssClass="textomini" Text="Nombre Completo"></asp:Label>
                     <br />
                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="form-control"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem Value="null">GENERO</asp:ListItem>
@@ -70,7 +77,7 @@
                         <asp:ListItem>C</asp:ListItem>
                     </asp:DropDownList>
                     <br />
-                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="CALCULAR" CssClass="btn btn-primary" />
+                    <asp:LinkButton ID="Button3" runat="server" OnClick="Button3_Click" Text="CALCULAR" CssClass="btn btn-primary" ><i class="fa fa-calculator"></i> CALCULAR</asp:LinkButton>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;<table class="auto-style5">
                         
@@ -94,8 +101,8 @@
                     <br />
                     &nbsp;&nbsp;
                     <br />
-                    <asp:Button class="btn btn-success" ID="Button1" runat="server" OnClick="Button1_Click" Text="REEMPLAZAR" />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="FINALIZAR" CssClass="btn btn-primary" />
+                    <asp:LinkButton class="btn btn-success" ID="Button1" runat="server" OnClick="Button1_Click" Text="REEMPLAZAR" ><i class="fa fa-plus-circle"></i> REEMPLAZAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="FINALIZAR" CssClass="btn btn-primary" ><i class="fa fa-check"></i> FINALIZAR</asp:LinkButton>
                    
                     
                     

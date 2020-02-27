@@ -33,6 +33,14 @@
                     
                     
                     <asp:Label ID="Label2" runat="server" CssClass="certificado"></asp:Label>
+                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="text-danger" DataSourceID="SqlDataSource2" DataTextField="Numero" DataValueField="Numero" Font-Bold="True" Font-Size="Large">
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Numero] FROM [Certificados] WHERE (([Ejecutivo] = @Ejecutivo) AND ([Accion] = @Accion))">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="Ejecutivo" SessionField="bienvenido" Type="String" />
+                                        <asp:Parameter DefaultValue="Entregado" Name="Accion" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </td>
                             
                         </tr>
@@ -54,15 +62,17 @@
                     <table >
                         <tr>
                             <td>
-                    <asp:Button ID="Button1" runat="server" Text="GENERAR" OnClick="Button1_Click" CssClass="btn btn-primary"/>
                     
                     
                             &nbsp;</td>
                             <td>
-                    <asp:Button ID="Button2" runat="server" Text="GUARDAR" OnClick="Button2_Click" CssClass="btn btn-success"/>
+                    <asp:LinkButton ID="Button2" runat="server"  OnClick="Button2_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
                     
                     
-                            &nbsp;<asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                            &nbsp;<asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                    
+                    
+                            &nbsp;<asp:LinkButton ID="Button4" runat="server"  OnClick="Button4_Click" CssClass="btn btn-primary"><i class="fa fa-check"></i> FINALIZAR</asp:LinkButton>
                     
                     
                             </td>

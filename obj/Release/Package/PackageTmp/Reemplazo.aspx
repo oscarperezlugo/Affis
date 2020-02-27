@@ -21,7 +21,9 @@
                         <tr>
                             <td >
                     
-                    
+                    <br />
+                                <asp:Label ID="Label6" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
+                    <br />
                     <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="CEDULA TOMADOR PRINCIPAL" Width="354px"></asp:TextBox>
                     
                     
@@ -36,7 +38,7 @@
                                 <br />
                     
                     
-                    <asp:Button ID="Button1" runat="server" Text="SIGUIENTE" OnClick="Button1_Click" CssClass="btn btn-primary"/>
+                    <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" OnClick="Button1_Click" CssClass="btn btn-primary"><i class="fas fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                             </td>

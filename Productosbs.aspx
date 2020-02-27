@@ -36,7 +36,7 @@
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Codigo], [Producto], [Plano], [Edadminima], [Edadmaxima], [Edadmaximarenova], [Aplicaa], [Valor] FROM [PRODUCTOS]"></asp:SqlDataSource>
                     
                     
-                    <asp:Button ID="Button1" runat="server" Text="SIGUIENTE" CssClass="button" OnClick="Button1_Click" />
+                    <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="btn btn-info" OnClick="Button1_Click" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                 </td>

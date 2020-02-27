@@ -18,24 +18,27 @@
               
                  
                 <td >
+                    <br />
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Nombre Empresa"></asp:Label>
+                    <br />
                     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="NOMBRECOMERCIAL" DataValueField="NOMBRECOMERCIAL" CssClass="cajagrande">
                     </asp:DropDownList>
                     <br />
                     <br />
-                    <asp:Button ID="Button1" runat="server" Text="SELECCIONAR" OnClick="Button1_Click" class="btn btn-primary"/>
+                    <asp:LinKButton ID="Button1" runat="server" Text="SELECCIONAR" OnClick="Button1_Click" class="btn btn-primary"><i class="fa fa-check"></i> SELECCIONAR</asp:LinKButton>
                     <br />
                     <br/>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                     
                     
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL], [DIRECCION], [MEDIO DE COBRO] AS MEDIO_DE_COBRO, [TELEFONO 1] AS TELEFONO_1 FROM [EMPRESAS]"></asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" CssClass="gridcalc">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="139%" CssClass="gridcalc">
                         <Columns>
                             <asp:CommandField ButtonType="Button" SelectText="Seleccionar" ShowSelectButton="True" />
                             <asp:BoundField DataField="NOMBRECOMERCIAL" HeaderText="NOMBRE COMERCIAL" SortExpression="NOMBRECOMERCIAL" />
                             <asp:BoundField DataField="DIRECCION" HeaderText="DIRECCION" SortExpression="DIRECCION" />
                             <asp:BoundField DataField="MEDIODECOBRO" HeaderText="MEDIO DE COBRO" SortExpression="MEDIO_DE_COBRO" />
-                            <asp:BoundField DataField="TELEFONO1" HeaderText="TELEFONO" SortExpression="TELEFONO_1" />
+                            <asp:BoundField DataField="TELEFONO2" HeaderText="TELEFONO" SortExpression="TELEFONO_1" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />
@@ -47,10 +50,10 @@
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
                     <br />
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE"  CssClass="btn btn-primary"/>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE"  CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
-                &nbsp;<asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                &nbsp;<asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"><i class="fa fa-plus-circle"></i> CANCELAR</asp:LinkButton>
                     
                     
                 </td>

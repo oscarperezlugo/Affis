@@ -32,7 +32,7 @@
                             <asp:BoundField DataField="PLAN" HeaderText="PLAN" SortExpression="PLAN" >
                             <ItemStyle Font-Size="Small" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="COSTO" HeaderText="COSTO" SortExpression="COSTO" >
+                            <asp:BoundField DataField="COSTO" HeaderText="PRIMA" SortExpression="COSTO" DataFormatString="{0:0.00}" >
                             <ItemStyle Font-Bold="True" Font-Size="Small" />
                             </asp:BoundField>
 
@@ -46,7 +46,7 @@
                         </SelectParameters>
                         
                     </asp:SqlDataSource>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="SIGUIENTE" CssClass="btn btn-primary" />
+                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" Text="SIGUIENTE" CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     <br />
                     
                     

@@ -20,11 +20,13 @@ namespace Affis
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            DropDownList7.SelectedValue = DateTime.Now.Day.ToString();
-            DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+            DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            DateTime endDate = startDate.AddMonths(1);
+            DropDownList7.SelectedValue = "1";
+            DropDownList11.SelectedValue = endDate.Month.ToString();
             DropDownList5.SelectedValue = DateTime.Now.Year.ToString();
-            DropDownList10.SelectedValue = DateTime.Now.Day.ToString();
-            DropDownList12.SelectedValue = DateTime.Now.Month.ToString();
+            DropDownList10.SelectedValue = "1";
+            DropDownList12.SelectedValue = endDate.Month.ToString();
             DropDownList8.SelectedValue = DateTime.Now.Year.ToString();
             DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
             DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
@@ -33,9 +35,19 @@ namespace Affis
             if (Session["empresa"] != null)
             {
                 TextBox1.Text = Session["empresa"].ToString();
-                TextBox2.Text = Session["direccion"].ToString();
                 TextBox3.Text = Session["medio"].ToString();
-                TextBox4.Text = Session["telefono"].ToString();
+                if (Session["direccion"] == "&nbsp;")
+                {
+                    TextBox2.Text = Session["direccion"].ToString();
+                    TextBox4.Text = Session["telefono"].ToString();
+                }
+                else 
+                {
+                    TextBox2.Text = "DIRECCION EMPRESA";
+                    TextBox4.Text = "TELEFONO EMPRESA";
+                }
+
+                
             }
             if (Session["cedula"] != null)
             {
@@ -52,7 +64,9 @@ namespace Affis
         protected void Button1_Click(object sender, EventArgs e)
         {
             Session["cedula"] = Text3.Text;
+            Session["cedul"] = Text3.Text;
             Session["nombre"] = Text6.Text;
+            Session["nombres"] = Text6.Text;
             Session["genero"] = String.Format("{0}", DropDownList1.SelectedValue);
             Session["ano"] = String.Format("{0}", DropDownList2.SelectedValue);
             Session["mes"] = String.Format("{0}", DropDownList3.SelectedValue);
@@ -118,7 +132,7 @@ namespace Affis
                     finally 
                     {
                         Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
-                        Response.Redirect("Adicion.aspx"); 
+                        Response.Redirect("IncluDesc.aspx"); 
                     }
                     
                    
@@ -163,5 +177,9 @@ namespace Affis
             Response.Redirect("InicioProceso.aspx");
         }
 
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Session["tomasegur"] = "si";
+        }
     }
 }
