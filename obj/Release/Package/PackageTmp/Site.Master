@@ -240,7 +240,7 @@
                                     <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/InicioProceso.aspx"></asp:TreeNode>
                                     <asp:TreeNode Text="ADICION" Value="ADICION" NavigateUrl="~/Adicion.aspx"></asp:TreeNode>
                                     <asp:TreeNode Text="REEMPLAZO" Value="REEMPLAZO" NavigateUrl="~/Reemplazo.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS"></asp:TreeNode>
+                                    <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS" NavigateUrl="~/Beneficiarios.aspx"></asp:TreeNode>
                                 </asp:TreeNode>
                                 
                             </asp:TreeNode>   
@@ -268,7 +268,8 @@
                                     <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Cobranzas.aspx"></asp:TreeNode>
                                 </asp:TreeNode>
                                 <asp:TreeNode SelectAction="None" Text="RECLAMOS" Value="RECLAMOS">
-                                    <asp:TreeNode Text="CASOS" Value="CASOS"></asp:TreeNode>
+                                    <asp:TreeNode Text="CASO" Value="CASO" NavigateUrl="~/caso.aspx"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Reclamos.aspx" Text="RECLAMOS" Value="RECLAMOS"></asp:TreeNode>
                                 </asp:TreeNode>
                                 <asp:TreeNode SelectAction="None" Text="COMISIONES" Value="COMISIONES">
                                     <asp:TreeNode Text="COMISION" Value="COMISION"></asp:TreeNode>
@@ -298,6 +299,7 @@
                                 </asp:TreeNode>
                                 <asp:TreeNode Text="CERTIFICADOS" Value="CERTIFICADOS">
                                     <asp:TreeNode NavigateUrl="~/AdminCert.aspx" Text="ADMINISTRAR" Value="ADMINISTRAR"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Retenciones2.aspx" Text="RETENCIONES" Value="RETENCIONES"></asp:TreeNode>
                                 </asp:TreeNode>
                                 <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS">
                                     <asp:TreeNode NavigateUrl="~/Beneficiarios.aspx" Text="AGREGAR" Value="AGREGAR"></asp:TreeNode>
@@ -310,6 +312,9 @@
                                         <asp:TreeNode NavigateUrl="~/Asistencia.aspx" Text="REGISTRO" Value="REGISTRO"></asp:TreeNode>
                                         <asp:TreeNode NavigateUrl="~/ConsultaAsistencia.aspx" Text="CONSULTA" Value="CONSULTA"></asp:TreeNode>
                                     </asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="EMPRESA" Value="EMPRESA">
+                                    <asp:TreeNode NavigateUrl="~/EmpresaDetalle1.aspx" Text="EMPRESA DETALLE" Value="EMPRESA DETALLE"></asp:TreeNode>
                                 </asp:TreeNode>
                             </asp:TreeNode>
                         </Nodes>

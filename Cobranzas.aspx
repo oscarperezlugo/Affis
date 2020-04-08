@@ -9,12 +9,13 @@
             <td class="auto-style3">
                     
                     
-                                <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
-                    
-                    
-                                <asp:Label ID="Label4" runat="server" CssClass="texto"></asp:Label>
+                                <asp:Label ID="Label11" runat="server" CssClass="textomini" Text="Nombre"></asp:Label>
+                                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" placeholder="NOMBRE"></asp:TextBox>
                             </td>
-            <td>&nbsp;</td>
+            <td>
+                                <asp:Label ID="Label12" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
+                                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" placeholder="CEDULA"></asp:TextBox>
+                            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>

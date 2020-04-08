@@ -11,7 +11,7 @@ namespace Affis
     {
         public static DataTable usuariosDT;
         SqlConnection conn = new SqlConnection("workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity");
-
+        string conex = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
         public DataSet Obtenerinfo(string filtro)
         {
             DataSet ds = new DataSet();

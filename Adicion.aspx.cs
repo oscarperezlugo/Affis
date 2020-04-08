@@ -33,40 +33,12 @@ namespace Affis
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Label4.Text = "";//String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
+            DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
+            DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+            DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
             if (IsPostBack)
                 recuperarInfo();
-            if (Session["cedula"] != null)
-            {
-                TextBox1.Text = Session["cedula"].ToString();
-                Text6.Text = Session["nombre"].ToString();
-                DropDownList1.SelectedValue = Session["genero"].ToString();
-                DropDownList5.SelectedValue = "TOMADOR";
-                if (Session["tomasegur"] != null) 
-                {
-                    Text3.Text = Session["cedula"].ToString();
-                    Text6.Text = Session["nombre"].ToString();
-                    DropDownList1.SelectedValue = Session["genero"].ToString();
-                    DropDownList5.SelectedValue = "TOMADOR";
-                    DropDownList4.SelectedValue = DateTime.Now.Day.ToString();                        
-                    DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                    DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
-
-                }
-                else 
-                {
-                    DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
-                    DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                    DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
-                }
-            
-            }
-            else
-            {
-                DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
-                DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
-            }
+           
         }
         
 
@@ -88,18 +60,20 @@ namespace Affis
             {
                 
 
-                string saveStaff = "INSERT into ASEGURADOS (CEDULA, NOMBRESCOMPLETOS, GENERO, FECHADENACIMIENTO, TOMADOR, RELACION) VALUES (@CEDULA, @NOMBRESCOMPLETOS, @GENERO, @FECHADENACIMIENTO, @TOMADOR, @RELACION)";
+                string saveStaff = "INSERT into ASEGURADOS (CEDULA, NOMBRESCOMPLETOS, GENERO, FECHADENACIMIENTO, TOMADOR, RELACION, TOTALPRIMAASEGURADO, PRIMABECAEDUCATIVA, PRIMARENTADIARIAPORHOSPITALIZACION) VALUES (@CEDULA, @NOMBRESCOMPLETOS, @GENERO, @FECHADENACIMIENTO, @TOMADOR, @RELACION, @TOTALPRIMAASEGURADO, @PRIMABECAEDUCATIVA, @PRIMARENTADIARIAPORHOSPITALIZACION)";
 
                 using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                 {
                     querySaveStaff.Connection = openCon;
                     querySaveStaff.Parameters.Add("@CEDULA", SqlDbType.VarChar).Value = Text3.Text;
-                    querySaveStaff.Parameters.Add("@NOMBRESCOMPLETOS", SqlDbType.VarChar).Value = Text3.Text;
+                    querySaveStaff.Parameters.Add("@NOMBRESCOMPLETOS", SqlDbType.VarChar).Value = Text6.Text;
                     querySaveStaff.Parameters.Add("@GENERO", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
                     querySaveStaff.Parameters.Add("@RELACION", SqlDbType.VarChar).Value = DropDownList5.SelectedValue;
                     querySaveStaff.Parameters.Add("@TOMADOR", SqlDbType.VarChar).Value = TextBox1.Text;                    
                     querySaveStaff.Parameters.Add("@FECHADENACIMIENTO", SqlDbType.VarChar).Value = DropDownList2.SelectedValue + "/" + DropDownList4.SelectedValue +"/"+ DropDownList11.SelectedValue;
-                                        
+                    querySaveStaff.Parameters.Add("@TOTALPRIMAASEGURADO", SqlDbType.VarChar).Value = String.Format(GridView1.Rows[0].Cells[0].Text);
+                    querySaveStaff.Parameters.Add("@PRIMABECAEDUCATIVA", SqlDbType.VarChar).Value = DropDownList7.SelectedValue.ToString();
+                    querySaveStaff.Parameters.Add("@PRIMARENTADIARIAPORHOSPITALIZACION", SqlDbType.VarChar).Value = DropDownList8.SelectedValue.ToString();
                     try
                     {
                         openCon.Open();

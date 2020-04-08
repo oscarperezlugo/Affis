@@ -92,7 +92,7 @@ namespace Affis
         {
             // define your connection string (typically from a .config file) and your query WITH parameters!
             string connectionString = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-            string query = "UPDATE ASEGURADOS SET NUMERODECERTIFICADO=@cer WHERE TOMADOR=@user AND RELACION=@pwd";
+            string query = "UPDATE ASEGURADOS SET NUMERODECERTIFICADO=@cer WHERE TOMADOR=@user AND FECHAVENTA=@pwd";
 
             // set up a connection and command in using() blocks
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -100,7 +100,7 @@ namespace Affis
             {
                 // add parameters and set their values
                 cmd.Parameters.Add("@user", SqlDbType.VarChar, 50).Value = Label4.Text;
-                cmd.Parameters.Add("@pwd", SqlDbType.VarChar, 50).Value = "TOMADOR";
+                cmd.Parameters.Add("@pwd", SqlDbType.VarChar, 50).Value = Session["fecha"];
                 cmd.Parameters.Add("@cer", SqlDbType.VarChar, 50).Value = DropDownList1.SelectedValue.ToString();
 
                 // open connection

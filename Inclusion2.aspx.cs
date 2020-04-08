@@ -31,20 +31,20 @@ namespace Affis
             DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
             DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
             DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
-            //Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
+            
             if (Session["empresa"] != null)
             {
                 TextBox1.Text = Session["empresa"].ToString();
                 TextBox3.Text = Session["medio"].ToString();
                 if (Session["direccion"] == "&nbsp;")
                 {
-                    TextBox2.Text = Session["direccion"].ToString();
-                    TextBox4.Text = Session["telefono"].ToString();
+                    TextBox2.Text = "";
+                    TextBox4.Text = "";
                 }
                 else 
                 {
-                    TextBox2.Text = "DIRECCION EMPRESA";
-                    TextBox4.Text = "TELEFONO EMPRESA";
+                    TextBox2.Text = Session["direccion"].ToString();
+                    TextBox4.Text = Session["telefono"].ToString();                    
                 }
 
                 
@@ -71,82 +71,23 @@ namespace Affis
             Session["ano"] = String.Format("{0}", DropDownList2.SelectedValue);
             Session["mes"] = String.Format("{0}", DropDownList3.SelectedValue);
             Session["dia"] = String.Format("{0}", DropDownList4.SelectedValue);
-
-            using (SqlConnection openCon = new SqlConnection("workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity"))
-            {
-                string empresa = TextBox1.Text;
-                string direccion = TextBox2.Text;
-                string medio = TextBox3.Text;
-                string telempresa = TextBox4.Text;
-                string cedula = Text3.Text;
-                string dirper = Text1.Text;
-                string email = Text2.Text;
-                //string cargo = String.Format("{0}", Request.Form["cargo"]);
-                string cargo = cargo1.Text;
-                string fechanac = String.Format("{0}", DropDownList2.SelectedValue + DropDownList3.SelectedValue + DropDownList4.SelectedValue);
-                string fechavig = String.Format("{0}", DropDownList5.SelectedValue + DropDownList11.SelectedValue + DropDownList7.SelectedValue);
-                string fechaefec = String.Format("{0}", DropDownList8.SelectedValue + DropDownList12.SelectedValue + DropDownList10.SelectedValue);
-                string nombre = Text6.Text;
-                string codigo = "codigo";
-                string telcelular = Text7.Text;
-                string teldom = Text8.Text;
-                string genero = String.Format("{0}", DropDownList1.SelectedValue);
-                
-
-                string saveStaff = "INSERT into ASEGURADOS (CEDULA, NOMBRESCOMPLETOS, GENERO, FECHADENACIMIENTO, ENTIDADTOMADORA, DIRECCIONEMPLEADOR, MEDIODECOBRO, TELEFONOEMPRESA, DIRECCION, EMAIL, CARGO, FECHAEFECTIVA, FECHAVIGENCIA, CODIGO, TELEFONOCELULAR, TELEFONODOMICILIO) VALUES (@CEDULA, @NOMBRESCOMPLETOS, @GENERO, @FECHADENACIMIENTO, @ENTIDADTOMADORA, @DIRECCIONEMPLEADOR, @MEDIODECOBRO, @TELEFONOEMPRESA, @DIRECCION, @EMAIL, @CARGO, @FECHAEFECTIVA, @FECHAVIGENCIA, @CODIGO, @TELEFONOCELULAR, @TELEFONODOMICILIO)";
-                
-                using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
-                {
-                    querySaveStaff.Connection = openCon;
-                    querySaveStaff.Parameters.Add("@CEDULA", SqlDbType.VarChar).Value = cedula.ToString();
-                    querySaveStaff.Parameters.Add("@NOMBRESCOMPLETOS", SqlDbType.VarChar).Value = nombre.ToString();
-                    querySaveStaff.Parameters.Add("@GENERO", SqlDbType.VarChar).Value = genero.ToString();
-                    querySaveStaff.Parameters.Add("@ENTIDADTOMADORA", SqlDbType.VarChar).Value = empresa.ToString();
-                    querySaveStaff.Parameters.Add("@DIRECCIONEMPLEADOR", SqlDbType.VarChar).Value = direccion.ToString();
-                    querySaveStaff.Parameters.Add("@MEDIODECOBRO", SqlDbType.VarChar).Value = medio.ToString();
-                    querySaveStaff.Parameters.Add("@TELEFONOEMPRESA", SqlDbType.VarChar).Value = telempresa.ToString();
-                    querySaveStaff.Parameters.Add("@DIRECCION", SqlDbType.VarChar).Value = dirper.ToString();
-                    querySaveStaff.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = email.ToString();
-                    querySaveStaff.Parameters.Add("@CARGO", SqlDbType.VarChar).Value = cargo.ToString();
-                    querySaveStaff.Parameters.Add("@FECHADENACIMIENTO", SqlDbType.VarChar).Value = fechanac.ToString();
-                    querySaveStaff.Parameters.Add("@FECHAEFECTIVA", SqlDbType.VarChar).Value = fechaefec.ToString();
-                    querySaveStaff.Parameters.Add("@FECHAVIGENCIA", SqlDbType.VarChar).Value = fechavig.ToString();
-                    querySaveStaff.Parameters.Add("@CODIGO", SqlDbType.VarChar).Value = codigo.ToString();
-                    querySaveStaff.Parameters.Add("@TELEFONOCELULAR", SqlDbType.VarChar).Value = telcelular.ToString();
-                    querySaveStaff.Parameters.Add("@TELEFONODOMICILIO", SqlDbType.VarChar).Value = teldom.ToString();
-                    
-                    try
-                    {
-                        openCon.Open();
-                        querySaveStaff.ExecuteNonQuery();
-                        openCon.Close();
-                        
-
-
-
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("Error" + ex);
-                    }
-                    finally 
-                    {
-                        Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
-                        Response.Redirect("IncluDesc.aspx"); 
-                    }
-                    
-                   
-
-
-                }
-                
-            }
+            Session["dirper"] = Text1.Text;
+            Session["email"] = Text2.Text;
+            Session["cargo"] = cargo1.Text;
+            Session["fechanac"] = "" + DropDownList2.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue + "";
+            Session["fechaef"] = "" + DropDownList5.SelectedValue + "/" + DropDownList11.SelectedValue + "/" + DropDownList7.SelectedValue + "";
+            Session["fechavig"] = "" + DropDownList8.SelectedValue + "/" + DropDownList12.SelectedValue + "/" + DropDownList10.SelectedValue + "";
+            Session["codigo"] = Text9.Text;
+            Session["telcel"] = Text7.Text;
+            Session["teldom"] = Text8.Text;
+            Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
+            Response.Redirect("IncluDesc.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Adicion.aspx");
-            //Server.Transfer("Adicion.aspx");
+            
         }
 
         

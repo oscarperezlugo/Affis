@@ -4,7 +4,17 @@
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
     <asp:Label ID="Label6" runat="server" CssClass="treeNode" Text="BENEFICIARIOS"></asp:Label>
     <br />
-    <br />
+                    
+                    
+                    <table >
+                        <tr>
+                            <td class="texto">
+                                CEDULA TOMADOR</td>
+                        </tr>
+                    </table>
+                    
+                    
+  
     <!DOCTYPE html>
 
 <html>
@@ -51,24 +61,25 @@
                         </tr>
                         <tr>
                             <td >
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td >
-                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control"  Width="90%"></asp:TextBox><br />
                             </td>
                         </tr>
+                        
                         <tr>
                             <td >
-                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="90%"></asp:TextBox>
                             </td>
                             <td >
-                                <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" Width="90%"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" Width="90%"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -77,35 +88,37 @@
                     <table >
                         <tr>
                             <td >
-                                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td >
-                                <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>
-                                <asp:TextBox ID="TextBox10" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox10" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td >
-                                <asp:TextBox ID="TextBox11" runat="server" CssClass="form-control" ></asp:TextBox>
+                                <asp:TextBox ID="TextBox11" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox12" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox12" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                         </tr>
+                        <br />
                         <tr>
                             <td >
-                                <asp:TextBox ID="TextBox13" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox13" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td >
-                                <asp:TextBox ID="TextBox14" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox14" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox15" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox15" runat="server" CssClass="form-control" Width="90%"></asp:TextBox><br />
                             </td>
                         </tr>
                     </table>

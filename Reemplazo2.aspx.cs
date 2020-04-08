@@ -40,7 +40,7 @@ namespace Affis
         {
             // define your connection string (typically from a .config file) and your query WITH parameters!
             string connectionString = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-            string query = "DELETE FROM ASEGURADOS WHERE NOMBRESCOMPLETOS=@cer AND CEDULA=@user";
+            string query = "DELETE FROM ASEGURADOS WHERE NOMBRESCOMPLETOS=@cer AND TOMADOR=@tomador OR CEDULA=@user";
 
             // set up a connection and command in using() blocks
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -50,7 +50,7 @@ namespace Affis
                 cmd.Parameters.Add("@user", SqlDbType.VarChar, 50).Value = GridView1.SelectedRow.Cells[2].Text;
                 cmd.Parameters.Add("@pwd", SqlDbType.VarChar, 50).Value = GridView1.SelectedRow.Cells[3].ToString();
                 cmd.Parameters.Add("@cer", SqlDbType.VarChar, 50).Value = GridView1.SelectedRow.Cells[1].Text;
-
+                cmd.Parameters.Add("@tomador", SqlDbType.VarChar, 50).Value = Session["cedula"];
                 // open connection
                 try
                 {
@@ -65,7 +65,7 @@ namespace Affis
                 {
                     con.Close();
                     //Label3.Text = GridView1.SelectedRow.Cells[1].Text;
-                    Response.Redirect("Reemplazo3.aspx");
+                    Response.Redirect("Remplazo4.aspx");
                 }
             }
 

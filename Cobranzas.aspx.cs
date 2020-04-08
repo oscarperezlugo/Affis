@@ -31,8 +31,8 @@ namespace Affis
             //Label5.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
             if (Session["nombre"] != null)
             {
-                Label3.Text = Session["nombre"].ToString();
-                Label4.Text = Session["cedula"].ToString();
+                TextBox6.Text = Session["nombre"].ToString();
+                TextBox7.Text = Session["cedula"].ToString();
 
             }
             if (CheckBox1.Checked)
@@ -65,16 +65,16 @@ namespace Affis
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            // define your connection string (typically from a .config file) and your query WITH parameters!
+            
             string connectionString = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-            string query = "UPDATE ASEGURADOS SET MEDIODECOBRO=@pwd, TARJETA=@tar, BANCO=@ban, CUENTANUMERO=@cn, VENCIMIENTO=@ven, NUMERO=@num, CODIGODESEGURIDAD=@cds, TIPOCUENTA=@tdc WHERE CEDULA=@user AND NOMBRESCOMPLETOS=@cer";
+            string query = "UPDATE ASEGURADOS SET MEDIODECOBRO=@pwd, TARJETA=@tar, BANCO=@ban, CUENTANUMERO=@cn, VENCIMIENTO=@ven, NUMERO=@num, CODIGODESEGURIDAD=@cds, TIPOCUENTA=@tdc WHERE CEDULA=@user";
 
-            // set up a connection and command in using() blocks
+            
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
-                // add parameters and set their values
-                cmd.Parameters.Add("@user", SqlDbType.VarChar, 50).Value = Label4.Text;
+                
+                cmd.Parameters.Add("@user", SqlDbType.VarChar, 50).Value = TextBox7.Text;
                 cmd.Parameters.Add("@pwd", SqlDbType.VarChar, 50).Value = DropDownList1.SelectedValue.ToString();
                 cmd.Parameters.Add("@tar", SqlDbType.VarChar, 50).Value = DropDownList2.SelectedValue.ToString();
                 cmd.Parameters.Add("@ban", SqlDbType.VarChar, 50).Value = TextBox1.Text;
@@ -83,7 +83,7 @@ namespace Affis
                 cmd.Parameters.Add("@num", SqlDbType.VarChar, 50).Value = TextBox5.Text;
                 cmd.Parameters.Add("@cds", SqlDbType.VarChar, 50).Value = TextBox4.Text;
                 cmd.Parameters.Add("@tdc", SqlDbType.VarChar, 50).Value = tipocuenta;
-                cmd.Parameters.Add("@cer", SqlDbType.VarChar, 50).Value = Label3.Text;
+                
 
                 // open connection
                 try

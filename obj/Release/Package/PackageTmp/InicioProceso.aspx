@@ -35,8 +35,8 @@
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                     
                     
-                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" class="btn btn-secondary"><i class="fa fa-search"> SRI</i></asp:LinkButton>
-                    &nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"><i class="fa fa-search"> RGCE</i></asp:LinkButton>
+                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" class="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"><i class="fa fa-search"></i> RGCE</asp:LinkButton>
                     <br />
                     <br />
                     &nbsp;<br /><br />

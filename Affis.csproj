@@ -111,8 +111,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Adicion2.aspx" />
+    <Content Include="caso.aspx" />
+    <Content Include="documentos.aspx" />
+    <Content Include="InicioAdicion.aspx" />
+    <Content Include="Reclamos.aspx" />
+    <Content Include="Reclamos2.aspx" />
+    <Content Include="Remplazo4.aspx" />
     <Content Include="Asistencia.aspx" />
     <Content Include="ConsultaAsistencia.aspx" />
+    <Content Include="EmpresaDetalle1.aspx" />
+    <Content Include="EmpresaDetalle2.aspx" />
     <Content Include="IncluDesc.aspx" />
     <Content Include="AdminCert.aspx" />
     <Content Include="Beneficiarios.aspx" />
@@ -179,6 +188,8 @@
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="login.aspx" />
+    <Content Include="Retenciones2.aspx" />
+    <Content Include="Retenciones1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fontawesome\all.js" />
@@ -242,6 +253,55 @@
     <Content Include="webfonts\fa-brands-400.eot" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicion2.aspx.cs">
+      <DependentUpon>Adicion2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adicion2.aspx.designer.cs">
+      <DependentUpon>Adicion2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="caso.aspx.cs">
+      <DependentUpon>caso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="caso.aspx.designer.cs">
+      <DependentUpon>caso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documentos.aspx.cs">
+      <DependentUpon>documentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="documentos.aspx.designer.cs">
+      <DependentUpon>documentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdicion.aspx.cs">
+      <DependentUpon>InicioAdicion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAdicion.aspx.designer.cs">
+      <DependentUpon>InicioAdicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reclamos.aspx.cs">
+      <DependentUpon>Reclamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reclamos.aspx.designer.cs">
+      <DependentUpon>Reclamos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reclamos2.aspx.cs">
+      <DependentUpon>Reclamos2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reclamos2.aspx.designer.cs">
+      <DependentUpon>Reclamos2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Remplazo4.aspx.cs">
+      <DependentUpon>Remplazo4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Remplazo4.aspx.designer.cs">
+      <DependentUpon>Remplazo4.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Asistencia.aspx.cs">
       <DependentUpon>Asistencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,6 +315,20 @@
     </Compile>
     <Compile Include="ConsultaAsistencia.aspx.designer.cs">
       <DependentUpon>ConsultaAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaDetalle1.aspx.cs">
+      <DependentUpon>EmpresaDetalle1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpresaDetalle1.aspx.designer.cs">
+      <DependentUpon>EmpresaDetalle1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaDetalle2.aspx.cs">
+      <DependentUpon>EmpresaDetalle2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpresaDetalle2.aspx.designer.cs">
+      <DependentUpon>EmpresaDetalle2.aspx</DependentUpon>
     </Compile>
     <Compile Include="IncluDesc.aspx.cs">
       <DependentUpon>IncluDesc.aspx</DependentUpon>
@@ -461,6 +535,20 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retenciones2.aspx.cs">
+      <DependentUpon>Retenciones2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Retenciones2.aspx.designer.cs">
+      <DependentUpon>Retenciones2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Retenciones1.aspx.cs">
+      <DependentUpon>Retenciones1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Retenciones1.aspx.designer.cs">
+      <DependentUpon>Retenciones1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

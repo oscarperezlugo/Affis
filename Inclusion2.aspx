@@ -25,12 +25,16 @@
                     <table >
                         <tr>
                             <td >
+                                <asp:Label ID="Label9" runat="server" CssClass="textomini" Text="Nombre Empresa"/>
                     <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
+                                <asp:Label ID="Label13" runat="server" CssClass="textomini" Text="Medio de Pago"></asp:Label>
                                 <br />
                             </td>
                             
                             <td>
+                                <asp:Label ID="Label10" runat="server" CssClass="textomini" Text="Dirección Empresa"/>
                     <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="95%" Height="95%"></asp:TextBox>
+                                <asp:Label ID="Label14" runat="server" CssClass="textomini" Text="Telefono Empresa"></asp:Label>
                                 <br />
                             </td>
                             
@@ -198,6 +202,9 @@
                         </tr>
                         
                     </table>
+                    <br />
+                                <asp:Label ID="Label15" runat="server" CssClass="textomini" Text="Codigo"></asp:Label>
+                                <asp:TextBox id="Text9" class="form-control" placeholder="CODIGO" type="text" runat="server" Width="20%" Height="95%"/>
                     <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>

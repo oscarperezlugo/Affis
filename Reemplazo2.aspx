@@ -40,7 +40,7 @@
                     <br />
                     
                     
-                    <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="btn btn-primary" OnClick="Button1_Click" ><i class="fas fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                    <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="btn btn-primary" OnClick="Button1_Click" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                 </td>
