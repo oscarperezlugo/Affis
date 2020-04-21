@@ -52,7 +52,7 @@ namespace Affis
                         Session["ficha"] = ficha.ToString();
                         Session["fecha"] = DateTime.Now.ToString();
                         Session["dia"] = DateTime.Now.Day.ToString();
-
+                        Session["fechacurso"] = DateTime.Now.Month.ToString();
                         Session["mes"] = "Enero";//DateTime.Now.Month.ToString("MMMM", CultureInfo.InvariantCulture).ToUpper();
                         Session["ano"] = DateTime.Now.Year.ToString();
 

@@ -19,7 +19,7 @@
                     
                     <table >
                         <tr>
-                            <td class="auto-style2">
+                            <td class="auto-style3">
                     
                     
                                 <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
@@ -113,6 +113,9 @@
     .auto-style2 {
         width: 150px;
     }
-</style>
+        .auto-style3 {
+            width: 328px;
+        }
+    </style>
 </asp:Content>
 

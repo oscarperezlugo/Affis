@@ -15,6 +15,15 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Adicion.aspx">
       <publishTime>03/16/2020 19:29:51</publishTime>
     </File>
+    <File Include="Adicion2.aspx">
+      <publishTime>04/04/2020 22:28:28</publishTime>
+    </File>
+    <File Include="Adicion3.aspx">
+      <publishTime>04/15/2020 19:35:09</publishTime>
+    </File>
+    <File Include="Adicion4.aspx">
+      <publishTime>04/15/2020 19:59:19</publishTime>
+    </File>
     <File Include="AdminCert.aspx">
       <publishTime>02/26/2020 17:41:10</publishTime>
     </File>
@@ -28,16 +37,16 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>03/16/2020 13:43:05</publishTime>
     </File>
     <File Include="bin/Affis.dll">
-      <publishTime>03/17/2020 00:47:49</publishTime>
+      <publishTime>04/16/2020 00:37:57</publishTime>
     </File>
     <File Include="bin/Affis.pdb">
-      <publishTime>03/17/2020 00:47:49</publishTime>
+      <publishTime>04/16/2020 00:37:57</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>09/10/2013 22:29:20</publishTime>
+      <publishTime>10/09/2013 22:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>09/10/2013 22:29:20</publishTime>
+      <publishTime>10/09/2013 22:29:20</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>03/15/2019 10:59:54</publishTime>
@@ -49,16 +58,16 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>07/30/2013 22:57:30</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
-      <publishTime>02/11/2014 20:26:04</publishTime>
+      <publishTime>11/02/2014 20:26:04</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 19:38:22</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
-      <publishTime>09/06/2013 17:20:12</publishTime>
+      <publishTime>06/09/2013 17:20:12</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
-      <publishTime>09/06/2013 17:20:22</publishTime>
+      <publishTime>06/09/2013 17:20:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 17:48:56</publishTime>
@@ -205,13 +214,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/24/2018 19:38:24</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 20:26:04</publishTime>
+      <publishTime>11/02/2014 20:26:04</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 18:57:34</publishTime>
     </File>
     <File Include="Bundle.config">
-      <publishTime>01/11/2020 14:04:26</publishTime>
+      <publishTime>11/01/2020 14:04:26</publishTime>
     </File>
     <File Include="BuscaCedula.aspx">
       <publishTime>01/29/2020 14:10:34</publishTime>
@@ -223,10 +232,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>03/17/2020 00:47:20</publishTime>
     </File>
     <File Include="Certificado.aspx">
-      <publishTime>02/27/2020 03:22:15</publishTime>
+      <publishTime>04/10/2020 19:19:46</publishTime>
     </File>
     <File Include="Coberturas.aspx">
-      <publishTime>03/12/2020 19:56:58</publishTime>
+      <publishTime>04/15/2020 23:18:13</publishTime>
     </File>
     <File Include="Cobranzas.aspx">
       <publishTime>03/12/2020 16:58:05</publishTime>
@@ -265,49 +274,49 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/27/2019 16:38:54</publishTime>
     </File>
     <File Include="Content/brands.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/brands.min.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/fontawesome-all.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/fontawesome-all.min.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/fontawesome.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/fontawesome.min.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/regular.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/regular.min.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>11/27/2019 16:38:26</publishTime>
     </File>
     <File Include="Content/solid.css">
-      <publishTime>01/11/2020 13:33:30</publishTime>
+      <publishTime>11/01/2020 13:33:30</publishTime>
     </File>
     <File Include="Content/solid.min.css">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Content/svg-with-js.css">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Content/svg-with-js.min.css">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Content/v4-shims.css">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Content/v4-shims.min.css">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="CreacionProductosBanca.aspx">
       <publishTime>02/20/2020 00:02:46</publishTime>
@@ -316,7 +325,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DashBoard.aspx">
-      <publishTime>02/11/2020 23:45:02</publishTime>
+      <publishTime>11/02/2020 23:45:02</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>11/27/2019 16:38:26</publishTime>
@@ -331,7 +340,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/20/2020 00:03:32</publishTime>
     </File>
     <File Include="EmpresaDetalle1.aspx">
-      <publishTime>03/05/2020 16:22:11</publishTime>
+      <publishTime>03/23/2020 12:49:30</publishTime>
     </File>
     <File Include="EmpresaDetalle2.aspx">
       <publishTime>03/04/2020 22:19:03</publishTime>
@@ -366,11 +375,17 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Inclusion2.aspx">
       <publishTime>03/12/2020 16:07:58</publishTime>
     </File>
+    <File Include="InicioAdicion.aspx">
+      <publishTime>04/04/2020 23:53:31</publishTime>
+    </File>
+    <File Include="InicioAdicionAs.aspx">
+      <publishTime>04/15/2020 19:23:18</publishTime>
+    </File>
     <File Include="InicioProceso.aspx">
       <publishTime>03/10/2020 14:26:09</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>03/17/2020 00:06:32</publishTime>
+      <publishTime>04/15/2020 21:45:02</publishTime>
     </File>
     <File Include="Logo.png">
       <publishTime>01/24/2020 13:23:40</publishTime>
@@ -415,46 +430,46 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/27/2019 16:38:54</publishTime>
     </File>
     <File Include="Scripts/fontawesome/all.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/all.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/brands.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/brands.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/conflict-detection.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/conflict-detection.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/fontawesome.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/fontawesome.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/regular.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/regular.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/solid.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/solid.min.js">
-      <publishTime>01/11/2020 13:33:28</publishTime>
+      <publishTime>11/01/2020 13:33:28</publishTime>
     </File>
     <File Include="Scripts/fontawesome/v4-shims.js">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="Scripts/fontawesome/v4-shims.min.js">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
       <publishTime>11/27/2019 16:38:46</publishTime>
@@ -541,7 +556,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/27/2019 16:38:58</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>03/16/2020 21:03:08</publishTime>
+      <publishTime>04/15/2020 19:59:18</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>02/19/2020 00:43:18</publishTime>
@@ -550,49 +565,49 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/19/2020 00:51:54</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.eot">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.svg">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.ttf">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.woff">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.woff2">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-regular-400.eot">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-regular-400.svg">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-regular-400.ttf">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-regular-400.woff">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-regular-400.woff2">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-solid-900.eot">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-solid-900.svg">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-solid-900.ttf">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-solid-900.woff">
-      <publishTime>01/11/2020 13:33:26</publishTime>
+      <publishTime>11/01/2020 13:33:26</publishTime>
     </File>
     <File Include="webfonts/fa-solid-900.woff2">
-      <publishTime>01/11/2020 13:33:24</publishTime>
+      <publishTime>11/01/2020 13:33:24</publishTime>
     </File>
   </ItemGroup>
 </Project>

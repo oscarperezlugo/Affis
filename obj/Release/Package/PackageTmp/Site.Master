@@ -243,6 +243,11 @@
                                     <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS" NavigateUrl="~/Beneficiarios.aspx"></asp:TreeNode>
                                 </asp:TreeNode>
                                 
+                                <asp:TreeNode Text="ADICION" Value="ADICION">
+                                    <asp:TreeNode Text="COBERTURAS" Value="COBERTURAS" NavigateUrl="~/InicioAdicion.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="ASEGURADOS" Value="ASEGURADOS" NavigateUrl="~/InicioAdicionAs.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                
                             </asp:TreeNode>   
                             </Nodes>
                         

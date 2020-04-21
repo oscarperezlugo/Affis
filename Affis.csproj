@@ -111,9 +111,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Adicion4.aspx" />
+    <Content Include="Adicion3.aspx" />
     <Content Include="Adicion2.aspx" />
     <Content Include="caso.aspx" />
+    <Content Include="Cobranza1.aspx" />
+    <Content Include="Cobranza2.aspx" />
     <Content Include="documentos.aspx" />
+    <Content Include="InicioAdicionAs.aspx" />
     <Content Include="InicioAdicion.aspx" />
     <Content Include="Reclamos.aspx" />
     <Content Include="Reclamos2.aspx" />
@@ -253,6 +258,20 @@
     <Content Include="webfonts\fa-brands-400.eot" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicion4.aspx.cs">
+      <DependentUpon>Adicion4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adicion4.aspx.designer.cs">
+      <DependentUpon>Adicion4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adicion3.aspx.cs">
+      <DependentUpon>Adicion3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adicion3.aspx.designer.cs">
+      <DependentUpon>Adicion3.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adicion2.aspx.cs">
       <DependentUpon>Adicion2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,12 +286,33 @@
     <Compile Include="caso.aspx.designer.cs">
       <DependentUpon>caso.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cobranza1.aspx.cs">
+      <DependentUpon>Cobranza1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cobranza1.aspx.designer.cs">
+      <DependentUpon>Cobranza1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cobranza2.aspx.cs">
+      <DependentUpon>Cobranza2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cobranza2.aspx.designer.cs">
+      <DependentUpon>Cobranza2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="documentos.aspx.cs">
       <DependentUpon>documentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="documentos.aspx.designer.cs">
       <DependentUpon>documentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdicionAs.aspx.cs">
+      <DependentUpon>InicioAdicionAs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAdicionAs.aspx.designer.cs">
+      <DependentUpon>InicioAdicionAs.aspx</DependentUpon>
     </Compile>
     <Compile Include="InicioAdicion.aspx.cs">
       <DependentUpon>InicioAdicion.aspx</DependentUpon>

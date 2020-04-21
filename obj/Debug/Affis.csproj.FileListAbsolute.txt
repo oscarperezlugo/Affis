@@ -68,3 +68,4 @@ C:\Users\Oscar\source\repos\Affis\obj\Debug\Affis.csprojAssemblyReference.cache
 C:\Users\Oscar\source\repos\Affis\obj\Debug\Affis.csproj.CopyComplete
 C:\Users\Oscar\source\repos\Affis\obj\Debug\Affis.dll
 C:\Users\Oscar\source\repos\Affis\obj\Debug\Affis.pdb
+C:\Users\oscar\source\repos\Affis\obj\Debug\Affis.csproj.CoreCompileInputs.cache

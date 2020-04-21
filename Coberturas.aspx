@@ -38,11 +38,9 @@
 
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRE], [RELACION], [COBERTURA], [PLAN], [COSTO] FROM [VENTATEMP] WHERE (([FECHA] = @FECHA) AND ([FICHA] = @FICHA) AND ([TOMADOR] = @TOMADOR))">
+                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRE], [RELACION], [COBERTURA], [PLAN], [COSTO] FROM [VENTATEMP] WHERE ([FECHA] = @FECHA)">
                         <SelectParameters>
                             <asp:SessionParameter Name="FECHA" SessionField="fecha" Type="String" />
-                            <asp:SessionParameter Name="FICHA" SessionField="ficha" Type="String" />
-                            <asp:SessionParameter Name="TOMADOR" SessionField="cedula" Type="String" />
                         </SelectParameters>
                         
                     </asp:SqlDataSource>

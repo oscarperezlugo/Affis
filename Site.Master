@@ -245,7 +245,7 @@
                                 
                                 <asp:TreeNode Text="ADICION" Value="ADICION">
                                     <asp:TreeNode Text="COBERTURAS" Value="COBERTURAS" NavigateUrl="~/InicioAdicion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="ASEGURADOS" Value="ASEGURADOS"></asp:TreeNode>
+                                    <asp:TreeNode Text="ASEGURADOS" Value="ASEGURADOS" NavigateUrl="~/InicioAdicionAs.aspx"></asp:TreeNode>
                                 </asp:TreeNode>
                                 
                             </asp:TreeNode>   
@@ -320,6 +320,9 @@
                                 </asp:TreeNode>
                                 <asp:TreeNode Text="EMPRESA" Value="EMPRESA">
                                     <asp:TreeNode NavigateUrl="~/EmpresaDetalle1.aspx" Text="EMPRESA DETALLE" Value="EMPRESA DETALLE"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="COBRANZA" Value="COBRANZA">
+                                    <asp:TreeNode NavigateUrl="~/Cobranza1.aspx" Text="GESTION EMPRESA" Value="GESTION EMPRESA"></asp:TreeNode>
                                 </asp:TreeNode>
                             </asp:TreeNode>
                         </Nodes>
