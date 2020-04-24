@@ -22,7 +22,12 @@ namespace Affis
         protected void Page_Load(object sender, EventArgs e)
         {
             
-
+            if (Session["valor"] != null) 
+            {
+                TextBox1.Text = Session["valor"].ToString();
+                Label13.Text = "El Usuario ya esta registrado en nuestra base de datos";
+                Session["valor"] = null;
+            }
 
         }
 

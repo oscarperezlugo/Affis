@@ -321,6 +321,9 @@
                                 <asp:TreeNode Text="EMPRESA" Value="EMPRESA">
                                     <asp:TreeNode NavigateUrl="~/EmpresaDetalle1.aspx" Text="EMPRESA DETALLE" Value="EMPRESA DETALLE"></asp:TreeNode>
                                 </asp:TreeNode>
+                                <asp:TreeNode Text="COBRANZA" Value="COBRANZA">
+                                    <asp:TreeNode NavigateUrl="~/Cobranza1.aspx" Text="GESTION EMPRESA" Value="GESTION EMPRESA"></asp:TreeNode>
+                                </asp:TreeNode>
                             </asp:TreeNode>
                         </Nodes>
                         

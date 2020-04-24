@@ -36,7 +36,7 @@
                     
                     
                     <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" class="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
-                    &nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"><i class="fa fa-search"></i> RGCE</asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="Button4" runat="server"  Text="RCGE" OnClick="Button4_Click" class="btn btn-secondary"><i class="fa fa-search"></i> R.CIVIL</asp:LinkButton>
                     <br />
                     <br />
                     &nbsp;<br /><br />

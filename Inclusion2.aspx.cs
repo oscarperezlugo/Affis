@@ -32,23 +32,7 @@ namespace Affis
             DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
             DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
             
-            if (Session["empresa"] != null)
-            {
-                TextBox1.Text = Session["empresa"].ToString();
-                TextBox3.Text = Session["medio"].ToString();
-                if (Session["direccion"] == "&nbsp;")
-                {
-                    TextBox2.Text = "";
-                    TextBox4.Text = "";
-                }
-                else 
-                {
-                    TextBox2.Text = Session["direccion"].ToString();
-                    TextBox4.Text = Session["telefono"].ToString();                    
-                }
-
-                
-            }
+            
             if (Session["cedula"] != null)
             {
                 Text3.Text = Session["cedula"].ToString();
@@ -121,6 +105,12 @@ namespace Affis
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             Session["tomasegur"] = "si";
+            CheckBox2.Checked = false;
+        }
+
+        protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox1.Checked = false;
         }
     }
 }

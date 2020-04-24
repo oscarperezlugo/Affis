@@ -9,40 +9,46 @@
 <body>
     
         <div>
-            &nbsp;<asp:Label ID="Label6" runat="server" CssClass="treeNode" Text="CONSULTA"></asp:Label>
+            &nbsp;<asp:Label ID="Label6" runat="server" CssClass="treeNode"></asp:Label>
             &nbsp;&nbsp;
             <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text="TOMADOR PRINCIPAL" CssClass="rootNode"></asp:Label>
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="gridcalc" Width="600px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="gridcalc" Width="700px">
                 <Columns>
-                    <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRES COMPLETOS" SortExpression="NOMBRESCOMPLETOS" />
+                    <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRESCOMPLETOS" SortExpression="NOMBRESCOMPLETOS" />
                     <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" />
-                    <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERO DE CERTIFICADO" SortExpression="NUMERODECERTIFICADO">
-                    <ItemStyle Font-Bold="True" Font-Size="Larger" ForeColor="Red" />
+                    <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERODECERTIFICADO" SortExpression="NUMERODECERTIFICADO">
+                    <ItemStyle Font-Bold="True" Font-Size="Large" ForeColor="Red" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="ESTADO" HeaderText="ESTADO" SortExpression="ESTADO">
+                    <ItemStyle Font-Bold="True" ForeColor="Black" />
                     </asp:BoundField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRESCOMPLETOS], [CEDULA], [NUMERODECERTIFICADO] FROM [ASEGURADOS] WHERE (([RELACION] = @RELACION) AND ([NUMERODECERTIFICADO] = @NUMERODECERTIFICADO))">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRESCOMPLETOS], [CEDULA], [NUMERODECERTIFICADO], [ESTADO] FROM [ASEGURADOS] WHERE (([CEDULA] = @CEDULA) AND ([RELACION] = @RELACION))">
                 <SelectParameters>
+                    <asp:SessionParameter Name="CEDULA" SessionField="valor" Type="String" />
                     <asp:Parameter DefaultValue="TOMADOR" Name="RELACION" Type="String" />
-                    <asp:SessionParameter Name="NUMERODECERTIFICADO" SessionField="valor" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" CssClass="gridcalc" Width="600px">
+            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" CssClass="gridcalc" Width="700px">
                 <Columns>
-                    <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRES COMPLETOS" SortExpression="NOMBRESCOMPLETOS" />
+                    <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRESCOMPLETOS" SortExpression="NOMBRESCOMPLETOS" />
                     <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" />
-                    <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERO DE CERTIFICADO" SortExpression="NUMERODECERTIFICADO">
-                    <ItemStyle Font-Bold="True" Font-Size="Larger" ForeColor="Red" />
+                    <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERODECERTIFICADO" SortExpression="NUMERODECERTIFICADO">
+                    <ItemStyle Font-Bold="True" Font-Size="Large" ForeColor="Red" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="ESTADO" HeaderText="ESTADO" SortExpression="ESTADO">
+                    <ItemStyle Font-Bold="True" ForeColor="Black" />
                     </asp:BoundField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRESCOMPLETOS], [CEDULA], [NUMERODECERTIFICADO] FROM [ASEGURADOS] WHERE (([CEDULA] = @CEDULA) AND ([RELACION] = @RELACION))">
+            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRESCOMPLETOS], [CEDULA], [NUMERODECERTIFICADO], [ESTADO] FROM [ASEGURADOS] WHERE (([NUMERODECERTIFICADO] = @NUMERODECERTIFICADO) AND ([RELACION] = @RELACION))">
                 <SelectParameters>
-                    <asp:SessionParameter Name="CEDULA" SessionField="valor" Type="String" />
+                    <asp:SessionParameter Name="NUMERODECERTIFICADO" SessionField="valor" Type="String" />
                     <asp:Parameter DefaultValue="TOMADOR" Name="RELACION" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
@@ -183,9 +189,7 @@
                     <asp:Parameter DefaultValue="TOMADOR" Name="RELACION" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:LinkButton ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Width="226px" ><i class="fa fa-angle-double-right"></i> CONSULTAR ESTADO</asp:LinkButton>
             &nbsp;&nbsp;
-            <asp:Label ID="Label5" runat="server" CssClass="texto" Font-Bold="True" Font-Size="Larger" ForeColor="Red"></asp:Label>
             <br />
             <br />
             <br />

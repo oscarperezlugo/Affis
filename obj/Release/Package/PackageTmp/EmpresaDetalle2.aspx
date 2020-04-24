@@ -187,7 +187,7 @@
         <tr>
             <td>
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="TARJETA  " Font-Size="Smaller" OnCheckedChanged="CheckBox1_CheckedChanged" />
-                <asp:CheckBox ID="CheckBox2" runat="server" Text="ROL " Font-Size="Smaller" OnCheckedChanged="CheckBox2_CheckedChanged" />
+                <asp:CheckBox ID="CheckBox2" runat="server" Text="ROL DE PAGOS" Font-Size="Smaller" OnCheckedChanged="CheckBox2_CheckedChanged" />
                 <br />
                 <asp:CheckBox ID="CheckBox3" runat="server" Text="AMBAS " OnCheckedChanged="CheckBox3_CheckedChanged" Font-Size="Smaller" />
             </td>

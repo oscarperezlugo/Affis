@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,7 +26,8 @@ namespace Affis
             }
             else
             {
-                Label3.Text = "El numero de cedula ya es parte de nuestro sistema";
+                Session["valor"] = TextBox1.Text;
+                Response.Redirect("InicioAdicion.aspx");
             }
 
         }

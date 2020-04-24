@@ -19,7 +19,7 @@
                         <tr>
                             <td>
                                 <br />
-                                <asp:Label ID="Label7" runat="server" CssClass="textomini" Text="Nombre Empresa"></asp:Label>
+                                <asp:Label ID="Label7" runat="server" CssClass="textomini" Text="Nombre Comercial"></asp:Label>
                                 <br />
                             </td>
                             
@@ -36,7 +36,7 @@
                             <td><asp:DropDownList ID="DropDownList11" runat="server" CssClass="btn btn-secondary dropdown-toggle">
                         <asp:ListItem>MEDIO DE COBRO</asp:ListItem>
                         <asp:ListItem>TARJETA DE CREDITO</asp:ListItem>
-                        <asp:ListItem>ROL DE PAGO</asp:ListItem>
+                        <asp:ListItem>ROL DE PAGOS</asp:ListItem>
                         <asp:ListItem>AMBOS</asp:ListItem>
                     </asp:DropDownList>
                                 <br />

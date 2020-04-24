@@ -26,7 +26,9 @@
                                 <asp:Label ID="Label6" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
                     <br />
                     
-                    <asp:TextBox ID="TextBox1" placeholder="CEDULA" runat="server" class="form-control" Width="200"></asp:TextBox><br />
+                    <asp:TextBox ID="TextBox1" placeholder="CEDULA" runat="server" class="form-control" Width="200"></asp:TextBox>
+                    <asp:Label ID="Label13" runat="server" CssClass="texto"></asp:Label>
+                    <br />
                     <br />
                     
                     
@@ -39,18 +41,13 @@
                     <asp:GridView ID="GridView1" runat="server" width="900px" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"  CssClass="gridcalc" DataSourceID="SqlDataSource1" >
                         <Columns>
                             <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" >
-                            <ItemStyle Font-Size="Smaller" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRESCOMPLETOS" SortExpression="NOMBRESCOMPLETOS" >
-                            <ItemStyle Font-Size="Smaller" />
+                            <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRES COMPLETOS" SortExpression="NOMBRESCOMPLETOS" >
                             </asp:BoundField>
-                            <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERODECERTIFICADO" SortExpression="NUMERODECERTIFICADO" >
-                            <ItemStyle Font-Bold="True" ForeColor="Red" />
+                            <asp:BoundField DataField="NUMERODECERTIFICADO" HeaderText="NUMERO DE CERTIFICADO" SortExpression="NUMERODECERTIFICADO" >
+                            <ItemStyle Font-Bold="True" Font-Size="Medium" ForeColor="Red" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="RELACION" HeaderText="RELACION" SortExpression="RELACION" >
-                            <ItemStyle Font-Size="Smaller" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ESTADO" HeaderText="ESTADO" SortExpression="ESTADO">
+                            <asp:BoundField DataField="ESTADO" HeaderText="ESTADO" SortExpression="ESTADO" >
                             <ItemStyle Font-Bold="True" />
                             </asp:BoundField>
                             <asp:ButtonField ButtonType="Button" CommandName="Select" Text="+" />
@@ -64,9 +61,10 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRESCOMPLETOS], [NUMERODECERTIFICADO], [RELACION], [ESTADO] FROM [ASEGURADOS] WHERE ([TOMADOR] = @TOMADOR)">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRESCOMPLETOS], [NUMERODECERTIFICADO], [ESTADO] FROM [ASEGURADOS] WHERE (([CEDULA] = @CEDULA) AND ([NUMERODECERTIFICADO] IS NOT NULL) AND ([RELACION] = @RELACION))">
                         <SelectParameters>
-                            <asp:SessionParameter Name="TOMADOR" SessionField="cedulaadc" Type="String" />
+                            <asp:SessionParameter Name="CEDULA" SessionField="cedulaadc" Type="String" />
+                            <asp:Parameter DefaultValue="TOMADOR" Name="RELACION" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                     <br />
