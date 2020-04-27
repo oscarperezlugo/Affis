@@ -21,6 +21,11 @@ namespace Affis
             Session["cedulacer"] = TextBox5.Text;
         }
 
+        public void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Session["cedulacer"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["cedulacer"] = null;

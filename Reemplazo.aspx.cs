@@ -33,6 +33,12 @@ namespace Affis
             Response.Redirect("Reemplazo2.aspx");
         }
 
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+
         public void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             

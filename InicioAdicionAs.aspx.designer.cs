@@ -51,6 +51,24 @@ namespace Affis
         protected global::System.Web.UI.WebControls.LinkButton Button1;
 
         /// <summary>
+        /// Control BtnAtras.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BtnAtras;
+
+        /// <summary>
+        /// Control BtnCancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BtnCancelar;
+
+        /// <summary>
         /// Control GridView1.
         /// </summary>
         /// <remarks>

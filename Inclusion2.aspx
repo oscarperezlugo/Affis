@@ -107,33 +107,33 @@
                     </asp:DropDownList>
                             </td>
                         </tr>
-                        <tr>
+                   <%--     <tr>
                             <td class="texto">FECHA EFECTIVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                             <td >
-                    <asp:DropDownList ID="DropDownList8" runat="server" datasourceid="SqlDataSource6" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdown-content">
-                    </asp:DropDownList>
+                                <asp:DropDownList ID="DropDownList8" runat="server" datasourceid="SqlDataSource6" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdown-content">
+                                </asp:DropDownList>
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList12" runat="server" CssClass="dropdown-content">
-                        <asp:ListItem Value="1">ENERO</asp:ListItem>
-                        <asp:ListItem Value="2">FEBRERO</asp:ListItem>
-                        <asp:ListItem Value="3">MARZO</asp:ListItem>
-                        <asp:ListItem Value="4">ABRIL</asp:ListItem>
-                        <asp:ListItem Value="5">MAYO</asp:ListItem>
-                        <asp:ListItem Value="6">JUNIO</asp:ListItem>
-                        <asp:ListItem Value="7">JULIO</asp:ListItem>
-                        <asp:ListItem Value="8">AGOSTO</asp:ListItem>
-                        <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
-                        <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
-                        <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
-                        <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
-                    </asp:DropDownList>
+                                <asp:DropDownList ID="DropDownList12" runat="server" CssClass="dropdown-content">
+                                    <asp:ListItem Value="1">ENERO</asp:ListItem>
+                                    <asp:ListItem Value="2">FEBRERO</asp:ListItem>
+                                    <asp:ListItem Value="3">MARZO</asp:ListItem>
+                                    <asp:ListItem Value="4">ABRIL</asp:ListItem>
+                                    <asp:ListItem Value="5">MAYO</asp:ListItem>
+                                    <asp:ListItem Value="6">JUNIO</asp:ListItem>
+                                    <asp:ListItem Value="7">JULIO</asp:ListItem>
+                                    <asp:ListItem Value="8">AGOSTO</asp:ListItem>
+                                    <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
+                                    <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
+                                    <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
+                                    <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
+                                </asp:DropDownList>
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList10" runat="server" datasourceid="SqlDataSource7" DataTextField="DIA_" DataValueField="DIA_" CssClass="dropdown-content">
-                    </asp:DropDownList>
+                                <asp:DropDownList ID="DropDownList10" runat="server" datasourceid="SqlDataSource7" DataTextField="DIA_" DataValueField="DIA_" CssClass="dropdown-content">
+                                </asp:DropDownList>
                             </td>
-                        </tr>
+                        </tr>--%>
                         <tr>
                             <td class="texto">FECHA NACIMIENTO <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                             </td>
@@ -166,12 +166,14 @@
                         <tr>
                             <td >
                                 <asp:Label ID="Label5" runat="server" CssClass="texto" Text="¿El tomador es un asegurado?"></asp:Label>
-                                <asp:CheckBox ID="CheckBox1" Text="SI" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" />
-                                <asp:CheckBox ID="CheckBox2" Text="NO" runat="server" OnCheckedChanged="CheckBox2_CheckedChanged" />
+                                <asp:RadioButtonList id="RadioButtonList1" runat="server" RepeatDirection="Horizontal"  OnSelectedIndexChanged="onSelectedIndexChanged" >
+                                    <asp:ListItem>SI</asp:ListItem>
+                                    <asp:ListItem>NO</asp:ListItem>
+                                </asp:RadioButtonList>
+<%--                                <asp:RadioButton ID="CheckBox1" Text="SI" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" />
+                                <asp:RadioButton ID="CheckBox2" Text="NO" runat="server" OnCheckedChanged="CheckBox2_CheckedChanged" />--%>
                             </td>
-                            <td >
-                                
-                                &nbsp;</td>
+                            <td >&nbsp;</td>
                             <td >
                                 &nbsp;</td>
                             
@@ -191,9 +193,9 @@
                     <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <br />
                     <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> REGISTRAR</asp:LinkButton>
-                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
+<%--                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
                     <asp:LinkButton ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> CEDULA</asp:LinkButton>
-                    <asp:LinkButton ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> R.CIVIL</asp:LinkButton>
+                    <asp:LinkButton ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> R.CIVIL</asp:LinkButton>--%>
                     <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click" Text="CANCELAR" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     

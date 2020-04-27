@@ -87,7 +87,18 @@
         </tr>
         <tr>
             <td>
-                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                 <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="CANCELAR" class="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>            
+
             </td>
            
         </tr>

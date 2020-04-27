@@ -16,6 +16,12 @@ namespace Affis
 
         }
 
+        public void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Session["CodigoCreacion"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Session["CodigoCreacion"] = DropDownList1.SelectedValue.ToString();

@@ -21,6 +21,7 @@ namespace Affis
 
         protected void Button8_Click(object sender, EventArgs e)
         {
+            Session["caso"] = null;
             Response.Redirect("InicioProceso.aspx");
         }
 

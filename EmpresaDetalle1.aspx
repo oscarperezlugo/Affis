@@ -8,12 +8,15 @@
     <br />
     <br />
     <br />
-    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
-                    
-                    
-                    
-                    &nbsp;&nbsp; <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
-                    
-                    
-                    
+    <table>
+        <tr>
+            <td>
+                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                &nbsp;
+                <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                &nbsp;&nbsp; 
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+            </td>
+        </tr>
+    </table>
                     </asp:Content>

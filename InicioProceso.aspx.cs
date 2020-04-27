@@ -27,7 +27,7 @@ namespace Affis
             else
             {
                 Session["valor"] = TextBox1.Text;
-                Response.Redirect("InicioAdicion.aspx");
+                //Response.Redirect("InicioAdicion.aspx");
             }
 
         }

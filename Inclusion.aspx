@@ -50,12 +50,16 @@
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
                     <br />
-                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE"  CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
-                    
-                    
-                &nbsp;<asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"><i class="fa fa-plus-circle"></i> CANCELAR</asp:LinkButton>
-                    
-                    
+
+                     <table>
+                        <tr>
+                            <td>                                      
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                                <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE"  CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                                <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"><i class="fa fa-plus-circle"></i> CANCELAR</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>                    
                 </td>
         
               

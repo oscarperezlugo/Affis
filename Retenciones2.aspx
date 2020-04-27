@@ -47,7 +47,20 @@
                 <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="Gray" OnClick="LinkButton2_Click"><i class="fa fa-search">b</i></asp:LinkButton>
                 <br />                                
                 <asp:TextBox ID="TextBox5" runat="server" placeholder="Cedula"  CssClass="auto-style5" Width="25%"></asp:TextBox>
-                <br />                                
+                <br />    
+                
+
+                <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="Button1" runat="server" Text="&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt; BUSCAR" OnClick="LinkButton2_Click" class="btn btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="CANCELAR" class="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
             </td>
             
         </tr>

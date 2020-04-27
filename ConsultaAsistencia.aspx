@@ -9,7 +9,17 @@
     <br />
                     
                     
-                    <asp:LinkButton ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-lg btn-primary"><i class="fa fa-search"></i> REVISAR</asp:LinkButton>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-primary"><i class="fa fa-search"></i> REVISAR</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                            </td>
+                        </tr>
+                    </table>
     <br />
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="564px" CssClass="gridcalc">

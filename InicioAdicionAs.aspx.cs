@@ -33,6 +33,13 @@ namespace Affis
 
         }
 
+        public void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Session["cedulaadc"] = null;
+            Session["fechaadc"] = null;
+            Response.Redirect("InicioProceso.aspx");
+        }
+
         public void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (GridView1.SelectedRow != null)

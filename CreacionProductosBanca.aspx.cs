@@ -68,5 +68,10 @@ namespace Affis
                 }
             }
         }
+
+        public void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InicioProceso.aspx");
+        }
     }
 }

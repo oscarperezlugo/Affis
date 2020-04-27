@@ -50,9 +50,17 @@
         </tr>
         <tr>
             <td>
-                    <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"  ><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
-                    &nbsp;<asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
-                    
+                <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"  ><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
+                            </td>
+                        </tr>
+                    </table>                    
                     
                     
                     </td>

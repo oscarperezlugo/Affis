@@ -1,27 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
 
 namespace Affis
 {
-
-
     public partial class Inclusion2 : System.Web.UI.Page
     {
-
-
         ConexionesDB conn = new ConexionesDB();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             DateTime endDate = startDate.AddMonths(1);
+
             DropDownList7.SelectedValue = "1";
             DropDownList11.SelectedValue = endDate.Month.ToString();
             DropDownList5.SelectedValue = DateTime.Now.Year.ToString();
@@ -31,8 +20,7 @@ namespace Affis
             DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
             DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
             DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
-            
-            
+
             if (Session["cedula"] != null)
             {
                 Text3.Text = Session["cedula"].ToString();
@@ -40,11 +28,17 @@ namespace Affis
                 {
                     Text6.Text = Session["nombre"].ToString();
                     DropDownList1.SelectedValue = Session["genero"].ToString();
+                    DropDownList1.Enabled = false;
                 }
             }
 
         }
-
+        
+        private void onSelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["tomasegur"] = RadioButtonList1.SelectedIndex == 0 ? "si" : "no";
+        }
+        
         protected void Button1_Click(object sender, EventArgs e)
         {
             Session["cedula"] = Text3.Text;
@@ -67,50 +61,52 @@ namespace Affis
             Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
             Response.Redirect("IncluDesc.aspx");
         }
-
+        
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Adicion.aspx");
-            
-        }
 
+        }
         
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ConsultaCedula");
-
-        }
-
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Session["tomasegur"] = "si"; 
+            Session["tomasegur"] = "si";
         }
-        
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            string url = "https://srienlinea.sri.gob.ec/sri-en-linea/SriDeclaracionesWeb/ConsultaImpuestoRenta/Consultas/consultaImpuestoRenta";
-            Response.Write("<script> window.open('" + url + "','_blank'); </script>");
-        }
-        protected void Button7_Click(object sender, EventArgs e)
-        {
-            string url = "https://www.registrocivil.gob.ec/";
-            Response.Write("<script> window.open('" + url + "','_blank'); </script>");
-        }
+
+        #region Según requerimientos del cliente no deberían ir en esta pantalla, sino en la pantalla asegurados 
+        //protected void Button4_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("ConsultaCedula");
+        //}
+
+        //protected void Button3_Click(object sender, EventArgs e)
+        //{
+        //    string url = "https://srienlinea.sri.gob.ec/sri-en-linea/SriDeclaracionesWeb/ConsultaImpuestoRenta/Consultas/consultaImpuestoRenta";
+        //    Response.Write("<script> window.open('" + url + "','_blank'); </script>");
+        //}
+
+        //protected void Button7_Click(object sender, EventArgs e)
+        //{
+        //    string url = "https://www.registrocivil.gob.ec/";
+        //    Response.Write("<script> window.open('" + url + "','_blank'); </script>");
+        //}
+        #endregion
+
         protected void Button8_Click(object sender, EventArgs e)
         {
             Session["cedula"] = null;
             Response.Redirect("InicioProceso.aspx");
         }
 
-        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            Session["tomasegur"] = "si";
-            CheckBox2.Checked = false;
-        }
+        //protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    Session["tomasegur"] = "si";
+        //    CheckBox2.Checked = false;
+        //}
 
-        protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox1.Checked = false;
-        }
+        //protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    CheckBox1.Checked = false;
+        //}
     }
 }

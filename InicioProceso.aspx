@@ -41,15 +41,23 @@
                     <br />
                     &nbsp;<br /><br />
                     
-                    
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="163%" CssClass="gridcalc" >
+                    <div style="overflow-x: scroll">
+                    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>--%>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="163%" CssClass="gridcalc"  >
                         <Columns>
-                            <asp:CommandField ButtonType="Button" SelectText="Confirmar" ShowSelectButton="True" />
+                            <%--<asp:CommandField ButtonType="Button" SelectText="Confirmar" ShowSelectButton="True" />--%>
+                            <asp:BoundField DataField="CODIGO" HeaderText="CODIGO" SortExpression="CODIGO" />
                             <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" />
+                            <asp:BoundField DataField="FECHADENACIMIENTO" HeaderText="FECHA DE NACIMIENTO" SortExpression="FECHANAC" DataFormatString="{0:yyyy-MM-dd}" />
                             <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRE" SortExpression="NOMBRE" />
-                            <asp:BoundField DataField="FECHADENACIMIENTO" HeaderText="FECHA DE NACIMIENTO" SortExpression="FECHANAC" />
                             <asp:BoundField DataField="GENERO" HeaderText="GENERO" SortExpression="GENERO" />
+                            <asp:BoundField DataField="TELEFONODOMICILIO" HeaderText="TELEFONO DOMICILIO" SortExpression="TELEFONODOMICILIO" />
+                            <asp:BoundField DataField="TELEFONOCELULAR" HeaderText="TELEFONO CELULAR" SortExpression="TELEFONOCELULAR" />
+                            <asp:BoundField DataField="TELEFONOEMPRESA" HeaderText="TELEFONO EMPRESA" SortExpression="TELEFONOEMPRESA" />
+                            <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" SortExpression="EMAIL" />
+                            <asp:BoundField DataField="DIRECCIONEMPLEADOR" HeaderText="DIRECCIÓN EMPLEADOR" SortExpression="DIRECCIONEMPLEADOR" />
+
+
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />
@@ -59,12 +67,17 @@
                         <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
-                    </asp:GridView><br />
-                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" class="btn btn-lg btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                    </asp:GridView><br /></div>
                     
-                    
-                &nbsp;<asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" class="btn btn-lg btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
-                    
+                    <table>
+                        <tr>
+                            <td>            
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-lg btn-primary"></asp:LinkButton>
+                                <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" class="btn btn-lg btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                                <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" class="btn btn-lg btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>                    
                     
                     <br />
                     

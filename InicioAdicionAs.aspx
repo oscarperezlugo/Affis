@@ -30,11 +30,19 @@
                     <br />
                     
                     
-                    <asp:LinkButton ID="Button1" runat="server" Text="&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt; BUSCAR" OnClick="Button1_Click" class="btn btn-lg btn-primary"></asp:LinkButton><br /><br />
-                    &nbsp;<br />
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="Button1" runat="server" Text="&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt; BUSCAR" OnClick="Button1_Click" class="btn btn-lg btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-lg btn-primary"></asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="CANCELAR" class="btn btn-lg btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
                     <br />
-                    &nbsp;<br /><br />
-                    
+                    <br />                    
                     
                     <asp:GridView ID="GridView1" runat="server" width="900px" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"  CssClass="gridcalc" DataSourceID="SqlDataSource1" >
                         <Columns>

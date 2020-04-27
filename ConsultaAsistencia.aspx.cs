@@ -19,5 +19,11 @@ namespace Affis
             Session["Asistencia"] = DropDownList1.SelectedValue.ToString();
             Response.Redirect("ConsultaAsistencia.aspx");
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Session["Asistencia"] = null;
+            Response.Redirect("Asistencia.aspx");
+        }
     }
 }

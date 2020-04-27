@@ -18,8 +18,18 @@
                                 <br />
                     
                     
-                    <asp:LinkButton ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-primary"><i class="fa fa-search"></i> REVISAR</asp:LinkButton>&nbsp<asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger" style="margin-left: 0px" Width="115px"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
-                    
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="Button1" runat="server" Text="REVISAR" OnClick="Button1_Click" class="btn btn-primary"><i class="fa fa-search"></i> REVISAR</asp:LinkButton>
+                                &nbsp
+                                <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger" style="margin-left: 0px" Width="115px"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+
+                      </td>
+                        </tr>
+                    </table>                    
                     
          
         </tr>

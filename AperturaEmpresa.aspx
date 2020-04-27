@@ -27,14 +27,14 @@
                         <tr>
                             <td>
                     <input id="Text2" class="form-control" placeholder="NOMBRE COMERCIAL" type="text" runat="server"/><br />
-                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Medio De Cobro"></asp:Label>
+                                <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Medio de Cobro"></asp:Label>
                                 <br />
                             </td>
                            
                         </tr>
                         <tr>
                             <td><asp:DropDownList ID="DropDownList11" runat="server" CssClass="btn btn-secondary dropdown-toggle">
-                        <asp:ListItem>MEDIO DE COBRO</asp:ListItem>
+                    <%--    <asp:ListItem>MEDIO DE COBRO</asp:ListItem>--%>
                         <asp:ListItem>TARJETA DE CREDITO</asp:ListItem>
                         <asp:ListItem>ROL DE PAGOS</asp:ListItem>
                         <asp:ListItem>AMBOS</asp:ListItem>
@@ -46,7 +46,9 @@
                         </tr>
                         <tr>
                             <td>
-                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" class="button" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                                <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" class="button" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                                
+                                <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
                                 <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" class="button" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     
                     
