@@ -29,8 +29,11 @@
                                 <br />
                                 <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Cedula"></asp:Label>
                     <br />
-                    <asp:TextBox  id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control" Width="95%" Height="95%"/></td>
-                            
+                                <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control" Width="95%" Height="95%"/>
+                                <asp:RequiredFieldValidator ID="rfv_cedula" runat="server" ErrorMessage="El campo cedula es obligatorio" ControlToValidate="Text3" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                            </td>
+                    
                             <td>
                                 <br />
                                 <asp:Label ID="Label2" runat="server" CssClass="textomini" Text="Direccion"></asp:Label>
@@ -52,16 +55,20 @@
                             
                         </tr>
                         <tr>
-                            <td >
+                            <td>
                                 <br />
                                 <asp:Label ID="Label4" runat="server" CssClass="textomini" Text="Nombre Completo"></asp:Label>
-                    <br />
-                    <asp:TextBox id="Text6" class="form-control" placeholder="NOMBRE COMPLETO" type="text" runat="server" Width="95%" Height="95%" /></td>
-                            <td><asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
-                        <asp:ListItem Value="null">GENERO</asp:ListItem>
-                        <asp:ListItem>MASCULINO</asp:ListItem>
-                        <asp:ListItem>FEMENINO</asp:ListItem>
-                    </asp:DropDownList>
+                                <br />
+                                <asp:TextBox id="Text6" class="form-control" placeholder="NOMBRE COMPLETO" type="text" runat="server" Width="95%" Height="95%" />
+                                <asp:RequiredFieldValidator ID="rfv_nombre" runat="server" ErrorMessage="El campo nombre es obligatorio" ControlToValidate="Text6" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="btn btn-secondary dropdown-toggle">
+                                    <asp:ListItem Value="null">GENERO</asp:ListItem>
+                                    <asp:ListItem>MASCULINO</asp:ListItem>
+                                    <asp:ListItem>FEMENINO</asp:ListItem>
+                                </asp:DropDownList>
+                                <asp:RequiredFieldValidator ID="rfv_Genero" runat="server" ErrorMessage="El campo genero es obligatorio" ControlToValidate="DropDownList1" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                             
                         </tr>
@@ -137,28 +144,39 @@
                         <tr>
                             <td class="texto">FECHA NACIMIENTO <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                             </td>
-                            <td > <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdown-content">
-                    </asp:DropDownList>
+                            <td> 
+                                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdown-content"></asp:DropDownList>
+                                
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdown-content">
-                        <asp:ListItem Value="1">ENERO</asp:ListItem>
-                        <asp:ListItem Value="2">FEBRERO</asp:ListItem>
-                        <asp:ListItem Value="3">MARZO</asp:ListItem>
-                        <asp:ListItem Value="4">ABRIL</asp:ListItem>
-                        <asp:ListItem Value="5">MAYO</asp:ListItem>
-                        <asp:ListItem Value="6">JUNIO</asp:ListItem>
-                        <asp:ListItem Value="7">JULIO</asp:ListItem>
-                        <asp:ListItem Value="8">AGOSTO</asp:ListItem>
-                        <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
-                        <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
-                        <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
-                        <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
-                    </asp:DropDownList>
+                                <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdown-content">
+                                    <asp:ListItem Value="1">ENERO</asp:ListItem>
+                                    <asp:ListItem Value="2">FEBRERO</asp:ListItem>
+                                    <asp:ListItem Value="3">MARZO</asp:ListItem>
+                                    <asp:ListItem Value="4">ABRIL</asp:ListItem>
+                                    <asp:ListItem Value="5">MAYO</asp:ListItem>
+                                    <asp:ListItem Value="6">JUNIO</asp:ListItem>
+                                    <asp:ListItem Value="7">JULIO</asp:ListItem>
+                                    <asp:ListItem Value="8">AGOSTO</asp:ListItem>
+                                    <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
+                                    <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
+                                    <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
+                                    <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
+                                </asp:DropDownList>
+                                
                             </td>
                             <td>
-                    <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource3" DataTextField="DIA_" DataValueField="DIA_" CssClass="dropdown-content">
-                    </asp:DropDownList>
+                                <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource3" DataTextField="DIA_" DataValueField="DIA_" CssClass="dropdown-content"></asp:DropDownList>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <asp:RequiredFieldValidator ID="rfv_anho" runat="server" ErrorMessage="El campo año es obligatorio" ControlToValidate="DropDownList2" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <br />
+                                <asp:RequiredFieldValidator ID="rfv_mes" runat="server" ErrorMessage="El campo mes es obligatorio" ControlToValidate="DropDownList3" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <br />
+                                <asp:RequiredFieldValidator ID="rfv_dia" runat="server" ErrorMessage="El campo dia es obligatorio" ControlToValidate="DropDownList4" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                     </table>

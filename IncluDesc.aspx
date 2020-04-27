@@ -116,12 +116,9 @@
                     <br />
                     &nbsp;&nbsp;
                     <br />
-                    <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"  ><i class="fa fa-plus-circle"></i> ADICIONAR</asp:LinkButton>
-                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
-                    
-                    
-                    
-                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click"  CssClass="btn btn-primary" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> ADICIONAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" CssClass="btn btn-danger" >CANCELAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="btn btn-primary"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     
                     
                     

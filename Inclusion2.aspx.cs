@@ -14,9 +14,9 @@ namespace Affis
             DropDownList7.SelectedValue = "1";
             DropDownList11.SelectedValue = endDate.Month.ToString();
             DropDownList5.SelectedValue = DateTime.Now.Year.ToString();
-            DropDownList10.SelectedValue = "1";
-            DropDownList12.SelectedValue = endDate.Month.ToString();
-            DropDownList8.SelectedValue = DateTime.Now.Year.ToString();
+            //DropDownList10.SelectedValue = "1";
+            //DropDownList12.SelectedValue = endDate.Month.ToString();
+            //DropDownList8.SelectedValue = DateTime.Now.Year.ToString();
             DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
             DropDownList3.SelectedValue = DateTime.Now.Month.ToString();
             DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
@@ -54,7 +54,7 @@ namespace Affis
             Session["cargo"] = cargo1.Text;
             Session["fechanac"] = "" + DropDownList2.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue + "";
             Session["fechaef"] = "" + DropDownList5.SelectedValue + "/" + DropDownList11.SelectedValue + "/" + DropDownList7.SelectedValue + "";
-            Session["fechavig"] = "" + DropDownList8.SelectedValue + "/" + DropDownList12.SelectedValue + "/" + DropDownList10.SelectedValue + "";
+            //Session["fechavig"] = "" + DropDownList8.SelectedValue + "/" + DropDownList12.SelectedValue + "/" + DropDownList10.SelectedValue + "";
             Session["codigo"] = Text9.Text;
             Session["telcel"] = Text7.Text;
             Session["teldom"] = Text8.Text;

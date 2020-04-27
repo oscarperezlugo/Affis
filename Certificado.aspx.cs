@@ -20,9 +20,9 @@ namespace Affis
     {
 
 
-        ConexionesDB conn = new ConexionesDB();
+        //ConexionesDB conn = new ConexionesDB();
 
-        private decimal total = (decimal)0.0;
+        //private decimal total = (decimal)0.0;
         private int ultimo;
 
         protected void Page_Load(object sender, EventArgs e)
