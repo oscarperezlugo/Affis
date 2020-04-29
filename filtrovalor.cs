@@ -11,5 +11,7 @@ namespace Affis
         public string filtro { get; set; }
         public string plan { get; set; }
         public string relacion { get; set; }
+
+        public DateTime fechaNacimiento { get; set; }
     }
 }

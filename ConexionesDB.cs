@@ -38,6 +38,19 @@ namespace Affis
             return dt;          
         }
 
+        public DataTable getProductos()
+        {
+            DataTable dt = new DataTable();
+
+            string sqlQuery = "SELECT * FROM PRODUCTOS";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
+            conn.Open();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
         public DataSet Obtenerinfo3(filtrovalor filtrorec)
         {
             string filtro = filtrorec.filtro;
@@ -46,7 +59,10 @@ namespace Affis
             DataSet ds = new DataSet();
 
 
-            string sqlQuery = "SELECT DISTINCT[Valor] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND ([Aplicaa] LIKE '%" + relacion + "%') AND ([Plano] LIKE '%" + plan +"%'))";
+            //string sqlQuery = "SELECT DISTINCT[Valor] FROM[PRODUCTOS] WHERE(([Producto] LIKE '%" + filtro + "%') AND ([Aplicaa] LIKE '%" + relacion + "%') AND ([Plano] LIKE '%" + plan +"%') AND )";
+            string sqlQuery = "SELECT DISTINCT[Valor] FROM[PRODUCTOS2] WHERE(([Producto] LIKE '%" + filtro + "%') AND([Aplicaa] LIKE '%" + relacion + "%') AND([Plano] LIKE '%" + plan + "%')) AND(DATEDIFF(yy, '04-01-1990', GETDATE()) >= Desde AND DATEDIFF(yy, '04-01-1990', GETDATE()) <= Hasta)";
+
+            
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
             da.Fill(ds);

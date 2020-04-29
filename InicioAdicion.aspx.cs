@@ -42,7 +42,7 @@ namespace Affis
         {
             Session["cedulaadc"] = null;
             Session["fechaadc"] = null;
-            Response.Redirect("InicioProceso.aspx");
+            Response.Redirect("InicioAdicion.aspx");
         }
 
         public void GridView1_SelectedIndexChanged(object sender, EventArgs e)
