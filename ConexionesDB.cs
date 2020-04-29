@@ -12,33 +12,32 @@ namespace Affis
         public static DataTable usuariosDT;
         SqlConnection conn = new SqlConnection("workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity");
         //string conex = "workstation id=Affinity.mssql.somee.com;packet size=4096;user id=operezlugo_SQLLogin_1;pwd=tc65ztfi6o;data source=Affinity.mssql.somee.com;persist security info=False;initial catalog=Affinity";
-        public DataSet Obtenerinfo(string filtro)
+        public DataTable Obtenerinfo(string filtro)
         {
-            DataSet ds = new DataSet();
-            
+            DataTable dt = new DataTable();            
 
             string sqlQuery = "SELECT * FROM EMPRESAS WHERE NOMBRECOMERCIAL Like '%" + filtro + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
-            da.Fill(ds);
+            da.Fill(dt);
             conn.Close();
 
-            return ds;
+            return dt;
         }
-        public DataSet Obtenerinfo2(string filtro)
+
+        public DataTable Obtenerinfo2(string filtro)
         {
-            DataSet ds = new DataSet();
-            
+            DataTable dt = new DataTable();            
 
             string sqlQuery = "SELECT * FROM ASEGURADOS WHERE CEDULA Like '%" + filtro + "%'";
+
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
-            da.Fill(ds);
+            da.Fill(dt);
             conn.Close();                       
-            return ds;
-           
-               
+            return dt;          
         }
+
         public DataSet Obtenerinfo3(filtrovalor filtrorec)
         {
             string filtro = filtrorec.filtro;

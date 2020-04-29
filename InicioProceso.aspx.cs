@@ -1,10 +1,5 @@
-﻿ using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
+﻿using System;
+using System.Data;
 
 namespace Affis
 {
@@ -12,13 +7,14 @@ namespace Affis
 
     public partial class InicioProceso : System.Web.UI.Page
     {
-
-
         ConexionesDB conn = new ConexionesDB();
+        private DataTable source = null;
         private void recuperarInfo()
         {
             string filtro = TextBox1.Text;
-            GridView1.DataSource = conn.Obtenerinfo2(filtro);
+            source = conn.Obtenerinfo2(filtro);
+
+            GridView1.DataSource = source;
             GridView1.DataBind();
             if (GridView1.Rows.Count == 0)
             {
@@ -59,12 +55,23 @@ namespace Affis
         {
             if (GridView1.SelectedRow != null)
             {
-                Session["cedula"] = GridView1.SelectedRow.Cells[1].Text;
-                Session["cedul"] = GridView1.SelectedRow.Cells[1].Text;
-                Session["Rela"] = "Tomador";
-                Session["nombre"] = GridView1.SelectedRow.Cells[2].Text;
-                Session["nombres"] = GridView1.SelectedRow.Cells[2].Text;
-                Session["genero"] = GridView1.SelectedRow.Cells[4].Text;
+                int i = GridView1.SelectedIndex;
+
+                string cedula = source.Rows[i].Field<string>("CEDULA");
+
+                Session["cedula"] = cedula;
+                Session["cedul"] = cedula;
+                Session["Rela"] = "TOMADOR";
+
+                string nombre = source.Rows[i].Field<string>("NOMBRESCOMPLETOS");
+                Session["nombre"] = nombre;
+                Session["nombres"] = nombre;
+
+                string genero = source.Rows[i].Field<string>("GENERO");
+                Session["genero"] = genero;
+
+                string fechaN = source.Rows[i].Field<string>("FECHADENACIMIENTO");
+                Session["fechanac"] = fechaN;
 
                 Response.Redirect("IncluDesc.aspx");
             }
@@ -90,5 +97,5 @@ namespace Affis
             Response.Redirect(Request.RawUrl);
         }
     }
-            
+
 }

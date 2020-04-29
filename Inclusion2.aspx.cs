@@ -31,15 +31,16 @@ namespace Affis
                     DropDownList1.Enabled = false;
                 }
             }
-
+            RadioButtonList1.SelectedIndexChanged += RadioButtonList1_SelectedIndexChanged;
         }
-        
-        private void onSelectedIndexChanged(object sender, EventArgs e)
+
+        private void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             Session["tomasegur"] = RadioButtonList1.SelectedIndex == 0 ? "si" : "no";
         }
         
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btn_Registrar_Click(object sender, EventArgs e)
         {
             Session["cedula"] = Text3.Text;
             Session["cedul"] = Text3.Text;
@@ -52,12 +53,14 @@ namespace Affis
             Session["dirper"] = Text1.Text;
             Session["email"] = Text2.Text;
             Session["cargo"] = cargo1.Text;
-            Session["fechanac"] = "" + DropDownList2.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue + "";
+            string fechaNacimiento = DropDownList2.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue;
+            Session["fechanac"] = fechaNacimiento;
             Session["fechaef"] = "" + DropDownList5.SelectedValue + "/" + DropDownList11.SelectedValue + "/" + DropDownList7.SelectedValue + "";
             //Session["fechavig"] = "" + DropDownList8.SelectedValue + "/" + DropDownList12.SelectedValue + "/" + DropDownList10.SelectedValue + "";
             Session["codigo"] = Text9.Text;
             Session["telcel"] = Text7.Text;
             Session["teldom"] = Text8.Text;
+            Session["tomasegur"] = RadioButtonList1.SelectedIndex == 0 ? "si" : "no";
             Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
             Response.Redirect("IncluDesc.aspx");
         }

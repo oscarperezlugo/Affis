@@ -31,6 +31,10 @@ namespace Affis
         protected void Page_Load(object sender, EventArgs e)
         {
             //Label4.Text = "";//String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
+
+            string fechaN = Session["fechanac"].ToString();
+            DateTime fecha = DateTime.Parse(fechaN);
+
             if (IsPostBack)
                 recuperarInfo();
             if (Session["cedula"] != null)
@@ -39,39 +43,56 @@ namespace Affis
                 Text3.Text = Session["cedul"].ToString();
                 Text6.Text = Session["nombres"].ToString();
 
-                if (Session["Rela"] != null)
-                {
-                    DropDownList5.SelectedValue = Session["Rela"].ToString();
-                }
-                else
-                {
-                    DropDownList5.SelectedValue = "RELACION";
-                }
+                //if (Session["Rela"] != null)
+                //{
+                //    DropDownList5.SelectedValue = Session["Rela"].ToString();
+                //}
+                //else
+                //{
+                //    DropDownList5.SelectedValue = "RELACION";
+                //}
+
                 if (Session["tomasegur"] != null)
                 {
                     Text3.Text = Session["cedula"].ToString();
                     Text6.Text = Session["nombre"].ToString();
                     DropDownList1.SelectedValue = Session["genero"].ToString();
-                    DropDownList5.SelectedValue = "TOMADOR";
-                    DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
-                    DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                    DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
 
+                    if (Session["Rela"] != null)
+                        DropDownList5.SelectedValue = Session["Rela"].ToString();//"TOMADOR";
+
+
+                    //DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
+                    //DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+                    //DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
+
+                    establecerFecha(fecha);
                 }
                 else
                 {
-                    DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
-                    DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                    DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
+                    //DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
+                    //DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+                    //DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
+
+                    establecerFecha(fecha);
                 }
 
             }
             else
             {
-                DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
-                DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
-                DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
+                //DropDownList4.SelectedValue = DateTime.Now.Day.ToString();
+                //DropDownList11.SelectedValue = DateTime.Now.Month.ToString();
+                //DropDownList2.SelectedValue = DateTime.Now.Year.ToString();
+
+                establecerFecha(fecha);
             }
+        }
+
+        private void establecerFecha(DateTime fecha)
+        {
+            DropDownList4.SelectedValue = fecha.Day.ToString();
+            DropDownList11.SelectedValue = fecha.Month.ToString();
+            DropDownList2.SelectedValue = fecha.Year.ToString();
         }
 
 
