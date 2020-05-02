@@ -41,21 +41,22 @@
                     <br />
                     &nbsp;<br /><br />
                     
-                    <div style="overflow-x: scroll">
+                    <%--<div style="overflow-x: scroll">--%>
+                    <div>
                     <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>--%>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="163%" CssClass="gridcalc"  >
                         <Columns>
                             <asp:CommandField ButtonType="Button" SelectText="Seleccionar" ShowSelectButton="True" />
-                            <asp:BoundField DataField="CODIGO" HeaderText="CODIGO" SortExpression="CODIGO" />
+                            <%--<asp:BoundField DataField="CODIGO" HeaderText="CODIGO" SortExpression="CODIGO" />--%>
                             <asp:BoundField DataField="CEDULA" HeaderText="CEDULA" SortExpression="CEDULA" />
                             <asp:BoundField DataField="FECHADENACIMIENTO" HeaderText="FECHA DE NACIMIENTO" SortExpression="FECHANAC" DataFormatString="{0:yyyy-MM-dd}" />
                             <asp:BoundField DataField="NOMBRESCOMPLETOS" HeaderText="NOMBRE" SortExpression="NOMBRE" />
                             <asp:BoundField DataField="GENERO" HeaderText="GENERO" SortExpression="GENERO" />
-                            <asp:BoundField DataField="TELEFONODOMICILIO" HeaderText="TELEFONO DOMICILIO" SortExpression="TELEFONODOMICILIO" />
-                            <asp:BoundField DataField="TELEFONOCELULAR" HeaderText="TELEFONO CELULAR" SortExpression="TELEFONOCELULAR" />
-                            <asp:BoundField DataField="TELEFONOEMPRESA" HeaderText="TELEFONO EMPRESA" SortExpression="TELEFONOEMPRESA" />
-                            <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" SortExpression="EMAIL" />
-                            <asp:BoundField DataField="DIRECCIONEMPLEADOR" HeaderText="DIRECCIÓN EMPLEADOR" SortExpression="DIRECCIONEMPLEADOR" />
+                            <%--<asp:BoundField DataField="TELEFONODOMICILIO" HeaderText="TELEFONO DOMICILIO" SortExpression="TELEFONODOMICILIO" />--%>
+                            <%--<asp:BoundField DataField="TELEFONOCELULAR" HeaderText="TELEFONO CELULAR" SortExpression="TELEFONOCELULAR" />--%>
+                            <%--<asp:BoundField DataField="TELEFONOEMPRESA" HeaderText="TELEFONO EMPRESA" SortExpression="TELEFONOEMPRESA" />--%>
+<%--                            <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" SortExpression="EMAIL" />
+                            <asp:BoundField DataField="DIRECCIONEMPLEADOR" HeaderText="DIRECCIÓN EMPLEADOR" SortExpression="DIRECCIONEMPLEADOR" />--%>
 
 
                         </Columns>

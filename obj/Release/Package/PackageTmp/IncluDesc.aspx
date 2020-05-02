@@ -33,12 +33,12 @@
                                 <asp:Label ID="Label9" runat="server" CssClass="textomini" Text="Nombre Completo"></asp:Label>
                     <br />
                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="form-control"/><asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="btn btn-secondary dropdown-toggle">
-                        <asp:ListItem Value="null">GENERO</asp:ListItem>
+                        <%--<asp:ListItem Value="null">GENERO</asp:ListItem>--%>
                         <asp:ListItem>MASCULINO</asp:ListItem>
                         <asp:ListItem>FEMENINO</asp:ListItem>
                     </asp:DropDownList>
                     <asp:DropDownList ID="DropDownList5" runat="server" CssClass="btn btn-secondary dropdown-toggle">
-                        <asp:ListItem>RELACION</asp:ListItem>
+                    <%--    <asp:ListItem>RELACION</asp:ListItem>--%>
                         <asp:ListItem Value="TOMADOR">Tomador</asp:ListItem>
                         <asp:ListItem Value="CONYUGUE">Cónyuge</asp:ListItem>
                         <asp:ListItem Value="HIJO">Hijo</asp:ListItem>

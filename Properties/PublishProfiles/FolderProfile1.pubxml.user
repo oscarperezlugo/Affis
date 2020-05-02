@@ -23,7 +23,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/24/2020 14:22:08</publishTime>
     </File>
     <File Include="Adicion4.aspx">
-      <publishTime>04/24/2020 14:22:08</publishTime>
+      <publishTime>04/29/2020 16:56:10</publishTime>
     </File>
     <File Include="AdminCert.aspx">
       <publishTime>04/24/2020 19:54:20</publishTime>
@@ -38,10 +38,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/24/2020 19:15:20</publishTime>
     </File>
     <File Include="bin/Affis.dll">
-      <publishTime>04/27/2020 21:25:47</publishTime>
+      <publishTime>04/29/2020 18:34:23</publishTime>
     </File>
     <File Include="bin/Affis.pdb">
-      <publishTime>04/27/2020 21:25:47</publishTime>
+      <publishTime>04/29/2020 18:34:23</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/24/2020 14:22:10</publishTime>
@@ -50,10 +50,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/24/2020 14:22:10</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/27/2020 21:26:41</publishTime>
+      <publishTime>04/29/2020 18:34:33</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/27/2020 21:26:41</publishTime>
+      <publishTime>04/29/2020 18:34:33</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>04/24/2020 14:22:10</publishTime>
@@ -380,31 +380,31 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/27/2019 16:38:26</publishTime>
     </File>
     <File Include="IncluDesc.aspx">
-      <publishTime>04/27/2020 15:48:15</publishTime>
+      <publishTime>04/29/2020 12:15:16</publishTime>
     </File>
     <File Include="Inclusion.aspx">
       <publishTime>04/24/2020 19:25:40</publishTime>
     </File>
     <File Include="Inclusion2.aspx">
-      <publishTime>04/27/2020 15:39:15</publishTime>
+      <publishTime>04/29/2020 14:04:04</publishTime>
     </File>
     <File Include="InicioAdicion.aspx">
-      <publishTime>04/24/2020 19:14:27</publishTime>
+      <publishTime>04/29/2020 14:57:04</publishTime>
     </File>
     <File Include="InicioAdicionAs.aspx">
       <publishTime>04/24/2020 19:12:38</publishTime>
     </File>
     <File Include="InicioProceso.aspx">
-      <publishTime>04/27/2020 15:35:15</publishTime>
+      <publishTime>04/29/2020 11:41:05</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>04/27/2020 12:45:23</publishTime>
+      <publishTime>04/29/2020 17:49:13</publishTime>
     </File>
     <File Include="Logo.png">
       <publishTime>04/24/2020 14:22:08</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/27/2020 21:26:15</publishTime>
+      <publishTime>04/29/2020 18:34:28</publishTime>
     </File>
     <File Include="Productosbs.aspx">
       <publishTime>04/24/2020 14:22:08</publishTime>

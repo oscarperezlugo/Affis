@@ -37,7 +37,7 @@
                         <asp:ListItem>MASCULINO</asp:ListItem>
                         <asp:ListItem>FEMENINO</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:DropDownList ID="DropDownList5" runat="server" CssClass="btn btn-secondary dropdown-toggle">
+                    <asp:DropDownList ID="Relacion" runat="server" CssClass="btn btn-secondary dropdown-toggle" AutoPostBack="True">
                         <asp:ListItem>RELACION</asp:ListItem>
                         <asp:ListItem Value="TOMADOR">Tomador</asp:ListItem>
                         <asp:ListItem Value="CONYUGUE">Cónyuge</asp:ListItem>
@@ -76,18 +76,20 @@
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [MES] FROM [MES$]"></asp:SqlDataSource>
                     <br />
-                    <asp:DropDownList ID="DropDownList8" runat="server"  Width="364px" CssClass="btn btn-secondary dropdown-toggle">
+                    <asp:Label runat="server" CssClass="textomini" Text="Producto"></asp:Label>
+                     <br />
+                    <asp:DropDownList ID="Producto" runat="server"  Width="364px" CssClass="btn btn-secondary dropdown-toggle" AutoPostBack="True">
                         <asp:ListItem>Producto</asp:ListItem>
-                        <asp:ListItem>Muerte accidental y desmembración accidental</asp:ListItem>
-                        <asp:ListItem>Renta diaria por hospitalización</asp:ListItem>
-                        <asp:ListItem>Beca educativa</asp:ListItem>
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Producto] FROM [PRODUCTOS]"></asp:SqlDataSource>
+                    <br />   
+                    <asp:Label runat="server" CssClass="textomini" Text="Plan"></asp:Label>
+                     <br />
                     <asp:DropDownList ID="DropDownList7" runat="server" CssClass="btn btn-secondary dropdown-toggle"  >
-                        <asp:ListItem Value="null">PLAN</asp:ListItem>
-                        <asp:ListItem>A</asp:ListItem>
+                        <%--<asp:ListItem Value="null">PLAN</asp:ListItem>--%>
+           <%--             <asp:ListItem>A</asp:ListItem>
                         <asp:ListItem>B</asp:ListItem>
-                        <asp:ListItem>C</asp:ListItem>
+                        <asp:ListItem>C</asp:ListItem>--%>
                     </asp:DropDownList>
                     <br />
                     <br />
@@ -98,7 +100,8 @@
                         
                         <tr>
                             
-                            <td class="auto-style6"><asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="gridcalc" ShowHeader="False" Width="10%" >
+                            <td class="auto-style6">
+                               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="gridcalc" ShowHeader="False" Width="10%" >
                         <Columns>
                             <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" DataFormatString="{0:0.00}" />
                             <asp:BoundField DataField="Producto" HeaderText="Producto" SortExpression="Producto" visible="false" />
@@ -109,7 +112,7 @@
                         </tr>
                        
                     </table>
-                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Valor], [Producto], [Plan] FROM [PRODUCTOS]"></asp:SqlDataSource>
+                    <%--<asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Valor], [Producto], [Plan] FROM [PRODUCTOS]"></asp:SqlDataSource>--%>
                     <br />
                     &nbsp;&nbsp;
                     <br />

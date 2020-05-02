@@ -88,7 +88,7 @@
                     </table>
                     <table style="width:100%;">
                         <tr>
-                            <td class="texto">INICIO VIGENCIA&nbsp;&nbsp;</td>
+                            <td class="texto">INICIO DE VIGENCIA&nbsp;&nbsp;</td>
                             <td >
                     <asp:DropDownList ID="DropDownList5" runat="server" datasourceid="SqlDataSource4" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdown-content">
                     </asp:DropDownList>
@@ -184,7 +184,7 @@
                         <tr>
                             <td >
                                 <asp:Label ID="Label5" runat="server" CssClass="texto" Text="¿El tomador es un asegurado?"></asp:Label>
-                                <asp:RadioButtonList id="RadioButtonList1" runat="server" RepeatDirection="Horizontal"  OnSelectedIndexChanged="onSelectedIndexChanged" >
+                                <asp:RadioButtonList id="RadioButtonList1" runat="server" RepeatDirection="Horizontal"  >
                                     <asp:ListItem>SI</asp:ListItem>
                                     <asp:ListItem>NO</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -210,7 +210,7 @@
                     <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [DIA ] AS DIA_ FROM [DIA$]"></asp:SqlDataSource>
                     <br />
-                    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> REGISTRAR</asp:LinkButton>
+                    <asp:LinkButton ID="Button1" runat="server" OnClick="btn_Registrar_Click" Text="REGISTRAR" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> REGISTRAR</asp:LinkButton>
 <%--                    <asp:LinkButton ID="Button3" runat="server"  Text="SRI" OnClick="Button3_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> SRI</asp:LinkButton>
                     <asp:LinkButton ID="Button4" runat="server"  Text="CEDULA" OnClick="Button4_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> CEDULA</asp:LinkButton>
                     <asp:LinkButton ID="Button7" runat="server"  Text="RGCE" OnClick="Button7_Click" CssClass="btn btn-secondary"><i class="fa fa-search"></i> R.CIVIL</asp:LinkButton>--%>

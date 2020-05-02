@@ -100,7 +100,7 @@
                         </tr>
                         <tr>
                             <td>
-            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" class="form-control" ></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" TextMode="Password" class="form-control" ></asp:TextBox>
                                 <br />
                             </td>                            
                         </tr>

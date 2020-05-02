@@ -12,11 +12,12 @@ namespace Affis
         //TimeSpan tspan;
         //DateTime inicio;
         //DateTime final;
-        
-        
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (GridView1.Rows.Count + GridView5.Rows.Count  == 0)
+            //if (GridView1.Rows.Count + GridView5.Rows.Count  == 0)
+            if (GridView1.Rows.Count == 0)
             {
                 Label4.Text = "USUARIO NO ENCONTRADO";
                 Label3.Text = "";
