@@ -41,8 +41,9 @@ namespace Affis
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            recuperarInfo();
-
+            //recuperarInfo();
+            Session["valor"] = TextBox1.Text;
+            Response.Redirect("BuscaCert.aspx");
         }
 
         public void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace Affis
                 string genero = source.Rows[i].Field<string>("GENERO");
                 Session["genero"] = genero;
 
-                string fechaN = source.Rows[i].Field<string>("FECHADENACIMIENTO");
+                DateTime fechaN = source.Rows[i].Field<DateTime>("FECHADENACIMIENTO");
                 Session["fechanac"] = fechaN;
 
                 Response.Redirect("IncluDesc.aspx");

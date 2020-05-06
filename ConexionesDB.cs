@@ -29,7 +29,7 @@ namespace Affis
         {
             DataTable dt = new DataTable();            
 
-            string sqlQuery = "SELECT * FROM ASEGURADOS WHERE CEDULA Like '%" + filtro + "%'";
+            string sqlQuery = "SELECT CEDULA, TRY_CONVERT(datetime, FECHADENACIMIENTO) FECHADENACIMIENTO, NOMBRESCOMPLETOS, GENERO FROM ASEGURADOS WHERE CEDULA Like '%" + filtro + "%'";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, conn);
             conn.Open();
