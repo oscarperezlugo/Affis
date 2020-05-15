@@ -2,6 +2,7 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
+     <html>   
         <head>
             <title></title>
             <style type="text/css">
@@ -58,6 +59,9 @@
                     color: #000;
                     text-decoration: none;
                 }
+                h3{
+                    font-weight:bolder;
+                }
             </style>
         </head>
         <body>
@@ -66,7 +70,7 @@
                     <div class="card-header">
                         <div class="form-row">
                             <div class="col-8">
-                                <h2><b> INCLUSIÓN </b></h2>
+                                <h3><b> INCLUSIÓN </b></h3>
                             </div>
                             <div class="col-auto">
                                 <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
@@ -76,7 +80,7 @@
                     </div>
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="col-10">
+                            <div class="col-7">
                                 <label for="cedula">Cédula</label><br />
                                 <asp:TextBox ID="TextBox1" placeholder="CEDULA" runat="server" class="form-control"></asp:TextBox><br />
                             </div>
@@ -99,9 +103,7 @@
                             <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>--%>
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="None" CssClass="mGrid" PagerStyle-CssClass="pgr" >
                                     
-                                     <pagersettings mode="Numeric"
-          position="Bottom"           
-          pagebuttoncount="10"/>
+                                    <pagersettings mode="Numeric" position="Bottom" pagebuttoncount="10"/>
                                     <Columns>
                                         <asp:CommandField ButtonType="Button" SelectText="Seleccionar" ShowSelectButton="True" />
                                         <%--<asp:BoundField DataField="CODIGO" HeaderText="CODIGO" SortExpression="CODIGO" />--%>
@@ -127,6 +129,7 @@
                 </div>
             </div>
         </body>
+</html>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
         <%: Scripts.Render("~/bundles/modernizr") %>

@@ -7,7 +7,7 @@
     <title></title>
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@300&display=swap');
         .button {
             background-color: #75bcb5;
             border-radius: 30px;
@@ -15,7 +15,6 @@
             color: #2e2e2e;
             padding: 15px 32px;
             text-align: center;
-            letter-spacing:1px;
             text-decoration: none;
             display: inline-block;
             font-size: medium;
