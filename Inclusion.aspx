@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inclusion.aspx.cs" Inherits="Affis.Inclusion" MasterPageFile="~/Site.Master"  %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inclusion.aspx.cs" Inherits="Affis.Inclusion"  MasterPageFile="~/Site.Master"  %>
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 
@@ -11,11 +11,11 @@
             <div class="container">
                 <div class="card">
                     <form>
-                        <!-- CABEZERA -->
+                        <!-- CABECERA -->
                         <div class="card-header">
                             <div class="form-row">
                                 <div class="col-8">
-                                    <h2><b> INCLUSION </b></h2>
+                                    <h2><b> INCLUSIÓN </b></h2>
                                 </div>
                                 <div class="col-auto">
                                     <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
@@ -26,13 +26,13 @@
                         <!-- CUERPO -->
                         <div class="card-body">
                             <div class="form-row">
-                                <div class="col-md-6">
-                                    <label for="nombrempresa">Nombre Empresa</label>
+                                <div class="col-6">
+                                    <label for="nombrempresa">Nombre Empresa</label><br />
                                     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="NOMBRECOMERCIAL" DataValueField="NOMBRECOMERCIAL" CssClass="dropdownStyle">
                                     </asp:DropDownList><br />
                                 </div>
-                                <div class="col-md-6">
-                                    <br />
+                                <div class="col-6">
+                                    <label for="" class="invisible">Probando</label><br />
                                     <asp:LinKButton ID="Button1" runat="server" Text="SELECCIONAR" OnClick="Button1_Click" class="buttonColor"><i class="fa fa-check"></i> SELECCIONAR</asp:LinKButton><br />
                                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRECOMERCIAL] FROM [EMPRESAS]"></asp:SqlDataSource>
                                 </div>

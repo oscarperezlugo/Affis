@@ -25,7 +25,7 @@
                         <div class="form-row">
                             <div class="col-12">
                                 <label for="cedulatomador">Cédula Tomador</label><br />
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="CEDULA TOMADOR PRINCIPAL" Width="354px"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Cédula Tomador Principal" Width="354px"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">

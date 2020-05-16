@@ -15,7 +15,7 @@
                          <div class="card-header">
                              <div class="form-row">
                                  <div class="col-8">
-                                     <h2><b>ADICION </b></h2>
+                                     <h2><b>ADICIÓN </b></h2>
                                  </div>
                                  <div class="col-auto">
                                      <asp:LinkButton ID="LinkButton3" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" CssClass="buttonColor"></asp:LinkButton>
@@ -28,30 +28,30 @@
                              <div class="form-row">
                                  <div class="col-md-6">
                                      <label for="tomadorcedula">Tomador Cédula</label>
-                                     <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="TOMADOR CEDULA"></asp:TextBox><br />
+                                     <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Tomador Cédula"></asp:TextBox><br />
                                  </div>
                                  <div class="col-md-6">
                                      <label for="cedula">Cédula</label>
-                                     <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control"/><br />
+                                     <asp:TextBox id="Text3" placeholder="Cédula" type="text" runat="server" class="form-control"/><br />
                                  </div>
                              </div>
                              <div class="form-row">
                                  <div class="col-md-6">
                                      <label for="nombrecompleto">Nombre Completo</label><br />
-                                     <asp:TextBox id="Text6" placeholder="NOMBRE COMPLETO" type="text" runat="server" class="form-control"/><br />
+                                     <asp:TextBox id="Text6" placeholder="Nombre Completo" type="text" runat="server" class="form-control"/><br />
                                  </div>
                                  <div class="col-md-3">
                                      <label for="genero">Género</label><br />
                                      <asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="dropdownStyle">
-                                         <asp:ListItem Value="null">GENERO</asp:ListItem>
-                                         <asp:ListItem>MASCULINO</asp:ListItem>
-                                         <asp:ListItem>FEMENINO</asp:ListItem>
+                                         <asp:ListItem Value="null">Género</asp:ListItem>
+                                         <asp:ListItem>Masculino</asp:ListItem>
+                                         <asp:ListItem>Femenino</asp:ListItem>
                                      </asp:DropDownList>
                                  </div>
                                  <div class="col-md-3">
                                      <label for="relacion">Relación</label><br />
                                      <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdownStyle">
-                                         <asp:ListItem>RELACION</asp:ListItem>
+                                         <asp:ListItem>Relación</asp:ListItem>
                                          <asp:ListItem Value="TOMADOR">Tomador</asp:ListItem>
                                          <asp:ListItem Value="CONYUGUE">Cónyuge</asp:ListItem>
                                          <asp:ListItem Value="HIJO">Hijo</asp:ListItem>
@@ -75,18 +75,18 @@
                                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [AÑO] FROM [ANO$]"></asp:SqlDataSource>
                                      <!-- MES -->
                                      <asp:DropDownList ID="DropDownList11" runat="server" CssClass="dropdownStyle">
-                                         <asp:ListItem Value="1">ENERO</asp:ListItem>
-                                         <asp:ListItem Value="2">FEBRERO</asp:ListItem>
-                                         <asp:ListItem Value="3">MARZO</asp:ListItem>
-                                         <asp:ListItem Value="4">ABRIL</asp:ListItem>
-                                         <asp:ListItem Value="5">MAYO</asp:ListItem>
-                                         <asp:ListItem Value="6">JUNIO</asp:ListItem>
-                                         <asp:ListItem Value="7">JULIO</asp:ListItem>
-                                         <asp:ListItem Value="8">AGOSTO</asp:ListItem>
-                                         <asp:ListItem Value="9">SEPTIEMBRE</asp:ListItem>
-                                         <asp:ListItem Value="10">OCTUBRE</asp:ListItem>
-                                         <asp:ListItem Value="11">NOVIEMBRE</asp:ListItem>
-                                         <asp:ListItem Value="12">DICIEMBRE</asp:ListItem>
+                                         <asp:ListItem Value="1">Enero</asp:ListItem>
+                                         <asp:ListItem Value="2">Febrero</asp:ListItem>
+                                         <asp:ListItem Value="3">Marzo</asp:ListItem>
+                                         <asp:ListItem Value="4">Abril</asp:ListItem>
+                                         <asp:ListItem Value="5">Mayo</asp:ListItem>
+                                         <asp:ListItem Value="6">Junio</asp:ListItem>
+                                         <asp:ListItem Value="7">Julio</asp:ListItem>
+                                         <asp:ListItem Value="8">Agosto</asp:ListItem>
+                                         <asp:ListItem Value="9">Septiembre</asp:ListItem>
+                                         <asp:ListItem Value="10">Octubre</asp:ListItem>
+                                         <asp:ListItem Value="11">Noviembre</asp:ListItem>
+                                         <asp:ListItem Value="12">Diciembre</asp:ListItem>
                                      </asp:DropDownList>
                                      <!-- DIA -->
                                      <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource3" DataTextField="DIA_" DataValueField="DIA_" CssClass="dropdownStyle">
@@ -98,7 +98,7 @@
                                  <div class="col-auto">
                                      <label for="producto">Producto</label><br />
                                      <asp:DropDownList ID="DropDownList8" runat="server"  Width="364px" CssClass="dropdownStyle">
-                                         <asp:ListItem>PRODUCTO</asp:ListItem>
+                                         <asp:ListItem>Producto</asp:ListItem>
                                          <asp:ListItem>Muerte accidental y desmembración accidental</asp:ListItem>
                                          <asp:ListItem>Renta diaria por hospitalización</asp:ListItem>
                                          <asp:ListItem>Beca educativa</asp:ListItem>
@@ -108,7 +108,7 @@
                                      <label for="plan">Plan</label><br />
                                      <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Producto] FROM [PRODUCTOS]"></asp:SqlDataSource>
                                      <asp:DropDownList ID="DropDownList7" runat="server" CssClass="dropdownStyle"  >
-                                         <asp:ListItem Value="null">PLAN</asp:ListItem>
+                                         <asp:ListItem Value="null">Plan</asp:ListItem>
                                          <asp:ListItem>A</asp:ListItem>
                                          <asp:ListItem>B</asp:ListItem>
                                          <asp:ListItem>C</asp:ListItem>

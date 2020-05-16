@@ -2,7 +2,7 @@
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content runat="server" ID="myContent" ContentPlaceHolderID="ContentPlaceHolder1"> 
-     <html>   
+    <html>
         <head>
             <title></title>
             <style type="text/css">
@@ -11,7 +11,7 @@
                     color: #666;
                     text-align: center;
                     padding: 20px 0;
-                }   
+                }
                 #container {
                     width: 700px;
                     margin: 10px auto;
@@ -59,9 +59,6 @@
                     color: #000;
                     text-decoration: none;
                 }
-                h3{
-                    font-weight:bolder;
-                }
             </style>
         </head>
         <body>
@@ -70,7 +67,7 @@
                     <div class="card-header">
                         <div class="form-row">
                             <div class="col-8">
-                                <h3><b> INCLUSIÓN </b></h3>
+                                <h2><b> INCLUSIÓN </b></h2>
                             </div>
                             <div class="col-auto">
                                 <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
@@ -82,7 +79,9 @@
                         <div class="form-row">
                             <div class="col-7">
                                 <label for="cedula">Cédula</label><br />
-                                <asp:TextBox ID="TextBox1" placeholder="CEDULA" runat="server" class="form-control"></asp:TextBox><br />
+                                <asp:TextBox ID="TextBox1" placeholder="Cédula" runat="server" class="form-control" Width="400px"></asp:TextBox>
+                                <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
+                                <br />
                             </div>
                             <div class="col-auto" align="center">
                                 <label class="invisible">Probando</label><br />
@@ -102,8 +101,6 @@
                             <div class="col-12">
                             <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [CEDULA], [NOMBRE], [FECHANAC], [GENERO] FROM [ADICIONADOS]"></asp:SqlDataSource>--%>
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="None" CssClass="mGrid" PagerStyle-CssClass="pgr" >
-                                    
-                                    <pagersettings mode="Numeric" position="Bottom" pagebuttoncount="10"/>
                                     <Columns>
                                         <asp:CommandField ButtonType="Button" SelectText="Seleccionar" ShowSelectButton="True" />
                                         <%--<asp:BoundField DataField="CODIGO" HeaderText="CODIGO" SortExpression="CODIGO" />--%>
@@ -129,8 +126,8 @@
                 </div>
             </div>
         </body>
-</html>
+    </html>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
         <%: Scripts.Render("~/bundles/modernizr") %>
-</asp:Content>
+    </asp:Content>
