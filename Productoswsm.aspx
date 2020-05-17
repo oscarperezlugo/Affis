@@ -74,7 +74,8 @@
                                 <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="btn btn-info" OnClick="Button1_Click" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                             </div>
                         </div>
-                </div>
+            </div>
+            <div class="card-body">
                 <div class="form-row">
                     <div class="col-12">
                         <table>
@@ -98,6 +99,7 @@
                          </table>
                       </div>
                     </div>
+                </div>
             </div>
         </div>
 </body>
