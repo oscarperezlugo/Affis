@@ -12,7 +12,7 @@
             <div class="card-header">
                 <div class="form-row">
                     <div class="col-8">
-                        <h3>CREACIÓN DE PRODUCTOS WSM</h3>
+                        <h3><b>CREACIÓN DE PRODUCTOS WSM</b></h3>
                     </div>
                     <div class="col-auto">
                         <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
@@ -42,7 +42,7 @@
                                 </asp:DropDownList>
                             </div>
                             <div class="col-2" style="padding-left: 3%">
-                                <asp:Label ID="Label9" runat="server" Text="Ed. Mínima"></asp:Label>
+                                <asp:Label ID="Label9" runat="server" Text="Edad Mínima"></asp:Label>
                                 <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdownStyle" Width="100%">
                                     <asp:ListItem>6 Meses</asp:ListItem>
                                     <asp:ListItem>5 Años</asp:ListItem>
@@ -52,7 +52,7 @@
 
                             </div>
                             <div class="col-2" style="padding-left: 3%">
-                                <asp:Label ID="Label5" runat="server" Text="Ed. Máx. Toma"></asp:Label>
+                                <asp:Label ID="Label5" runat="server" Text="Edad Máx. Toma"></asp:Label>
                                 <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdownStyle" Width="100%">
                                      <asp:ListItem>55 Años</asp:ListItem>
                                      <asp:ListItem>65 Años</asp:ListItem>
@@ -60,7 +60,7 @@
                                  </asp:DropDownList>
                             </div>
                             <div class="col-3" style="padding-left: 3%;">
-                                <asp:Label ID="Label6" runat="server" Text="Ed. Máx Renov"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="Edad Máx. Renovación"></asp:Label>
                                 <asp:DropDownList ID="DropDownList4" runat="server" CssClass="dropdownStyle" Width="100%">
                                     <asp:ListItem>21 Años</asp:ListItem>
                                     <asp:ListItem>65 Años</asp:ListItem>
