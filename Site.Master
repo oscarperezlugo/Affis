@@ -200,13 +200,33 @@
             border-radius: 0.25rem;
             transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
+
+        .buttonColor:hover {
+            color: #2e2e2e;
+            text-decoration: none;
+            background-color: #539791;
+        }
+        .buttonColor:active {
+            color: #fff;
+        }
+        .btn-danger {
+            color: #2e2e2e;
+            background-color: #f45767;
+            border-color: #f45767;
+            font-weight:bold;
+        }
+        .btn-danger:hover {
+            color: #2e2e2e;
+            background-color: #ee3044; 
+        }
+
         .dropdownStyle{
             border: 1px solid #ced4da;
             border-radius: 0.25rem;
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
             color: #495057;
             text-align: center;
-            padding: 0.375rem 0.75rem;
+            padding: 0.375rem 0.65rem;
         }
         
         </style>
