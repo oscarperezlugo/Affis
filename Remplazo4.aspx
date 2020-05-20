@@ -41,7 +41,8 @@
                         <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="TOMADOR CEDULA"></asp:TextBox>
                     </div>
                 </div>
-                <div class="form-row" style="padding-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="Cédula"></asp:Label>
                         <asp:TextBox id="Text3" placeholder="CEDULA" type="text" runat="server" class="form-control"/>
@@ -59,7 +60,8 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <div class="form-row" style="margin-top: 2%;">
+                <br />
+                <div class="form-row">
                     <div class="col-2">
                         <asp:Label ID="LabelR" runat="server" CssClass="textomini" Text="Relación"></asp:Label>
                         <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdownStyle">
@@ -112,7 +114,8 @@
                         <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Producto] FROM [PRODUCTOS]"></asp:SqlDataSource>
                     </div>
                 </div>
-                <div class="form-row" style="margin-top: 2%;">
+                <br />
+                <div class="form-row">
                     <div class="col-2">
                         <asp:Label ID="LabelPl" runat="server" CssClass="textomini" Text="Plan"></asp:Label>
                         <asp:DropDownList ID="DropDownList7" runat="server" CssClass="dropdownStyle"  Width="100%">
