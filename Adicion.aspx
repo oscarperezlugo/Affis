@@ -25,7 +25,7 @@
              <div class ="container">
                  <div class="card">
                      <form>
-                         <!-- CABEZERA -->
+                         <!-- CABECERA -->
                          <div class="card-header">
                              <div class="form-row">
                                  <div class="col-8">

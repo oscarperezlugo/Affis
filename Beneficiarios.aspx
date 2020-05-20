@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-12" align="center">
+                            <div class="col-12" style="padding-left:37%">
                                 <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>                    
                                 <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                             </div>

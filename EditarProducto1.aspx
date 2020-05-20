@@ -25,7 +25,8 @@
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Codigo] FROM [PRODUCTOS]"></asp:SqlDataSource>
                         </div>
                     </div>
-                    <div class="col-6" style="padding-top:2%">
+                    <br />
+                    <div class="col-6">
                         <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-check"></i> SELECCIONAR</asp:LinkButton>
                     </div>
                 </div>

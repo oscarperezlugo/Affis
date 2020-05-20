@@ -1,5 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cobranza2.aspx.cs" Inherits="Affis.Cobranza2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+         #container{
+                    width: 700px;
+                    margin: 10px auto;
+                }
+                .mGrid {
+                    width: 100%;
+                    background-color: #fff;
+                    margin: 5px 0 10px 0;
+                    border: solid 1px #525252;
+                    border-collapse: collapse;
+                }
+                .mGrid td {
+                    padding: 14px;
+                    color: #717171;
+                    text-align: center;
+                }
+                .mGrid th {
+                    padding: 4px 14px;
+                    color: #2e2e2e;
+                    background: #75bcb5;
+                    font-size: 0.9em;
+                    text-align: center;
+                }
+                .mGrid .alt {
+                    background: #fcfcfc url(grd_alt.png) repeat-x top;
+                }
+                .mGrid .pgr {
+                    background: #75bcb5;
+                }
+                .mGrid .pgr table {
+                    margin: 5px 0;
+                }
+                .mGrid .pgr td {
+                    border-width: 0;
+                    padding: 0 6px;
+                    font-weight: bold;
+                    color: #fff;
+                    line-height: 12px;
+                }
+                .mGrid .pgr a {
+                    color: #666;
+                    text-decoration: none;
+                }
+                .mGrid .pgr a:hover {
+                    color: #000;
+                    text-decoration: none;
+                }
+                #button{
+                    left:10%;
+                }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -14,7 +66,7 @@
             <div class="card-body">
                 <div class="form-row">
                     <div class="col-6">
-                        <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="MES DE FACTURACION"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="MES DE FACTURACIÓN"></asp:Label>
                     </div>
                     <div class="col-6">
                         <asp:Label ID="Label9" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red"></asp:Label>
@@ -24,8 +76,8 @@
                     <div class="col-12">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="gridcalc" DataSourceID="SqlDataSource1" Width="800px">
                             <Columns>
-                                <asp:BoundField DataField="RAZON_SOCIAL" HeaderText="RAZON_SOCIAL" SortExpression="RAZON_SOCIAL" />
-                                <asp:BoundField DataField="NOMBRECOMERCIAL" HeaderText="NOMBRECOMERCIAL" SortExpression="NOMBRECOMERCIAL" />
+                                <asp:BoundField DataField="RAZON_SOCIAL" HeaderText="RAZÓN SOCIAL" SortExpression="RAZON_SOCIAL" />
+                                <asp:BoundField DataField="NOMBRECOMERCIAL" HeaderText="NOMBRE COMERCIAL" SortExpression="NOMBRECOMERCIAL" />
                                 <asp:BoundField DataField="CLASE" HeaderText="CLASE" SortExpression="CLASE" />
                                 <asp:BoundField DataField="POLIZA" HeaderText="POLIZA" SortExpression="POLIZA" />
                             </Columns>
@@ -38,13 +90,14 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="padding-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-12">
-                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CssClass="gridcalc" DataSourceID="SqlDataSource2" Width="800px">
+                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black" GridLines="none" CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AllowPaging="true">
                             <Columns>
-                                <asp:BoundField DataField="EMITEN_FACTURA_DE_COMISIÓN" HeaderText="EMITEN_FACTURA_DE_COMISIÓN" SortExpression="EMITEN_FACTURA_DE_COMISIÓN" />
-                                <asp:BoundField DataField="PORCENTAJE_DE_COMISIÓN" HeaderText="PORCENTAJE_DE_COMISIÓN" SortExpression="PORCENTAJE_DE_COMISIÓN" />
-                                <asp:BoundField DataField="FECHA_DE_LLAMADA_PARA_EL_COBRO" HeaderText="FECHA_DE_LLAMADA_PARA_EL_COBRO" SortExpression="FECHA_DE_LLAMADA_PARA_EL_COBRO" />
+                                <asp:BoundField DataField="EMITEN_FACTURA_DE_COMISIÓN" HeaderText="EMITEN FACTURA DE COMISIÓN" SortExpression="EMITEN_FACTURA_DE_COMISIÓN" />
+                                <asp:BoundField DataField="PORCENTAJE_DE_COMISIÓN" HeaderText="PORCENTAJE DE COMISIÓN" SortExpression="PORCENTAJE_DE_COMISIÓN" />
+                                <asp:BoundField DataField="FECHA_DE_LLAMADA_PARA_EL_COBRO" HeaderText="FECHA DE LLAMADA PARA EL COBRO" SortExpression="FECHA_DE_LLAMADA_PARA_EL_COBRO" />
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [EMITEN FACTURA DE COMISIÓN] AS EMITEN_FACTURA_DE_COMISIÓN, [PORCENTAJE DE COMISIÓN] AS PORCENTAJE_DE_COMISIÓN, [FECHA DE LLAMADA PARA EL COBRO] AS FECHA_DE_LLAMADA_PARA_EL_COBRO FROM [EMPRESAS] WHERE ([RAZON SOCIAL] = @RAZON_SOCIAL)">
@@ -55,9 +108,10 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="padding-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-12">
-                        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CssClass="gridcalc" DataSourceID="SqlDataSource3" Width="800px">
+                        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black" GridLines="none" CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AllowPaging="true">
                             <Columns>
                                 <asp:BoundField DataField="CONTACTO_COBRANZA_1" HeaderText="CONTACTO_COBRANZA_1" SortExpression="CONTACTO_COBRANZA_1" />
                                 <asp:BoundField DataField="TELEFONO_12" HeaderText="TELEFONO_12" SortExpression="TELEFONO_12" />
@@ -73,7 +127,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="padding-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-12">
                         <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" CssClass="gridcalc" DataSourceID="SqlDataSource4" Width="800px">
                             <Columns>
@@ -91,7 +146,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="padding-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-12">
                         <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" ShowHeader="False">
                             <Columns>

@@ -41,7 +41,8 @@
                          <asp:TextBox ID="TextBox6" runat="server" class="form-control" Placeholder="Dias Laborados" Width="100%"></asp:TextBox>
                     </div>
                 </div>
-                <div class="form-row" style="margin-top: 5%;">
+                <br />
+                <div class="form-row">
                     <div class="col-12">
                         <hr />
                     </div>

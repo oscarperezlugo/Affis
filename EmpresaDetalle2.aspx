@@ -14,7 +14,8 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <asp:Label ID="Label4" runat="server" Text="RUC"></asp:Label>
                         <asp:TextBox id="Text3" placeholder="RUC" type="text" runat="server" class="form-control" Width="100%"/>
@@ -28,7 +29,8 @@
                         <asp:TextBox id="TextBox2" placeholder="NOMBRE COMERCIAL" type="text" runat="server" class="form-control" Width="100%"/>
                     </div>
                 </div>
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                         <div class="col-4">
                             <asp:Label ID="Label9" runat="server" CssClass="textomini" Text="DIRECCIÓN"></asp:Label>
                             <asp:TextBox id="TextBox5" placeholder="DIRECCIÓN" type="text" runat="server" class="form-control" Width="100%"/>
@@ -43,7 +45,8 @@
                         </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                         <div class="col-3">
                             <asp:Label ID="Label8" runat="server" CssClass="textomini" Text="CONTACTO FACTURACIÓN 1"></asp:Label> 
                             <asp:TextBox id="Text5" placeholder="CONTACTO FACTURACIÓN 1" type="text" runat="server" class="form-control" Width="100%"/>    
@@ -61,7 +64,8 @@
                             <asp:TextBox id="TextBox8" placeholder="EMAIL FACTURACIÓN 1" type="text" runat="server" class="form-control" Width="100%"/>
                         </div>
                 </div>
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label12" runat="server" CssClass="textomini" Text="CONTACTO FACTURACIÓN 2"></asp:Label>
                         <asp:TextBox ID="TextBox9" placeholder="CONTACTO FACTURACIÓN 2" type="text" runat="server" class="form-control" Width="100%" />
@@ -79,7 +83,8 @@
                         <asp:TextBox ID="TextBox12" placeholder="EMAIL FACTURACIÓN 2" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                 </div>
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label16" runat="server" CssClass="textomini" Text="CONTACTO FACTURACIÓN 3"></asp:Label>
                         <asp:TextBox ID="TextBox13" placeholder="CONTACTO FACTURACIÓN 3" type="text" runat="server" class="form-control" Width="100%" />
@@ -98,7 +103,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label20" runat="server" CssClass="textomini" Text="CONTACTO LISTADO 1"></asp:Label>
                         <asp:TextBox ID="TextBox17" placeholder="CONTACTO LISTADO 3" type="text" runat="server" class="form-control" Width="100%" />
@@ -116,7 +122,8 @@
                         <asp:TextBox ID="TextBox20" placeholder="EMAIL LISTADO 3" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                 </div>
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label24" runat="server" CssClass="textomini" Text="CONTACTO LISTADO 2"></asp:Label>
                         <asp:TextBox ID="TextBox21" placeholder="CONTACTO LISTADO 2" type="text" runat="server" class="form-control" Width="100%" />
@@ -135,7 +142,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label28" runat="server" CssClass="textomini" Text="CONTACTO COBRANZA 1"></asp:Label>
                         <asp:TextBox ID="TextBox25" placeholder="CONTACTO COBRANZA 1" type="text" runat="server" class="form-control" Width="100%" />
@@ -153,7 +161,8 @@
                         <asp:TextBox ID="TextBox28" placeholder="EMAIL COBRANZA 1" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                 </div>
-                <div class="form-row" style="margin-top:2%">
+                <br />
+                <div class="form-row">
                     <div class="col-3">
                         <asp:Label ID="Label32" runat="server" CssClass="textomini" Text="CONTACTO COBRANZA 2"></asp:Label>
                         <asp:TextBox ID="TextBox29" placeholder="CONTACTO COBRANZA 2" type="text" runat="server" class="form-control" Width="100%" />
@@ -172,7 +181,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <asp:Label ID="Label36" runat="server" CssClass="textomini" Text="PÓLIZA"></asp:Label>
                         <asp:TextBox id="TextBox33" placeholder="PÓLIZA" type="text" runat="server" class="form-control" Width="100%"/>
@@ -190,7 +200,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <asp:Label ID="Label39" runat="server" CssClass="textomini" Text="FECHA DE EMISIÓN FACTURA"></asp:Label>
                         <asp:TextBox id="TextBox35" placeholder="FECHA DE EMISIÓN FACTURA" type="text" runat="server" class="form-control" Width="100%"/>
@@ -201,11 +212,12 @@
                     </div>
                     <div class="col-4">
                         <asp:Label ID="Label41" runat="server" CssClass="textomini" Text="TIPO DE LISTADO"></asp:Label>
-            <asp:TextBox id="TextBox37" placeholder="TIPO DE LISTADO" type="text" runat="server" class="form-control" Width="100%"/>
+                        <asp:TextBox id="TextBox37" placeholder="TIPO DE LISTADO" type="text" runat="server" class="form-control" Width="100%"/>
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <asp:Label ID="Label42" runat="server" CssClass="textomini" Text="EMITE FACTURA DE COMISIÓN"></asp:Label>
                         <asp:TextBox id="TextBox38" placeholder="EMITE FACTURA DE COMISIÓN" type="text" runat="server" class="form-control" Width="100%"/>
@@ -220,7 +232,8 @@
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%">
+                <br />
+                <div class="form-row">
                     <div class="col-2"></div>
                     <div class="col-4">
                         <asp:Label ID="Label45" runat="server" Font-Bold="True" Text="MEDIO DE COBRO"></asp:Label>
@@ -252,7 +265,8 @@
                     <div class="col-2"></div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-top:3%;">
+                <br />
+                <div class="form-row">
                     <div class="col-4">
                         <p class="invisible">Columna Relleno</p>
                     </div>
