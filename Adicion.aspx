@@ -6,6 +6,20 @@
      <!DOCTYPE html>
      <html>
          <head>
+             <title></title>
+             <style type="text/css">
+                .mGrid td {
+                border-radius: 0.25rem;
+                border: 1px solid #ced4da;
+                height: calc(1.5em + 0.75rem + 2px);
+                display: block;
+                font-size: 1rem;
+                padding: 0.375rem 0.75rem;
+                background-color: #fff;
+                background-clip: padding-box;
+                margin-top: -8px;
+            }
+             </style>
          </head>
          <body>
              <div class ="container">
@@ -125,7 +139,7 @@
                                  </div>
                                  <div class="col-md-6">
                                      <label for="valorcalcular">Valor</label>
-                                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="gridcalc" ShowHeader="False" Width="10%" >
+                                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="mGrid" ShowHeader="False" BorderStyle="None">
                                          <Columns>
                                              <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" DataFormatString="{0:0.00}" />
                                              <asp:BoundField DataField="Producto" HeaderText="Producto" SortExpression="Producto" visible="false" />

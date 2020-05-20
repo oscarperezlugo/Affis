@@ -3,6 +3,10 @@
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
+        .texto{
+            padding-left:5%;
+            color:dimgray;
+        }
     </style>
 </asp:Content>
 
@@ -16,13 +20,14 @@
             </div>
             <div class="card-body">
                 <div class="form-row">
-                    <div class="col-1">
-                        <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
-                        <asp:Label ID="Label4" runat="server" CssClass="texto"></asp:Label>
+                    <div class="col-3">
+                        <asp:Label ID="LabelTitulo" runat="server">Tomador Cédula</asp:Label>
+                        <asp:Label ID="Label4" runat="server" CssClass="texto" Width="100%"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" CssClass="texto" Width="100%"></asp:Label>
                      </div>   
-                     <div class="col-2">
+                     <div class="col-3">
                         <asp:Label ID="Label2" runat="server">Certificado</asp:Label>
-                         <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdownStyle" DataSourceID="SqlDataSource2" DataTextField="Numero" DataValueField="Numero" Font-Bold="True" Font-Size="Large" Width="100%">
+                         <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdownStyle" style="color:red" DataSourceID="SqlDataSource2" DataTextField="Numero" DataValueField="Numero" Font-Bold="True" Font-Size="Large" Width="100%">
                          </asp:DropDownList>
                          <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Numero] FROM [Certificados] WHERE (([Ejecutivo] = @Ejecutivo) AND ([Accion] = @Accion))">
                              <SelectParameters>
@@ -36,10 +41,15 @@
                             </SelectParameters>
                         </asp:SqlDataSource>
                     </div>
-                    <div class="col-9" style="left: 10%;margin-top: 26px;">
-                        <asp:LinkButton ID="Button2" runat="server"  OnClick="Button2_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                    <div class="col-6" style="left: 10%;margin-top: 26px;">
+                        <asp:LinkButton ID="Button2" runat="server"  OnClick="Button2_Click" CssClass="buttonColor"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                        <asp:LinkButton ID="Button4" runat="server"  OnClick="Button4_Click" CssClass="buttonColor"><i class="fa fa-check"></i> FINALIZAR</asp:LinkButton>
+                    </div>
+                </div>
+                <hr />
+                <div class ="form-row">
+                    <div class="col-12" style="padding-left:45%">
                         <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
-                        <asp:LinkButton ID="Button4" runat="server"  OnClick="Button4_Click" CssClass="btn btn-primary"><i class="fa fa-check"></i> FINALIZAR</asp:LinkButton>
                     </div>
                 </div>
             </div>
