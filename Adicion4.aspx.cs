@@ -6,7 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
 using TextBox = System.Web.UI.WebControls.TextBox;
 
 namespace Affis
@@ -196,7 +195,7 @@ namespace Affis
                         openCon.Open();
                         querySaveStaff.ExecuteNonQuery();
                         openCon.Close();
-                        Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
+                        Response.Write("<script>alert('REGISTRO AQUI EXITOSO')</script>");
                     }
                     catch (SqlException ex)
                     {

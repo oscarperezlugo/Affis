@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web.UI.WebControls;
 
 namespace Affis
 {
@@ -9,6 +10,8 @@ namespace Affis
     {
         ConexionesDB conn = new ConexionesDB();
         private DataTable source = null;
+        private readonly GridView GridView1;
+
         private void recuperarInfo()
         {
             string filtro = TextBox1.Text;
@@ -26,6 +29,14 @@ namespace Affis
                 //Response.Redirect("InicioAdicion.aspx");
             }
 
+        }
+
+        public virtual bool AllowPaging { get; set; }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            GridView1.DataBind();
         }
 
 

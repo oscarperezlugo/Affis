@@ -11,349 +11,406 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .hr.new4 {
-            border: 1px solid;
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@300&display=swap');
+        html, body {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing:1px;
+            font-weight: bold;
         }
-        .linea{
-            border: solid;
-            border-width: 2px;
-            height: 1018px;
-            width: 2px;
+        .header{
+            background-color: #929599;
+            box-shadow: 2px 2px 10px #666 inset;
+            border-bottom:2px;
+            border-bottom-color: #535456;
             height: 100%;
-            color: grey;
-            
+        }    
+        #header{
+            background-color: #929599;
+            box-shadow: 2px 2px 10px #666 inset;
+            border-bottom:2px;
+            border-bottom-color: #535456;
+            height: 70px;
         }
-        .texto {
-            font-family: Arial;
-            font-size: small;
-            font-weight: normal;
-            text-align: left;
-            color: gray;
-        }
-        .textomini {
-            font-family: Arial;
-            font-size: xx-small;
-            font-weight: normal;
-            text-align: left;
-            color: black;
-        }
-
-        .certificado {
-            font-family: Arial;
-            font-size: large;
-            font-weight: bold;
-            font-weight: normal;
-            text-align: left;
-            color: red;
-        }
-        .TableTopAlign {
-            align-content: center;
-            vertical-align: top;
-        }
-
-        .cajagrande {
-            border-color: lightgray;
-            border-radius: 6px;
-            height: 25px;
-            width: 350px;
-        }
-
-        .rootNode {
-            margin-top: 0px;
-            color: black;
-            font-family: Arial;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .treeNode {
-             margin-top: 0px;
-            color: gray;
-            font-family: Arial;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .leafNode {
-             margin-top: 0px;
-            font-size: 10px;
-            font-weight: normal;
-            color: gray;
-        }
-
-
-
-
-        .button2 {
-            background-color: gray;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: medium;
-            font-family: Arial;
-            font-weight: bold;
-            width: 150px;
-        }
-        .button3 {
-            background-color: gray;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: medium;
-            font-family: Arial;
-            font-weight: bold;
-            width: 30px;
-        }
-        .fa {
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .subtitulo {
-            font-family: Arial;
-            font-size: medium;
-            font-weight: normal;
-            text-align: left;
+        .textHeader{
+            padding-top: 19px;
+            margin-left: -2%;
             color: white;
         }
-
-        .button {
-            background-color: white;
-            border-radius: 5px;
-            border: solid;
-            border-color: gray;
-            color: gray;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
+        .buttonHeader{
             font-size: medium;
-            font-family: Arial;
-            font-weight: bold;
-            width: 140px;
+            font-weight: inherit;
         }
-        .gridcalc {
-            border-color: white;
-            font-family: Arial;
-            font-weight: normal;
-            color: gray;
-            
+        .headerButton{
+            margin-left: -2%;
         }
+        #logo{
+            text-align: center;
+            top: 25%;
+        }
+        #content{
+            top:50px;
+        }
+        /* ############# Barra de busqueda #####################*/
+        
+        input {
+	        outline: none;
+        }
+        input[type=search] {
+	        -webkit-appearance: textfield;
+	        -webkit-box-sizing: content-box;
+	        font-family: inherit;
+	        font-size: 100%;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+	        display: none; 
+        }
+        .searchdiv{
+            padding-top:10px;
+        }
+
+        input[type=search] {
+	        background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png)   no-repeat 9px center;
+	        border: solid 1px #75bcb5;
+	        padding: 9px 10px 9px 32px;
+	        width: 55px;
+	
+	        -webkit-border-radius: 10em;
+	        -moz-border-radius: 10em;
+	        border-radius: 10em;
+	
+	        -webkit-transition: all .5s;
+	        -moz-transition: all .5s;
+	        transition: all .5s;
+        }
+        input[type=search]:focus {
+	        width: 130px;
+	        background-color: #fff;
+	        border-color: #75BCB5;
+	
+	        -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	        -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	        box-shadow: 0 0 5px rgba(109,207,246,.5);
+        }
+        /*############# css de menu lateral ######################*/
+        a { /*decoracion de links y labels*/
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+        a:hover {
+          color: #75BCB5;
+        }
+        .menu a {
+          display: block;
+          padding: 10px 15px;
+        }
+        .drop-down a { /*submenu*/
+          min-width: 90px;
+        }
+        .drop-down-menu {
+          display: block;
+        }
+
+
+        .menu-title {
+          cursor: pointer;
+          color: #fff;
+          font-weight: bold;
+        }
+        .menu-title {
+          display:block;
+          padding: 10px 15px;
+        }
+        .activate {
+          display: none;
+
+          position: absolute;
+          cursor: pointer;
+          width: 100%;
+          height: 40px;
+          margin: 0 0 0 -15px;
+          opacity: 0;
+        }
+        .menu a:hover, .drop-down-menu:hover {
+          background: #58616C;
+        }
+        .drop-down a:hover {
+          background: #58616C;
+        }
+
+        .menu  { /*Fondo del menu*/
+          background: #2D2D6A;
+        }
+        :checked ~ .menu-title {
+          background: #404072;
+        }
+
+        .drop-down {
+          max-height: 0;
+          overflow: hidden;
+        }
+
+        .drop-down a { /*fondo de submenu*/
+          background: #404072;
+        }
+
+        .activate:checked ~ .drop-down { /*Desplaza el submenu al dar click*/
+          max-height: 600px;
+        }
+
+
+        .drop-down, .menu a, .drop-down-menu { /*Movimiento de desplazamiento suave*/
+          -webkit-transform: translateZ(0);  
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+        .menu span {
+            color:white;
+            background: #464676;
+            height: 40px;
+            padding: 10px;
+            padding-bottom: 10px;
+            display: block;
+        }
+
+        /*css de la pagina web*/
         .content{
+             top: -10%;
              width: 100%;
              margin-top: 0px;
         }
-          
-        .dropdown-content {
-            border: none;
-            font-family: Arial;
-            font-size: 10px;
-            height: 25px;
-            width: 100px;
-            background-color: white;                        
+        .buttonColor{
+            display: inline-block;
+            color: #2e2e2e;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #75bcb5;
+            border-color: #75bcb5;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing:1px;
+            font-weight: bolder;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
-        .dropdown-contentG {
-            border: none;
-            font-family: Arial;
-            font-size: 10px;
-            height: 25px;
-            width: 300px;
-            background-color: white;
+
+        .buttonColor:hover {
+            color: #2e2e2e;
+            text-decoration: none;
+            background-color: #539791;
         }
-        .logo {
-            width: 50%;
+        .buttonColor:active {
+            color: #fff;
         }
-        
-        .auto-style1 {
-            width: 134px;
+        .btn-danger {
+            color: #2e2e2e;
+            background-color: #f45767;
+            border-color: #f45767;
+            font-weight:bold;
         }
-        .contenttop {
-            margin-top: 0px;
+        .btn-danger:hover {
+            color: #2e2e2e;
+            background-color: #ee3044; 
+        }
+
+        .dropdownStyle{
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            color: #495057;
+            text-align: center;
+            padding: 0.375rem 0.65rem;
         }
         
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        
-            
-                
-        <div style="background-color:gray;">
-            
-            
-           <table>
-               <tr>
-                   <td>&nbsp;</td>
-               </tr>
-               <tr>
-                   <td class="auto-style1">&nbsp;&nbsp;&nbsp;
-                       <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" />
-                   </td>
-                   <td><asp:TextBox ID="TextBox4" runat="server" class="caja" Height="30" Width="450" placeholder="Introduzca el valor" CssClass="form-control"></asp:TextBox> </td>
-                   <td>&nbsp;</td>
-                   <td><asp:LinkButton ID="certbutton" runat="server" class="button3" OnClick="certbutton_click" ><i class="fa fa-search"></i></asp:LinkButton></td>
-               </tr>
-              
-           </table> 
-            <table>
-                <tr>
-                   <td class="auto-style11"><asp:Label ID="Label2" runat="server" class="subtitulo" ></asp:Label>   <asp:Label ID="Label1" runat="server" CssClass="subtitulo"></asp:Label>
-                       
-                       <asp:LinkButton ID="LinkButton1" runat="server" CssClass="button2" OnClick="LinkButton1_Click"><i class="fa fa-user"></i> Cerrar Sesion</asp:LinkButton>
-                       
-                    </td>
-                   
-               </tr>
-                </table> 
+        <div class="container-fluid">
+            <!-- HEADER -->
+            <div class="row" id="header">
+                <div class="col-2" id="logo">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" />
+                </div>
+                <div class="col-7">
+                    <div class="textHeader">
+                        <asp:Label ID="Label2" runat="server"></asp:Label>
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                    </div>
+                    <div class="headerButton">
+                        <asp:LinkButton ID="LinkButton3" runat="server" CssClass="buttonHeader" OnClick="LinkButton1_Click">Cerrar Sesión</asp:LinkButton>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="searchdiv">
+                        <asp:Panel ID="PanelSearch" runat="server" DefaultButton="certbutton">
+                            <asp:TextBox ID="TextBox4" runat="server" type="search" placeholder="Buscar"></asp:TextBox> 
+                            <asp:LinkButton ID="certbutton" runat="server" OnClick="certbutton_click" style="display:none;"></asp:LinkButton>
+                        </asp:Panel>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-                       
-                       
-                            <table >
-                                <tr>
-                                    <td class="TableTopAlign">
-                                       
-                                        
-                                        
-                    <asp:TreeView ID="TreeView2" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode" Width="197px"   >
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                        <RootNodeStyle CssClass="rootNode" />
-                        <LeafNodeStyle CssClass="leafNode" />
-                        <Nodes>
-                            <asp:TreeNode SelectAction="None" Text="WSM" Value="WSM" >
-                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
-                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA" SelectAction="Expand"></asp:TreeNode>
-                                </asp:TreeNode>                                
-                                <asp:TreeNode Text="VENTAS" Value="VENTAS">
-                                    <asp:TreeNode Text="INCLUSION" Value="INCLUSION" NavigateUrl="~/InicioProceso.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="ADICION" Value="ADICION" NavigateUrl="~/Adicion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="REEMPLAZO" Value="REEMPLAZO" NavigateUrl="~/Reemplazo.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS" NavigateUrl="~/Beneficiarios.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                                
-                                <asp:TreeNode Text="ADICION" Value="ADICION">
-                                    <asp:TreeNode Text="COBERTURAS" Value="COBERTURAS" NavigateUrl="~/InicioAdicion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode Text="ASEGURADOS" Value="ASEGURADOS" NavigateUrl="~/InicioAdicionAs.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                                
-                            </asp:TreeNode>   
-                            </Nodes>
-                        
-<NodeStyle CssClass="treeNode"></NodeStyle>
-                        <RootNodeStyle CssClass="rootNode" />
-                        
-                    </asp:TreeView>
-                                        <hr class="hr.new4" />
-<asp:TreeView ID="TreeView1" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode" Width="197px"   >
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                        <LeafNodeStyle CssClass="leafNode" />
-                        <Nodes>
-                            <asp:TreeNode SelectAction="None" Text="BANCA SEGUROS" Value="BANCA SEGUROS">
-                                <asp:TreeNode SelectAction="None" Text="EMPRESA" Value="EMPRESA">
-                                    <asp:TreeNode NavigateUrl="~/AperturaEmpresa.aspx" Text="APERTURA" Value="APERTURA"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="VENTAS" Value="VENTAS">
-                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Inclusion.aspx"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/InicioProceso.aspx" Text="INCLUSION" Value="INCLUSION"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/Beneficiarios.aspx" Text="BENEFICIARIOS" Value="BENEFICIARIOS"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="COBRANZA" Value="COBRANZA">
-                                    <asp:TreeNode Text="GESTION" Value="GESTION" NavigateUrl="~/Cobranzas.aspx"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="RECLAMOS" Value="RECLAMOS">
-                                    <asp:TreeNode Text="CASO" Value="CASO" NavigateUrl="~/caso.aspx"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/Reclamos.aspx" Text="RECLAMOS" Value="RECLAMOS"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode SelectAction="None" Text="COMISIONES" Value="COMISIONES">
-                                    <asp:TreeNode Text="COMISION" Value="COMISION"></asp:TreeNode>
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                               </Nodes>
-                        
-<NodeStyle CssClass="treeNode"></NodeStyle>
-                        <RootNodeStyle CssClass="rootNode" />
-                        
-                    </asp:TreeView>
-                                        <hr/>
-<asp:TreeView ID="TreeView3" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="treeNode"  RootNodeStyle-CssClass="rootNode" LeafNodeStyle-CssClass="leafNode" Width="197px"   >
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                        <LeafNodeStyle CssClass="leafNode" />
-                        <Nodes>
-                            <asp:TreeNode Text="OPERACIONES" Value="OPERACIONES">
-                                <asp:TreeNode Text="PRODUCTOS" Value="PRODUCTOS">
-                                    <asp:TreeNode Text="WSM" Value="WSM" NavigateUrl="~/Productoswsm.aspx">
-                                        <asp:TreeNode NavigateUrl="~/CreacionProductosWSM.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
-                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
-                                    </asp:TreeNode>
-                                    <asp:TreeNode Text="BANCA SEGUROS" Value="BANCA SEGUROS" NavigateUrl="~/Productosbs.aspx">
-                                        <asp:TreeNode NavigateUrl="~/CreacionProductosBanca.aspx" Text="CREACION" Value="CREACION"></asp:TreeNode>
-                                        <asp:TreeNode NavigateUrl="~/EditarProducto1.aspx" Text="EDICION" Value="EDICION"></asp:TreeNode>
-                                    </asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="CERTIFICADOS" Value="CERTIFICADOS">
-                                    <asp:TreeNode NavigateUrl="~/AdminCert.aspx" Text="ADMINISTRAR" Value="ADMINISTRAR"></asp:TreeNode>
-                                    <asp:TreeNode NavigateUrl="~/Retenciones2.aspx" Text="RETENCIONES" Value="RETENCIONES"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="BENEFICIARIOS" Value="BENEFICIARIOS">
-                                    <asp:TreeNode NavigateUrl="~/Beneficiarios.aspx" Text="AGREGAR" Value="AGREGAR"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="COBRANZA" Value="COBRANZA">
-                                    <asp:TreeNode NavigateUrl="~/Cobranzas.aspx" Text="GESTION" Value="GESTION"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="PERSONAL" Value="PERSONAL">
-                                    <asp:TreeNode Text="ASISTENCIA" Value="ASISTENCIA">
-                                        <asp:TreeNode NavigateUrl="~/Asistencia.aspx" Text="REGISTRO" Value="REGISTRO"></asp:TreeNode>
-                                        <asp:TreeNode NavigateUrl="~/ConsultaAsistencia.aspx" Text="CONSULTA" Value="CONSULTA"></asp:TreeNode>
-                                    </asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="EMPRESA" Value="EMPRESA">
-                                    <asp:TreeNode NavigateUrl="~/EmpresaDetalle1.aspx" Text="EMPRESA DETALLE" Value="EMPRESA DETALLE"></asp:TreeNode>
-                                </asp:TreeNode>
-                                <asp:TreeNode Text="COBRANZA" Value="COBRANZA">
-                                    <asp:TreeNode NavigateUrl="~/Cobranza1.aspx" Text="GESTION EMPRESA" Value="GESTION EMPRESA"></asp:TreeNode>
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                        </Nodes>
-                        
-<NodeStyle CssClass="treeNode"></NodeStyle>
-                        <RootNodeStyle CssClass="rootNode" />
-                        
-                    </asp:TreeView>
-                                        
-                                    </td>
-                                    <td class="linea">
-                                        
-                                    </td>
-                                    <td>&nbsp; &nbsp;</td>
-                                    <td class="content">
-                                        
-                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
-
-                                        </asp:ContentPlaceHolder>
-                                        
-                                    </td>
-                                    
-                                </tr>
-                                
-                            </table>
-                      
-                    
-                   
-               
-            
-        
+        <!-- CUERPO -->
+        <div class="form-row">
+            <div class="col-2">
+                <nav class="menu">
+                    <span>WSM</span>
+                    <nav class="drop-down-menu">
+                        <input type="checkbox" class="activate" id="accordion-1" name="accordion-1">
+                        <label for="accordion-1" class="menu-title"> Empresa </label>
+                        <div class="drop-down">
+                            <a class="last" href="/AperturaEmpresa.aspx">Apertura</a>
+                        </div>
+                    </nav>
+                    <nav class="drop-down-menu">
+                        <input type="checkbox" class="activate" id="accordion-2" name="accordion-2">
+                        <label for="accordion-2" class="menu-title">Ventas</label>
+                            <div class="drop-down">
+                                <a href="/InicioProceso.aspx">Inclusión</a>
+                                <a href="/Adicion.aspx">Adición</a>
+                                <a href="/Reemplazo.aspx">Reemplazo</a>
+                                <a class="last" href="/Beneficiarios.aspx">Beneficiarios</a>
+                            </div>
+                    </nav>
+                    <nav class="drop-down-menu">
+                        <input type="checkbox" class="activate" id="accordion-3" name="accordion-3">
+                        <label for="accordion-3" class="menu-title">Adición</label>
+                        <div class="drop-down">
+                            <a href="/InicioAdicion.aspx">Coberturas</a>
+                            <a class="last" href="/InicioAdicionAs.aspx">Asegurados</a>
+                        </div>
+                    </nav>
+                    <span>BANCA SEGUROS</span>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-4" name="accordion-4">
+                            <label for="accordion-4" class="menu-title">Empresa</label>
+                            <div class="drop-down">
+                                <a class="last" href="/AperturaEmpresa.aspx">Apertura</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-5" name="accordion-5">
+                            <label for="accordion-5" class="menu-title">Ventas</label>
+                            <div class="drop-down">
+                                <a href="/Inclusion.aspx">Gestión</a>
+                                <a href="/InicioProceso.aspx">Inclusión</a>
+                                <a class="last" href="/Beneficiarios.aspx">Beneficiarios</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-6" name="accordion-5">
+                            <label for="accordion-6" class="menu-title">Cobranza</label>
+                            <div class="drop-down">
+                                <a class="last" href="/Cobranzas.aspx">Gestión</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-7" name="accordion-7">
+                            <label for="accordion-7" class="menu-title">Reclamos</label>
+                            <div class="drop-down">
+                                <a href="/caso.aspx">Caso</a>
+                                <a class="last" href="/Reclamos.aspx">Reclamos</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-8" name="accordion-8">
+                            <label for="accordion-8" class="menu-title">Comisiones</label>
+                            <div class="drop-down">
+                                <a href="/">Comisión</a>
+                            </div>
+                        </nav>
+                        <span>OPERACIONES</span>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-9" name="accordion-9">
+                            <label for="accordion-9" class="menu-title">Productos</label>
+                            <div class="drop-down">
+                                <nav class="drop-down-menu">
+                                    <input type="checkbox" class="activate" id="accordion-10" name="accordion-10">
+                                    <label for="accordion-10" class="menu-title">WSM</label>
+                                        <div class="drop-down">
+                                            <a href="/Productoswsm.aspx">WSM Lista</a>
+                                            <a href="/CreacionProductosWSM.aspx">Creación</a>
+                                            <a class="last" href="/EditarProducto1.aspx">Edición</a>
+                                        </div>
+                                </nav>
+                                <nav class="drop-down-menu">
+                                    <input type="checkbox" class="activate" id="accordion-11" name="accordion-11">
+                                    <label for="accordion-11" class="menu-title">Banca Seguros</label>
+                                    <div class="drop-down">
+                                        <a href="/Productosbs.aspx">Banca Seguros Lista</a>
+                                        <a href="/CreacionProductosBanca.aspx">Creación</a>
+                                        <a class="last" href="/EditarProducto1.aspx">Edición</a>
+                                    </div>
+                                </nav>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-12" name="accordion-12">
+                            <label for="accordion-12" class="menu-title">Certificados</label>
+                            <div class="drop-down">
+                                <a href="/AdminCert.aspx">Administrar</a>
+                                <a href="/Retenciones2.aspx">Retenciones</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-13" name="accordion-13">
+                            <label for="accordion-13" class="menu-title">Beneficiarios</label>
+                            <div class="drop-down">
+                                <a href="/Beneficiarios.aspx">Agregar</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-14" name="accordion-14">
+                            <label for="accordion-14" class="menu-title">Cobranza</label>
+                            <div class="drop-down">
+                                <li><a href="/Cobranzas.aspx">Gestión</a></li>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-15" name="accordion-15">
+                            <label for="accordion-15" class="menu-title">Personal</label>
+                            <div class="drop-down">
+                                <nav class="drop-down-menu">
+                                    <input type="checkbox" class="activate" id="accordion-16" name="accordion-16">
+                                    <label for="accordion-16" class="menu-title">Asistencia</label>
+                                    <div class="drop-down">
+                                        <a href="/Asistencia.aspx">Registro</a>
+                                        <a href="/ConsultaAsistencia.aspx">Consulta</a>
+                                    </div>
+                                </nav>l
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-17" name="accordion-17">
+                            <label for="accordion-17" class="menu-title">Empresa</label>
+                            <div class="drop-down">
+                                <a href="/EmpresaDetalle1.aspx">Empresa Detalle</a>
+                            </div>
+                        </nav>
+                        <nav class="drop-down-menu">
+                            <input type="checkbox" class="activate" id="accordion-18" name="accordion-18">
+                            <label for="accordion-18" class="menu-title">Cobranza</label>
+                            <div class="drop-down">
+                                <a href="/Cobranza1.aspx">Gestión Empresa</a>
+                            </div>
+                        </nav>
+                    <nav>
+                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="button2" OnClick="LinkButton1_Click">CERRAR SESION</asp:LinkButton>
+                    </nav>
+                </nav>
+            </div>
+            <div class="col-10" id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" ></asp:ContentPlaceHolder>
+            </div>
+        </div>       
     </form>
 </body>
 </html>

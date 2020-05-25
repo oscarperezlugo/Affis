@@ -6,12 +6,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
-
 namespace Affis
 {
     public partial class CreacionProductosWSM : System.Web.UI.Page
     {
+
+        public void ButtonNext(object sender, EventArgs e)
+        {
+            Response.Redirect("EditarProducto1.aspx");
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
