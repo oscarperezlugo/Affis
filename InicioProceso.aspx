@@ -67,9 +67,9 @@
                     <div class="card-header">
                         <div class="form-row">
                             <div class="col-8">
-                                <h2><b> INCLUSIÓN </b></h2>
+                                <h3><b> INCLUSIÓN </b></h3>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-4">
                                 <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
                                 <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" Text="SIGUIENTE" class="buttonColor"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                             </div>
@@ -79,9 +79,7 @@
                         <div class="form-row">
                             <div class="col-7">
                                 <label for="cedula">Cédula</label><br />
-                                <asp:TextBox ID="TextBox1" placeholder="Cédula" runat="server" class="form-control" Width="400px"></asp:TextBox>
-                                <asp:Label ID="Label3" runat="server" CssClass="texto"></asp:Label>
-                                <br />
+                                <asp:TextBox ID="TextBox1" placeholder="Cédula" runat="server" class="form-control" Width="400px" MaxLength="10"></asp:TextBox><br />
                             </div>
                             <div class="col-auto" align="center">
                                 <label class="invisible">Probando</label><br />
@@ -117,8 +115,9 @@
                                 </asp:GridView>
                             </div>
                         </div>
+                        <div><hr /></div>
                         <div class="form-row">
-                            <div class="col-12" align="center">
+                            <div class="col-12" style="padding-left: 45%">
                                 <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" class="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                             </div>
                         </div>

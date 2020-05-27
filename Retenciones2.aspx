@@ -63,9 +63,12 @@
             <div class="card-header">
                 <div class="form-row">
                     <div class="col-8">
-                        <h2><b> RETENCIONES </b></h2>
+                        <h3><b> RETENCIONES </b></h3>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-2">
+                        <p class="invisible">Columna de relleno</p>
+                    </div>
+                    <div class="col-2">
                         <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
                     </div>
                 </div>
@@ -121,7 +124,7 @@
                 </div>
                 <div><hr /></div>
                 <div class="form-row">
-                    <div class="col-12" align="center">
+                    <div class="col-12" style="padding-left:45%">
                         <asp:LinkButton ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="CANCELAR" class="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     </div>
                 </div>

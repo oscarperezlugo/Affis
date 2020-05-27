@@ -16,6 +16,7 @@
             color: #2e2e2e;
             padding: 15px 32px;
             text-align: center;
+            letter-spacing:1px;
             text-decoration: none;
             display: inline-block;
             font-size: medium;
@@ -26,6 +27,12 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: 2px 2px 10px #666 inset;
+        }
+        
+        .button:hover{
+            background-color: #539791;
+            text-decoration:none;
+            color:black;
         }
 
         .main {

@@ -6,12 +6,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
 
 namespace Affis
 {
     public partial class AdminCert : System.Web.UI.Page
     {
+        private TextBox TextBox5;
+        private TextBox TextBox6;
+        private DropDownList DropDownList1;
+        private DropDownList DropDownList2;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -42,7 +45,7 @@ namespace Affis
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("Error" + ex);
+                        //MessageBox.Show("Error" + ex);
                     }
 
 

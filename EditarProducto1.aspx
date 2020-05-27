@@ -5,17 +5,17 @@
             <div class="card-header">
                 <div class="form-row">
                     <div class="col-8">
-                        <h3>EDICIÓN DE PRODUCTOS WSM</h3>
+                        <h3><b>EDICIÓN DE PRODUCTOS WSM</b></h3>
                     </div>
                     <div class="col-auto">
-                        <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="btn btn-primary"></asp:LinkButton>
+                        <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="form-row">
                     <div class="col-2">
-                        <p class="invisible">texto para separar</p>
+                        <p class="invisible">columna relleno</p>
                     </div>
                     <div class="col-4">
                         <div style="margin-left: 30%;">
@@ -27,11 +27,12 @@
                     </div>
                     <br />
                     <div class="col-6">
-                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" OnClick="LinkButton1_Click"><i class="fa fa-check"></i> SELECCIONAR</asp:LinkButton>
+                        <asp:Label ID="Label99" runat="server" Text="Código" Visible="false"></asp:Label><br />
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="buttonColor" OnClick="LinkButton1_Click"><i class="fa fa-check"></i> SELECCIONAR</asp:LinkButton>
                     </div>
                 </div>
                 <hr />
-                <div class="form-row" style="margin-left: 40%;">
+                <div class="form-row" style="margin-left: 45%;">
                     <asp:LinkButton ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="CANCELAR" class="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                 </div>
             </div>

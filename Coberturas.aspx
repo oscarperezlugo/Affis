@@ -78,15 +78,21 @@
                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" ShowFooter="True"  DataSourceID="SqlDataSource6" OnRowDataBound="GridView2_RowDataBound" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black" GridLines="none" CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AllowPaging="true">
                             <Columns>
                                 <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" SortExpression="NOMBRE" >
+                                <ItemStyle Font-Size="Small" />
                                 </asp:BoundField>
-                                <asp:BoundField DataField="RELACION" HeaderText="RELACIÓN" SortExpression="RELACION" >
+                                <asp:BoundField DataField="RELACION" HeaderText="RELACION" SortExpression="RELACION" >
+                                <ItemStyle Font-Size="Small" />
                                 </asp:BoundField>
                                 <asp:BoundField DataField="COBERTURA" HeaderText="TIPO DE COBERTURA" SortExpression="COBERTURA" >
+                                <ItemStyle Font-Size="Small" />
                                 </asp:BoundField>
                                 <asp:BoundField DataField="PLAN" HeaderText="PLAN" SortExpression="PLAN" >
+                                <ItemStyle Font-Size="Small" />
                                 </asp:BoundField>
                                 <asp:BoundField DataField="COSTO" HeaderText="PRIMA" SortExpression="COSTO" DataFormatString="{0:0.00}" >
+                                <ItemStyle Font-Bold="True" Font-Size="Small" />
                                 </asp:BoundField>
+
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [NOMBRE], [RELACION], [COBERTURA], [PLAN], [COSTO] FROM [VENTATEMP] WHERE ([FECHA] = @FECHA)">

@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-3">
                             <asp:Label ID="Label5" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                            <asp:TextBox id="TextBox6" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%"/>
+                            <asp:TextBox id="TextBox6" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%"/>
                         </div>
                         <div class="col-3">
                             <asp:Label ID="Label10" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label13" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox10" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox10" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label14" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label17" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox14" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox14" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label18" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label21" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox18" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox18" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label22" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label25" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox22" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox22" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label26" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label29" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox26" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox26" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label30" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -169,7 +169,7 @@
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label33" runat="server" CssClass="textomini" Text="TELÉFONO"></asp:Label>
-                        <asp:TextBox ID="TextBox30" placeholder="TELEFONO" type="text" runat="server" class="form-control" Width="100%" />
+                        <asp:TextBox ID="TextBox30" placeholder="TELÉFONO" type="text" runat="server" class="form-control" Width="100%" />
                     </div>
                     <div class="col-3">
                         <asp:Label ID="Label34" runat="server" CssClass="textomini" Text="CELULAR"></asp:Label>
@@ -271,7 +271,7 @@
                         <p class="invisible">Columna Relleno</p>
                     </div>
                     <div class="col-2">
-                        <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="btn btn-success"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
+                        <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="buttonColor"><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
                     </div>
                     <div class="col-2">
                         <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>

@@ -8,7 +8,7 @@
              <div class="card-header">
                  <div class="form-row">
                      <div class="col-8">
-                         <h2><b> INCLUSIÓN </b></h2>
+                         <h3><b> INCLUSIÓN </b></h3>
                      </div>
                      <div class="col-auto">
                          <asp:LinkButton ID="Button2" runat="server" OnClick="Button2_Click" CssClass="buttonColor"><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
@@ -126,14 +126,15 @@
                      </div>
                      <div class="col-6"></div>
                      <div class="col-2">
+                         <br />
                          <label for="" class="invisible">Adicionar</label><br />
                          <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_Click" CssClass="buttonColor"><i class="fa fa-plus-circle"></i> ADICIONAR</asp:LinkButton>
                      </div>
                  </div>
                  <div><hr /></div>
                  <div class="form-row">
-                     <div class="col-12" align="center">
-                         <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" CssClass="btn btn-danger" >CANCELAR</asp:LinkButton>
+                     <div class="col-12" style="padding-left: 45%">
+                         <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                      </div>
                  </div>
              </div>

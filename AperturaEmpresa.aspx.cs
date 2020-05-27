@@ -5,17 +5,27 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
+using System.Windows;
+//using System.Windows.Forms;
 
 namespace Affis
 {
     public partial class Base : System.Web.UI.Page
     {
+        public DropDownList DropDownList11;
+        public Label nombrevacio;
+        public TextBox Textbox99;
+
         protected void Page_Load1(object sender, EventArgs e)
         {
             //Label2.Text = String.Format("Bienvenido {0}", Session["bienvenido"].ToString());
         }
+
+        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
+
+        public HtmlInputText Text2 { get; private set; }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -69,15 +79,19 @@ namespace Affis
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("Error" + ex);
+                        Response.Write(ex);
                     }
                     finally
                     {
-                        openCon.Close();
-                        
-                        Response.Write("<script>alert('REGISTRO EXITOSO')</script>");
-
-
+                        if(Text2.Value == String.Empty)
+                        {
+                            this.nombrevacio.Text = "Ingrese un nombre comercial";
+                            
+                        }
+                        else {
+                            openCon.Close();
+                            //Response.Write(Text2.Value+"<script>alert('')</script>");
+                        }
 
                     }
 
@@ -90,6 +104,12 @@ namespace Affis
         {
             Session["cedula"] = null;
             Response.Redirect("InicioProceso.aspx");
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Session["cedula"] = null;
+            Response.Redirect("Beneficiarios.aspx");
         }
     }
 }

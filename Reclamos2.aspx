@@ -30,7 +30,7 @@
                 <div class="form-row">
                     <div class="col-5">
                         <label for="cedula">Cédula de Identidad</label><br />
-                        <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Cédula de Identidad" Width="100%"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Cédula de Identidad" Width="100%" MaxLength="10"></asp:TextBox>
                         <br />
                     </div>
                     <div class="col-5">

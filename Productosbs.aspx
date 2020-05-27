@@ -67,7 +67,7 @@
                         <p class="invisible">columna relleno</p>
                     </div>
                     <div class="col-auto">
-                        <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="btn btn-info" OnClick="Button1_Click" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
+                        <asp:LinkButton ID="Button1" runat="server" Text="SIGUIENTE" CssClass="buttonColor" OnClick="Button1_Click" ><i class="fa fa-forward"></i> SIGUIENTE</asp:LinkButton>
                     </div>
                 </div>
             </div>

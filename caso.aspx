@@ -83,7 +83,7 @@
                 </div>
                 <div><hr /></div>
                 <div class="form-row">
-                    <div class="col-12" style="padding-left:45%">
+                    <div class="col-12" align="center">
                         <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click"  CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     </div>
                 </div>

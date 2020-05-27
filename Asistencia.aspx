@@ -48,16 +48,13 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-4">
-                        <p class="invisible">columna de relleno</p>
+                    <div class="col-12" style="padding-left:43%">
+                        <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="buttonColor"  ><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
                     </div>
-                    <div class="col-4">
-                        <asp:LinkButton class="button" ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-success"  ><i class="fa fa-plus-circle"></i> GUARDAR</asp:LinkButton>
-                        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
-                    </div>
-                    <div class="col-4">
-                        <p class="invisible">columna de relleno</p>
-                    </div>
+                </div>
+                <hr />
+                <div class="form-row" style="padding-left:45%">
+                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="CANCELAR" CssClass="btn btn-danger"/>
                 </div>
             </div>
         </div>

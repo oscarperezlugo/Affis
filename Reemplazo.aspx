@@ -8,11 +8,11 @@
         <body>
             <div class="container">
                 <div class="card">
-                    <!-- CABECERA -->
+                    <!-- CABEZERA -->
                     <div class="card-header">
                         <div class="form-row">
                             <div class="col-8">
-                                <h2><b> REEMPLAZO </b></h2>
+                                <h3><b> REEMPLAZO </b></h3>
                             </div>
                             <div class="col-auto">
                                 <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" CssClass="buttonColor"></asp:LinkButton>
@@ -23,15 +23,15 @@
                     <!-- CUERPO -->
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="col-12">
+                            <div class="col-8">
                                 <label for="cedulatomador">Cédula Tomador</label><br />
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Cédula Tomador Principal" Width="354px"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Cédula Tomador Principal" Width="100%" MaxLength="10"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12" align="center">
                                 <hr />
-                                <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click" CssClass="buttonColor"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                                <asp:LinkButton ID="Button8" runat="server" OnClick="Button8_Click" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                             </div>
                         </div>
                     </div>

@@ -44,8 +44,9 @@
                                 <asp:ListItem>D</asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <div class="col-2" style="padding-left: 3%">
-                            <asp:Label ID="Label9" runat="server" CssClass="texto" Text="Edad Minima"></asp:Label>
+                        <br />
+                        <div class="col-2">
+                            <asp:Label ID="Label9" runat="server" CssClass="texto" Text="Edad Mínima"></asp:Label>
                             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdownStyle" Width="100%">
                                 <asp:ListItem>6 Meses</asp:ListItem>
                                 <asp:ListItem>5 Años</asp:ListItem>
@@ -53,24 +54,27 @@
                                 <asp:ListItem>21 Años</asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <div class="col-2" style="padding-left: 3%">
-                            <asp:Label ID="Label5" runat="server" CssClass="texto" Text="Edad Maxima Toma"></asp:Label>
+                        <br />
+                        <div class="col-2">
+                            <asp:Label ID="Label5" runat="server" CssClass="texto" Text="Edad Máx. Toma"></asp:Label>
                             <asp:DropDownList ID="DropDownList3" runat="server" CssClass="dropdownStyle" Width="100%">
                                  <asp:ListItem>55 Años</asp:ListItem>
                                  <asp:ListItem>65 Años</asp:ListItem>
                                  <asp:ListItem>70 Años</asp:ListItem>
                              </asp:DropDownList>
                         </div>
-                        <div class="col-3" style="padding-left: 3%;">
-                            <asp:Label ID="Label6" runat="server" CssClass="texto" Text="Edad Maxima Renova"></asp:Label>
+                        <br />
+                        <div class="col-3">
+                            <asp:Label ID="Label6" runat="server" CssClass="texto" Text="Edad Máx. Renova"></asp:Label>
                             <asp:DropDownList ID="DropDownList4" runat="server" CssClass="dropdownStyle" Width="100%">
                                 <asp:ListItem>21 Años</asp:ListItem>
                                 <asp:ListItem>65 Años</asp:ListItem>
                                 <asp:ListItem>70 Años</asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <div class="col-3" style="padding-left: 5%;">
-                            <asp:Label ID="Label7" runat="server" CssClass="texto" Text="Aplicar a:"></asp:Label>
+                        <br />
+                        <div class="col-3">
+                            <asp:Label ID="Label7" runat="server" CssClass="texto" Text="Aplicar a"></asp:Label>
                             <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdownStyle" Width="100%">
                                 <asp:ListItem>Conyugue</asp:ListItem>
                                 <asp:ListItem>Padre</asp:ListItem>

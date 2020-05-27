@@ -34,9 +34,12 @@
                 <div class="card-header">
                     <div class="form-row">
                         <div class="col-8">
-                            <h2><b> COBRANZA </b></h2>
+                            <h3><b> COBRANZA </b></h3>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-2">
+                            <p class="invisible">Columna de relleno</p>
+                        </div>
+                        <div class="col-2">
                             <asp:LinkButton ID="BtnAtras" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
                         </div>
                     </div>
@@ -45,11 +48,11 @@
                     <div class="form-row">
                         <div class="col-6">
                             <label for="nombre">Nombre</label><br />
-                            <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" width="400px" placeholder="Nombre"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" width="100%" placeholder="Nombre"></asp:TextBox>
                         </div>
                         <div class="col-6">
                             <label for="cedula">Cédula</label><br />
-                            <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" width="400px" placeholder="Cédula"></asp:TextBox>
+                            <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" width="100%" placeholder="Cédula" MaxLength="10"></asp:TextBox>
                             <br />
                         </div>
                     </div>
@@ -116,8 +119,9 @@
                             <asp:LinkButton ID="Button4" runat="server" OnClick="Button4_Click" CssClass="buttonColor"><i class="fa fa-check"></i> FINALIZAR</asp:LinkButton>
                         </div>
                     </div>
+                    <hr />
                     <div class="form-row">
-                        <div class="col-12" align="center">
+                        <div class="col-12" style="padding-left:45%">
                             <asp:LinkButton ID="Button3" runat="server" Text="CANCELAR" OnClick="Button3_Click" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                         </div>
                     </div>

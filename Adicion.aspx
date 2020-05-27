@@ -25,11 +25,11 @@
              <div class ="container">
                  <div class="card">
                      <form>
-                         <!-- CABECERA -->
+                         <!-- CABEZERA -->
                          <div class="card-header">
                              <div class="form-row">
                                  <div class="col-8">
-                                     <h2><b>ADICIÓN </b></h2>
+                                     <h3><b>ADICIÓN </b></h3>
                                  </div>
                                  <div class="col-auto">
                                      <asp:LinkButton ID="LinkButton3" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" CssClass="buttonColor"></asp:LinkButton>
@@ -40,31 +40,31 @@
                          <!-- CUERPO -->
                          <div class="card-body">
                              <div class="form-row">
-                                 <div class="col-md-6">
+                                 <div class="col-6">
                                      <label for="tomadorcedula">Tomador Cédula</label>
                                      <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Tomador Cédula"></asp:TextBox><br />
                                  </div>
-                                 <div class="col-md-6">
+                             </div>
+                             <div class="form-row">
+                                 <div class="col-4">
                                      <label for="cedula">Cédula</label>
                                      <asp:TextBox id="Text3" placeholder="Cédula" type="text" runat="server" class="form-control"/><br />
                                  </div>
-                             </div>
-                             <div class="form-row">
-                                 <div class="col-md-6">
+                                 <div class="col-4">
                                      <label for="nombrecompleto">Nombre Completo</label><br />
                                      <asp:TextBox id="Text6" placeholder="Nombre Completo" type="text" runat="server" class="form-control"/><br />
                                  </div>
-                                 <div class="col-md-3">
+                                 <div class="col-2">
                                      <label for="genero">Género</label><br />
-                                     <asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="dropdownStyle">
+                                     <asp:DropDownList ID="DropDownList1" runat="server" class="dropdown-content" CssClass="dropdownStyle" Width="100%">
                                          <asp:ListItem Value="null">Género</asp:ListItem>
                                          <asp:ListItem>Masculino</asp:ListItem>
                                          <asp:ListItem>Femenino</asp:ListItem>
                                      </asp:DropDownList>
                                  </div>
-                                 <div class="col-md-3">
+                                 <div class="col-2">
                                      <label for="relacion">Relación</label><br />
-                                     <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdownStyle">
+                                     <asp:DropDownList ID="DropDownList5" runat="server" CssClass="dropdownStyle" Width="100%">
                                          <asp:ListItem>Relación</asp:ListItem>
                                          <asp:ListItem Value="TOMADOR">Tomador</asp:ListItem>
                                          <asp:ListItem Value="CONYUGUE">Cónyuge</asp:ListItem>
@@ -81,7 +81,7 @@
                                  </div>
                              </div>
                              <div class="form-row">
-                                 <div class="col-auto">
+                                 <div class="col-4">
                                      <label for="fechanacimiento">Fecha de Nacimiento</label><br />
                                      <!-- AÑO -->
                                      <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="AÑO" DataValueField="AÑO" CssClass="dropdownStyle">
@@ -109,19 +109,19 @@
                                      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [MES] FROM [MES$]"></asp:SqlDataSource>
                                      <br />
                                  </div>
-                                 <div class="col-auto">
+                                 <div class="col-6">
                                      <label for="producto">Producto</label><br />
-                                     <asp:DropDownList ID="DropDownList8" runat="server"  Width="364px" CssClass="dropdownStyle">
+                                     <asp:DropDownList ID="DropDownList8" runat="server"  Width="100%" CssClass="dropdownStyle">
                                          <asp:ListItem>Producto</asp:ListItem>
                                          <asp:ListItem>Muerte accidental y desmembración accidental</asp:ListItem>
                                          <asp:ListItem>Renta diaria por hospitalización</asp:ListItem>
                                          <asp:ListItem>Beca educativa</asp:ListItem>
                                      </asp:DropDownList>
                                  </div>
-                                 <div class="col-auto">
+                                 <div class="col-2">
                                      <label for="plan">Plan</label><br />
                                      <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AffinityConnectionString %>" SelectCommand="SELECT [Producto] FROM [PRODUCTOS]"></asp:SqlDataSource>
-                                     <asp:DropDownList ID="DropDownList7" runat="server" CssClass="dropdownStyle"  >
+                                     <asp:DropDownList ID="DropDownList7" runat="server" CssClass="dropdownStyle" Width="100%">
                                          <asp:ListItem Value="null">Plan</asp:ListItem>
                                          <asp:ListItem>A</asp:ListItem>
                                          <asp:ListItem>B</asp:ListItem>
@@ -151,7 +151,12 @@
                                  <div class="col-md-auto">
                                      <br />
                                      <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Button1_Click" CssClass="buttonColor"><i class="fa fa-plus-circle"></i> ADICIONAR </asp:LinkButton>
-                                     <asp:LinkButton ID="LinkButton2" runat="server" OnClick="Button5_Click" CssClass="buttonColor"> CANCELAR </asp:LinkButton>
+                                 </div>
+                             </div>
+                             <div><hr /></div>
+                             <div class="form-row">
+                                 <div class="col-12" style="padding-left:45%">
+                                     <asp:LinkButton ID="LinkButton2" runat="server" OnClick="Button5_Click" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR </asp:LinkButton>
                                  </div>
                              </div>
                          </div>

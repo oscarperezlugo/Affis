@@ -85,5 +85,13 @@ namespace Affis
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton Button5;
+
+        /// <summary>
+        /// Control LinkButton3;
+        /// </summary>
+        /// <remarks>
+        /// Capo generado automaticamente
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
     }
 }

@@ -6,12 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
 
 namespace Affis
 {
     public partial class Retenciones2 : System.Web.UI.Page
     {
+        public TextBox TextBox5;
+        public GridView GridView1;
+        public GridView GridView2;
         protected void Page_Load(object sender, EventArgs e)
         {
         }

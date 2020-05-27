@@ -40,12 +40,12 @@
                     </div>
                     <div class="col-2">
                         <label for="genero">Género</label><br />
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdownStyle" Width="100%" Enabled="True">
+                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdownStyle" >
                             <asp:ListItem Value="null">Género</asp:ListItem>
                             <asp:ListItem>Masculino</asp:ListItem>
                             <asp:ListItem>Femenino</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="rfv_Genero" runat="server" ErrorMessage="El campo genero es obligatorio" ControlToValidate="DropDownList1" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <%-- <asp:RequiredFieldValidator ID="rfv_Genero" runat="server" ErrorMessage="El campo genero es obligatorio" ControlToValidate="DropDownList1" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                     </div>
                     <div class="col-4">
                         <label for="fechanac">Fecha de Nacimiento</label><br />

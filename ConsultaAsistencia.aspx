@@ -85,7 +85,9 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-12" style="margin-top: 5%;">
+                    <div class="col-12">
+                        <br />
+                        <br />
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black" GridLines="none" CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AllowPaging="true">
                             <Columns>
                                 <asp:BoundField DataField="Ejecutivo" HeaderText="Ejecutivo" SortExpression="Ejecutivo" />

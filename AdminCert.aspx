@@ -2,14 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
     <div class="container">
         <div class="card">
             <div class="card-header">
                 <div class="form-row">
                     <div class="col-8">
-                        <h2><b> ADMINISTRAR CERTIFICADOS </b></h2>
+                        <h3><b> ADMINISTRAR CERTIFICADOS </b></h3>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-2">
+                        <p class="invisible">Columna de relleno</p>
+                    </div>
+                    <div class="col-2">
                         <asp:LinkButton ID="LinkButton2" runat="server" Text="&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt; ATRAS" OnClientClick="history.back(); return false;" class="buttonColor"></asp:LinkButton>
                     </div>
                 </div>
@@ -51,7 +56,7 @@
                 <div><hr /></div>
                 <div class="form-row">
                     <div class="col-12" style="padding-left:45%">
-                        <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" class="button" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
+                        <asp:LinkButton ID="Button5" runat="server" OnClick="Button5_Click" CssClass="btn btn-danger"><i class="fa fa-ban"></i> CANCELAR</asp:LinkButton>
                     </div>
                 </div>
             </div>

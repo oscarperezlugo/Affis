@@ -28,7 +28,7 @@ namespace Affis
                 {
                     Text6.Text = Session["nombre"].ToString();
                     DropDownList1.SelectedValue = Session["genero"].ToString();
-                    DropDownList1.Enabled = false;
+                    //DropDownList1.Enabled = false;
                 }
             }
             RadioButtonList1.SelectedIndexChanged += RadioButtonList1_SelectedIndexChanged;
