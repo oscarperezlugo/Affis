@@ -9,6 +9,9 @@ namespace Affis
 {
     public partial class Site : System.Web.UI.MasterPage
     {
+        public Label Label2;
+        public Label Label1;
+        public TextBox TextBox4;
         protected void Page_Load(object sender, EventArgs e)
         {
             Label2.Text = String.Format("Bienvenido(a): {0}", Session["bienvenido"].ToString());

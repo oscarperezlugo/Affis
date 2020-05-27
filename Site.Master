@@ -10,12 +10,27 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:ContentPlaceHolder>
+
+    <script runat="server"> 
+        //Cuando da click al logo este redirecciona a home
+        protected void logo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InicioProceso.aspx");
+        }
+    </script>
+
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@300&display=swap');
         html, body {
             font-family: 'Oswald', sans-serif;
             letter-spacing:1px;
             font-weight: bold;
+        }
+        .drop-down-menu label {
+            margin-bottom:0;
+        }
+        .drop-down-menu .drop-down a {
+            padding-left: 20%;
         }
         .header{
             background-color: #929599;
@@ -30,22 +45,42 @@
             border-bottom:2px;
             border-bottom-color: #535456;
             height: 70px;
+            padding-bottom:8%;
         }
         .textHeader{
-            padding-top: 19px;
-            margin-left: -2%;
+            padding-top: 3%;
+            margin-left: 4%;
             color: white;
         }
         .buttonHeader{
             font-size: medium;
-            font-weight: inherit;
+            color: white;
+            background:transparent;
+            border: 2px solid #75bcb5;
+            border-radius: 8px;
+            padding-left: 1em;
+            padding-right: 1em;
+            border-top-width: 3px;
+            border-bottom-width: 3px;
+            padding-bottom: 3px;
+        }
+        .buttonHeader:hover{
+            background-color: #75bcb5;
+            color: black;
+            text-decoration: none;
         }
         .headerButton{
-            margin-left: -2%;
+            padding-top: 0.5em;
+            margin-left: 45%;
         }
         #logo{
             text-align: center;
             top: 25%;
+            margin-top: 2em;
+        }
+        .buttonLogo{
+            background: none;
+            border: none;
         }
         #content{
             top:50px;
@@ -66,7 +101,7 @@
 	        display: none; 
         }
         .searchdiv{
-            padding-top:10px;
+            padding-top:1.5em;
         }
 
         input[type=search] {
@@ -93,6 +128,9 @@
 	        box-shadow: 0 0 5px rgba(109,207,246,.5);
         }
         /*############# css de menu lateral ######################*/
+        .fa fa-angle-down{
+            font-size: 22.7px;
+        }
         a { /*decoracion de links y labels*/
           text-decoration: none;
           color: #fff;
@@ -111,16 +149,30 @@
         .drop-down-menu {
           display: block;
         }
-
-
         .menu-title {
           cursor: pointer;
           color: #fff;
           font-weight: bold;
+          display:inline-block;
+          padding: 10px 0px 10px 15px;
+          width: 70%;
         }
-        .menu-title {
-          display:block;
-          padding: 10px 15px;
+        .menu-title1{
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            display:inline-block;
+            /*padding:10px 15px;*/
+            padding:10px 0px 10px 0px;
+            /*padding:15px 15px 13px 15px;*/
+            width: 30%;
+        }
+        .menu-title-span{
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            display:inline-block;
+            visibility:hidden;
         }
         .activate {
           display: none;
@@ -145,6 +197,10 @@
         :checked ~ .menu-title {
           background: #404072;
         }
+        :checked ~ .menu-title1{
+            background: #404072;
+        }
+
 
         .drop-down {
           max-height: 0;
@@ -167,7 +223,7 @@
           -o-transition: all 0.3s;
           transition: all 0.3s;
         }
-        .menu span {
+        .menu-span {
             color:white;
             background: #464676;
             height: 40px;
@@ -200,6 +256,9 @@
             border-radius: 0.25rem;
             transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
+        button2:hover{
+            text-decoration: none;
+        }
 
         .buttonColor:hover {
             color: #2e2e2e;
@@ -228,7 +287,10 @@
             text-align: center;
             padding: 0.375rem 0.65rem;
         }
-        
+        /* ICONO DE ABAJO PARA EL MENU*/
+        .text-icon{
+
+        }
         </style>
 </head>
 <body>
@@ -237,7 +299,7 @@
             <!-- HEADER -->
             <div class="row" id="header">
                 <div class="col-2" id="logo">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" />
+                    <asp:LinkButton class="buttonLogo" onClick="logo_Click" runat="server"><asp:Image ID="Image1" runat="server" ImageUrl="~/Logo.png" /></asp:LinkButton>
                 </div>
                 <div class="col-7">
                     <div class="textHeader">
@@ -262,17 +324,17 @@
         <div class="form-row">
             <div class="col-2">
                 <nav class="menu">
-                    <span>WSM</span>
+                    <span class="menu-span">WSM</span>
                     <nav class="drop-down-menu">
                         <input type="checkbox" class="activate" id="accordion-1" name="accordion-1">
-                        <label for="accordion-1" class="menu-title"> Empresa </label>
+                        <label for="accordion-1" class="menu-title" >Empresa</label><label for="accordion-1" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label> 
                         <div class="drop-down">
                             <a class="last" href="/AperturaEmpresa.aspx">Apertura</a>
                         </div>
                     </nav>
                     <nav class="drop-down-menu">
                         <input type="checkbox" class="activate" id="accordion-2" name="accordion-2">
-                        <label for="accordion-2" class="menu-title">Ventas</label>
+                        <label for="accordion-2" class="menu-title">Ventas</label><label for="accordion-2" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/InicioProceso.aspx">Inclusión</a>
                                 <a href="/Adicion.aspx">Adición</a>
@@ -282,23 +344,23 @@
                     </nav>
                     <nav class="drop-down-menu">
                         <input type="checkbox" class="activate" id="accordion-3" name="accordion-3">
-                        <label for="accordion-3" class="menu-title">Adición</label>
+                        <label for="accordion-3" class="menu-title">Adición</label><label for="accordion-3" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                         <div class="drop-down">
                             <a href="/InicioAdicion.aspx">Coberturas</a>
                             <a class="last" href="/InicioAdicionAs.aspx">Asegurados</a>
                         </div>
                     </nav>
-                    <span>BANCA SEGUROS</span>
+                    <span class="menu-span">BANCA SEGUROS</span>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-4" name="accordion-4">
-                            <label for="accordion-4" class="menu-title">Empresa</label>
+                            <label for="accordion-4" class="menu-title">Empresa</label><label for="accordion-4" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a class="last" href="/AperturaEmpresa.aspx">Apertura</a>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-5" name="accordion-5">
-                            <label for="accordion-5" class="menu-title">Ventas</label>
+                            <label for="accordion-5" class="menu-title">Ventas</label><label for="accordion-5" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/Inclusion.aspx">Gestión</a>
                                 <a href="/InicioProceso.aspx">Inclusión</a>
@@ -307,14 +369,14 @@
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-6" name="accordion-5">
-                            <label for="accordion-6" class="menu-title">Cobranza</label>
+                            <label for="accordion-6" class="menu-title">Cobranza</label><label for="accordion-6" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a class="last" href="/Cobranzas.aspx">Gestión</a>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-7" name="accordion-7">
-                            <label for="accordion-7" class="menu-title">Reclamos</label>
+                            <label for="accordion-7" class="menu-title">Reclamos</label><label for="accordion-7" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/caso.aspx">Caso</a>
                                 <a class="last" href="/Reclamos.aspx">Reclamos</a>
@@ -322,19 +384,19 @@
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-8" name="accordion-8">
-                            <label for="accordion-8" class="menu-title">Comisiones</label>
+                            <label for="accordion-8" class="menu-title">Comisiones</label><label for="accordion-8" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/">Comisión</a>
                             </div>
                         </nav>
-                        <span>OPERACIONES</span>
+                        <span class="menu-span">OPERACIONES</span>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-9" name="accordion-9">
-                            <label for="accordion-9" class="menu-title">Productos</label>
+                            <label for="accordion-9" class="menu-title">Productos</label><label for="accordion-9" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <nav class="drop-down-menu">
                                     <input type="checkbox" class="activate" id="accordion-10" name="accordion-10">
-                                    <label for="accordion-10" class="menu-title">WSM</label>
+                                    <label for="accordion-10" class="menu-title">WSM</label><label for="accordion-10" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                                         <div class="drop-down">
                                             <a href="/Productoswsm.aspx">WSM Lista</a>
                                             <a href="/CreacionProductosWSM.aspx">Creación</a>
@@ -343,7 +405,7 @@
                                 </nav>
                                 <nav class="drop-down-menu">
                                     <input type="checkbox" class="activate" id="accordion-11" name="accordion-11">
-                                    <label for="accordion-11" class="menu-title">Banca Seguros</label>
+                                    <label for="accordion-11" class="menu-title">Banca Seguros</label><label for="accordion-11" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                                     <div class="drop-down">
                                         <a href="/Productosbs.aspx">Banca Seguros Lista</a>
                                         <a href="/CreacionProductosBanca.aspx">Creación</a>
@@ -354,7 +416,7 @@
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-12" name="accordion-12">
-                            <label for="accordion-12" class="menu-title">Certificados</label>
+                            <label for="accordion-12" class="menu-title">Certificados</label><label for="accordion-12" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/AdminCert.aspx">Administrar</a>
                                 <a href="/Retenciones2.aspx">Retenciones</a>
@@ -362,48 +424,48 @@
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-13" name="accordion-13">
-                            <label for="accordion-13" class="menu-title">Beneficiarios</label>
+                            <label for="accordion-13" class="menu-title">Beneficiarios</label><label for="accordion-13" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/Beneficiarios.aspx">Agregar</a>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-14" name="accordion-14">
-                            <label for="accordion-14" class="menu-title">Cobranza</label>
+                            <label for="accordion-14" class="menu-title">Cobranza</label><label for="accordion-14" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <li><a href="/Cobranzas.aspx">Gestión</a></li>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-15" name="accordion-15">
-                            <label for="accordion-15" class="menu-title">Personal</label>
+                            <label for="accordion-15" class="menu-title">Personal</label><label for="accordion-15" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <nav class="drop-down-menu">
                                     <input type="checkbox" class="activate" id="accordion-16" name="accordion-16">
-                                    <label for="accordion-16" class="menu-title">Asistencia</label>
+                                    <label for="accordion-16" class="menu-title">Asistencia</label><label for="accordion-16" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                                     <div class="drop-down">
                                         <a href="/Asistencia.aspx">Registro</a>
                                         <a href="/ConsultaAsistencia.aspx">Consulta</a>
                                     </div>
-                                </nav>l
+                                </nav>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-17" name="accordion-17">
-                            <label for="accordion-17" class="menu-title">Empresa</label>
+                            <label for="accordion-17" class="menu-title">Empresa</label><label for="accordion-17" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/EmpresaDetalle1.aspx">Empresa Detalle</a>
                             </div>
                         </nav>
                         <nav class="drop-down-menu">
                             <input type="checkbox" class="activate" id="accordion-18" name="accordion-18">
-                            <label for="accordion-18" class="menu-title">Cobranza</label>
+                            <label for="accordion-18" class="menu-title">Cobranza</label><label for="accordion-18" class="menu-title1"><span class="menu-title-span">xxx</span><i class="fa fa-angle-down"></i></label>
                             <div class="drop-down">
                                 <a href="/Cobranza1.aspx">Gestión Empresa</a>
                             </div>
                         </nav>
                     <nav>
-                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="button2" OnClick="LinkButton1_Click">CERRAR SESION</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="button2" OnClick="LinkButton1_Click">CERRAR SESIÓN</asp:LinkButton>
                     </nav>
                 </nav>
             </div>
