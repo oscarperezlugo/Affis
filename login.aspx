@@ -7,7 +7,7 @@
     <title></title>
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
         .button {
             background-color: #75bcb5;
             border-radius: 30px;
@@ -15,6 +15,7 @@
             color: #2e2e2e;
             padding: 15px 32px;
             text-align: center;
+            letter-spacing:1px;
             text-decoration: none;
             display: inline-block;
             font-size: medium;
@@ -25,6 +26,10 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: 2px 2px 10px #666 inset;
+        }
+        
+        .button:hover{
+            background-color: #539791;
         }
 
         .main {
@@ -74,7 +79,7 @@
 
         .texto {
             font-family: 'Oswald', sans-serif;
-            font-size: small;
+            font-size: 1em;
             font-weight: normal;
             margin-top: 0px;
             text-align:center;
@@ -82,6 +87,10 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+        }
+        .texto:hover{
+            text-decoration:none;
+            color: #75bcb5;
         }
         .auto-style3 {
             margin-top: 0px;
@@ -104,7 +113,7 @@
                 <br />
                 <asp:TextBox ID="TextBox2" runat="server" placeholder="CONTRASEÑA" TextMode="Password" class="form-control" ></asp:TextBox>
                 <br />
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="INICIAR SESION" class="button" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="INICIAR SESIÓN" class="button" />
                 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="texto" OnClick="LinkButtonClicked">Recuperar Contraseña</asp:LinkButton>
             </form>
          </div>
